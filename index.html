@@ -27,35 +27,6 @@
   box-sizing: border-box;
 }
 
-body { 
-  font-family: sans-serif; 
-  font-weight: 300;
-  margin: 0;
-  padding: 0;
-}
-.header {
-  height: 70px;
-  background: #3498db;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  position: fixed;
-  left: 0;
-  right:0;
-  top: 0;  
-  transition: ease 0.4s;
-  &--scrolled {
-    height: 40px;
-  }
-}
-
-.scrollable-area {
-  height: 200vh;
-  background:#ecf0f1;
-}
-
 /* dispaly time and date */
 
 .header1{
@@ -75,7 +46,7 @@ body {
   text-align: center;
   top: 0%;
   right: 47%;
-  position: fixed;
+  position: absolute;
   margin-bottom: 10px;
   font-size: 1.6rem;
   font-weight: 600;
@@ -83,7 +54,7 @@ body {
 
 .display-time {
   display: right;
-  position: fixed;
+  position: absolute;
   right: 30%;
   font-size: 2rem;
   font-weight: bold;
@@ -185,7 +156,7 @@ header {
 
 .logo1
 {
-  position: fixed;
+  position: absolute;
   right: 0%;
   top: 6%;
   transform: translate(-50%, -50%);
@@ -195,7 +166,7 @@ header {
 
 .logo
 {
-  position: fixed;
+  position: absolute;
   left:20%;
   top: 14%;
   transform: translate(-50%, -50%);
@@ -211,7 +182,7 @@ font-family: 'Roboto', Arial, sans-serif;
 /* search box */
 
 .container{
-	position: fixed;
+	position: absolute;
 	top: 20%;
 	left: 45%;
 	transform: translate(-50%,-50%);
@@ -246,6 +217,7 @@ button{
 }
 
 .search-box-btn{
+
 	display: contents;
   font-size: large;
 	border-radius: 50%;
@@ -809,7 +781,6 @@ body {
             </div>
           </div>
         </div>
-    
       </div>
   </div>
 
