@@ -27,6 +27,35 @@
   box-sizing: border-box;
 }
 
+body { 
+  font-family: sans-serif; 
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  height: 70px;
+  background: #3498db;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  right:0;
+  top: 0;  
+  transition: ease 0.4s;
+  &--scrolled {
+    height: 40px;
+  }
+}
+
+.scrollable-area {
+  height: 200vh;
+  background:#ecf0f1;
+}
+
 /* dispaly time and date */
 
 .header1{
@@ -53,7 +82,7 @@
 }
 
 .display-time {
-  display: left;
+  display: right;
   position: fixed;
   right: 30%;
   font-size: 2rem;
@@ -786,6 +815,15 @@ body {
 
           
         <!-- js - script -->
+
+        <script>
+          ScrollTrigger.create({
+            start: 'top -70',
+            end: 99999,
+            toggleClass: {className: 'header--scrolled', targets: '.header'}
+          });
+          
+        </script>
 
         <!-- dark light mode  -->
 
