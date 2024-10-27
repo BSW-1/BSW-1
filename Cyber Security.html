@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://kit.fontawesome.com/c08977e70f.js" crossorigin="anonymous"></script>
+<title>CYBER SECURITY</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+  background: black;
+  background: linear-gradient(50deg, black 0%, black 67%, black);
+  margin: 30px 0 30px 0;
+}
+
+main {
+  width: 750px;
+  height: auto;
+  margin: auto;
+  padding: 0px 0px 1px 0px;
+  font-family: "Averia Serif Libre", Garamond, serif;
+  background-color: #fff;
+  border-left: 2px solid #6c517b;
+  box-shadow: 9px 9px 5px gray;
+}
+
+footer {
+  width: 750px;
+  height: auto;
+  margin: auto;
+  padding: 5px 0px 30px 0px;
+  font-family: "Averia Serif Libre", Garamond, serif;
+  background-color: #fff;
+  border: 0px 2px solid #6c517b;
+  box-shadow: 9px 9px 5px #6c517b;
+}
+
+hr {
+  height: 10px;
+  background-image: url(https://missymjwrites.neocities.org/IMAGES/Wavy%20Line%20Black.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  width: 675px;
+  padding: 8px;
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  background-size: contain;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Averia Serif Libre", Garamond, serif;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+h1.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  padding: 55px 0px 25px 0px;
+  background-color: white;
+}
+
+h4 {
+  text-align: center;
+  font-family: "Averia Serif Libre", Garamond, serif;
+  text-transform: uppercase;
+  font-size: 23px;
+}
+
+p {
+  color: black;
+  text-align: justify;
+  padding: 0rem 4rem 0rem 4rem;
+  line-height: 2;
+}
+    
+.plinetwo {
+  text-indent: 3em;
+  }
+
+div.foottext {
+  color: black;
+  text-align: justify;
+  padding: 0rem 8rem 0rem 4rem;
+  line-height: 2.5;
+}
+
+a.one:link {
+  background-color: #8e5d5d;
+  color: white;
+  padding: 5px 5px 5px 5px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy; 
+}
+a.one:visited {
+  background-color: #7b5151;
+  color: white;
+  padding: 5px 5px 5px 5px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy; 
+}
+a.one:hover {
+  background-color: #a47474;
+  color: black;
+  padding: 5px 5px 5px 5px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy; 
+}
+
+a.two:link {
+  background-color: #5d698e;
+  color: white;
+  padding: 5px 5px 5px 5px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy; 
+}
+a.two:visited {
+  background-color: #47506c;
+  color: white;
+  padding: 5px 5px 5px 5px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy; 
+}
+a.two:hover {
+  background-color: #7480a4;
+  color: black;
+  padding: 5px 5px 5px 5px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy; 
+}
+
+a.icon:link {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  padding: 10px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+a.icon:visited {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  padding: 10px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+a.icon:hover {
+  background-color: #d9d9d9;
+  color: black;
+  border-radius: 5px;
+  padding: 10px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a:link {
+  background-color: white;
+  color: black;
+  padding: 5px 5px 5px 5px;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+a:visited {
+  background-color: white;
+  color: white;
+}
+
+a:hover {
+  background-color: white;
+  color: black;
+}
+
+a:active {
+  background-color: #93b893;
+  color: black;
+} 
+
+.trigger {
+  display: none;
+  text-align: center;
+}
+    
+.warn:hover + .trigger {
+  display: block;
+  font-size: 15px;
+  background-color: #c98282;
+  padding: 15px 0px 15px 0px;
+}
+
+/**
+ * Initialiazing a `footnotes` counter on the wrapper
+ */
+article {
+  counter-reset: footnotes;
+    color: black; /* 2 */
+  background-color: white;
+}
+
+
+a[aria-describedby="footnote-label"] {
+  counter-increment: footnotes; /* 1 */
+  text-decoration: none; /* 2 */
+  color: black; /* 2 */
+  cursor: default; /* 2 */
+  outline: none; /* 2 */
+  background-color: white;
+  padding: 0px 0px 0px 0px;
+}
+
+
+a[aria-describedby="footnote-label"]::after {
+  content: '[' counter(footnotes) ']'; /* 1 */
+  vertical-align: super; /* 2 */
+  font-size: 0.5em; /* 3 */
+  margin-left: 2px; /* 4 */
+  color: blue; /* 5 */
+  text-decoration: underline; /* 5 */
+  cursor: pointer; /* 5 */
+  padding: 0px 0px 0px 0px;
+  font-size: 14px;
+}
+
+/**
+ * Resetting the default focused styles on the number
+ */
+a[aria-describedby="footnote-label"]:focus::after {
+  outline: thin dotted;
+  outline-offset: 2px;
+  font-size: 14px;
+}
+
+footer :target {
+  background: #a587c5;
+  color: black;
+  padding: 10px;
+}
+
+a.footnotegoback:link {
+  background-color: white; 
+  color: black; 
+  font-size: 25px; 
+  line-height: 1;
+}
+a.footnotegoback:hover {
+  background-color: #d9d9d9; 
+  color: black; 
+  font-size: 25px; 
+  line-height: 1;
+}
+a.footnotegoback:visited {
+  background-color: white; 
+  color: black; 
+  font-size: 25px; 
+  line-height: 1;
+}
+
+.button {
+  text-align: center;
+  transition-duration: 0.4s;
+  font-size: 15px; 
+  border: none; 
+  color: #686191; 
+  padding: 15px 32px; 
+  text-decoration: none; 
+  display: inline-block; 
+  margin: 4px 2px; 
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #d9d9d9;
+  color: #4d4d4d;
+  border: 2px solid #404040;
+}
+
+.button1:hover {
+  background-color: #bfbfbf;
+  color: black;
+}
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <div style="text-align: center; font-size: 12px; padding-top: 10px;">©️ Bhaskar Sah <br> October 25, 2024</div>
+    <h1 class="sticky">CYBER SECURITY<br><br>
+      <a class="icon" href="https://www.bhaskarsah.com.np" title="go home"><img src="https://i.postimg.cc/vTHGBZ4z/32bhome.png"></a>
+    </h1>
+    
+    <div class="warn" style="text-align: center; font-size: 18px;"></div>
+<div class="trigger"></div>
+    
+    <h1>Understanding Cybersecurity</h1>
+
+    <p>Cyber security is a field which protects computer systems, networks and data from the theft or damage done to hardware, software. In a world where all things personal, financial and business-related are stored online or on the internet somewhere safe deep within our companies firewalls importance of cybersecurity cannot be understated. There are a wide variety of cyber threats, from the simple phishing scam to targeted attacks by state sponsored hackers and therefore there is a need for individuals as well as organizations to ensure they take security seriously.</p>
+
+    <br>
+
+    <h1>The Landscape of Cyber Threats</h1>
+
+    <p><b>The scope of cyber threats is deep and intricate Common ones include:-</b>
+
+      <br>
+      <br>  
+
+       <li>
+        <u> Malware:</u> It is a number of malicious software types including viruses, worms trojans as well as Ransomware which are intended to either cause harm or earn money from systems. Especially ransomware, which is notorious for encrypting a victim's data and then demanding they pay.
+    </li>
+
+        <br>
+        <br>
+
+        <li>
+            <u>Phishing:</u> This type of attack usually involves emails with malicious intent to steal information like passwords or credit card numbers. The problem is that these emails might seem to be official looking email and therefore are very hard for the average person.
+        </li>
+
+        <br>
+        <br>
+
+       <li> 
+           <u>Denial of Service (DoS) Attack:</u> An attack that intends to render a system unavailability by flooding the target with excessive traffic. These malicious Distributed Denial-of-Service (DDoS) attacks are harder to prevent since they typically involve an attacker using multiple compromised systems in an effort to saturate a single server.
+        </li>
+
+        <br>
+        <br>
+        
+        <li>
+            <u>Man-in-the-Middle (MitM) Attacks:</u> In these attacks, a hacker sets up malicious communication between the two parties and in some cases might even try to phish out private information from regular users.
+        </li>
+
+        <br>
+        <br>
+        
+    <b>And one of the most dangerous possibilities is an insider threat; a security risk that originates from within your company. With insider threat management, employees who are already in possession of sensitive data can either intentionally or unintentionally cause breaches.</b>
+        
+        </p>
+
+        <br>
+
+        <h1>Key Components of Cybersecurity</h1>
+        <p>
+           <b> Organizations can only look to reduce the impact of such threats by deploying multi-layer cybersecurity. Key elements of cybersecurity would involve:</b>
+
+            <br>
+            <br>
+
+<li>
+    <u>Network Security:</u> It refers to the authenticity, privacy, and accessibility of information over the networks. Firewalls, intrusion detection systems, and virtual private systems are common measures taken to protect network traffic and monitor the same for unusual activities.
+</li>
+
+<br>
+<br>
+
+<li>
+    <u>Application Security:</u> Ensuring that the software applications are secure, free from vulnerabilities, is very vital since most of these breaches attack weaknesses in software. The effective ways to ensure this include secure coding practices, periodic updating, and testing for security during the software development life cycle.
+</li>
+
+<br>
+<br>
+
+<li>
+    <u>Data Security:</u> This will protect sensitive information through encryption, access controls, and data masking. Every organization needs to set up policies to guarantee data access and that its storage is available only for the authorized users.
+</li>
+
+<br>
+<br>
+
+<li>
+    <u>Endpoint Security:</u> Due to remote working and mobile working, endpoint security is becoming very significant. It involves protecting individual devices, such as laptops, smartphones, and tablets, from cyber threats by installing antivirus software, firewalls, and using their secure configuration.
+</li>
+
+<br>
+<br>
+
+<b>Probably the most important aspect is identity and access management, which basically has to do with showing who has access to what system or data, while unauthorized access could be prevented. IAM solutions allow managing user identities and enforcing security policies, including MFA.</b>
+        </p>
+
+        <br>
+
+        <h1>Incident Response and Recovery</h1>
+        <p>
+            <b>Even with the best preventive measures in place, breaches can still happen. It is crucial for them to have an incident response plan to mitigate the damage and recover from it as efficiently as possible. Major incident response steps include:</b> 
+
+            <br>
+            <br>
+
+            
+                <li>
+                    <u>Preparation:</u> Organizations need to be able to formulate and continually update an incident response plan, with everyone in their team fully informed of their roles in case a breach occurs.
+                </li>
+        
+            
+            <br>
+            <br>
+          
+                <li>
+                    <u>Detection and Analysis:</u> The recognition of the security incident needs to be done as quickly as possible. This might include a system, log, and alert monitoring for events that could indicate there is a breach.
+                </li>
+
+                <br>
+                <br>
+
+                <li>
+                    <u>Containment: </u>When an incident has been identified, there needs to be containment immediately to avoid any further damage. Such actions might include keeping the affected systems or networks in quarantine.
+                </li>
+
+                <br>
+                <br>
+
+                <li>
+                    <u>Eradication:</u> The organization needs to locate and eradicate the source of such incidents after the containment stage is complete, which can involve removal of malware or closure of vulnerabilities.
+                </li>
+
+                <br>
+                <br>
+                <li>
+                    <u>Recovery:</u>Restoring systems and data to normal functioning is important. This might involve restoring data from backups and ensuring that all vulnerabilities are fixed.
+                </li>
+
+                <br>
+                <br>
+
+                <li>
+                    <u>Post-Incident Review:</u> Once the incident has been contained and resolved, organizational learning and improvements can be made for future responses.
+                </li>
+
+            </p>
+            
+            <br>
+
+            <h1>User Education and Awareness</h1>
+            <p>Human error forms one of the weakest links in security. Wide users' education and awareness training is very important in mitigation of the risks associated with phishing and other social engineering attacks. Organizations should have periodic training for employees on recognizing potential threats, good browsing practices, and other security-related aspects like password and data security.</p>
+
+            <br>
+
+           <h1>Regulatory Compliance</h1>
+            <p>
+                A great number of industries fall under various regulations that enforce the implementation of certain cybersecurity measures. Compliance with standards such as GDPR, HIPAA, and PCI DSS is not only a legal obligation but also very important in establishing confidence with customers and business partners. Each organization should be fully aware of its regulatory requirements and take proper measures to achieve compliance.
+            </p>
+            
+            <br>
+
+            <h1>The Future of Cybersecurity</h1>
+            <p>
+
+                <b>The cyber threats keep changing with the evolution in technology. Going by the latest trends in cybersecurity, some of the trends to watch out for are:</b>
+
+                <br>
+
+                <li>
+                    <u>Artificial Intelligence:</u> AI is an emergent technology in application, and machine learning improves the threat detection and response capabilities of organizations. These technologies can analyze large volumes of data to identify patterns and anomalies that indicate cyber threats.
+                </li>
+
+                <br>
+                <br>
+
+                <li>
+                    <u>Zero Trust Security:</u> This security model presumes that threats are not only outside the network but also inside it. Stringent verification depends on who is accessing the resources from which location.
+                </li>
+
+                <br>
+                <br>
+
+                <li>
+                    <u>Cloud Security:</u> Since organisations are moving towards cloud services, cloud environments need to be protected. It ranges from shared responsibility models to understanding what security measures should be in place to protect data stored on the cloud.
+                </li>
+
+                <br>
+                <br>
+
+                <li>
+                    <u>IoT Security:</u> The huge growth in the number of IoT devices introduces a variety of vulnerabilities. It's very important to secure those devices because they usually have very minimal security features.
+                </li>
+
+            </p>
+
+            <br>
+            <br>
+
+            <h1>
+                
+            </h1>
+            <p>
+                cybersecurity is an essential aspect of modern digital life, safeguarding information, systems, and networks from a wide array of threats. A proactive and comprehensive approach, incorporating various security measures and continuous education, is vital for protecting against cyber risks. As technology continues to evolve, staying informed and adaptable in the face of new threats will be crucial for individuals and organizations alike. By prioritizing cybersecurity, we can help create a safer digital environment for everyone.
+            </p>
+    
+  </main>
+  
+    <footer><h4>For Any Question Contact Me</h4>
+      <a href="/Contact.html">Contact me</a>
+      <div class="foottext">
+    <ol>
+    
+        </ol></div>
+  </footer>
+  
+  <main>
+  <div style="text-align: right; font-size: 20px; margin-bottom: 20px; margin-right: 20px; margin-top: -2rem"><button class="button button1" onclick="history.back()">Go Back</button></div>
+  </main>
+
+</body>
+</html>

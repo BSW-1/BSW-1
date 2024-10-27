@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+}
+
+.icon {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  border-radius: 50%;
+  animation: wave 4s ease-in-out infinite;
+  transition: transform 0.3s ease, background-image 0.3s ease;
+}
+
+.icon::before {
+  content: "";
+  position: absolute;
+  top: -400px;
+  left: 50%;
+  width: 2px;
+  height: 400px;
+  background-color: none;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.instagram {
+  background-image: url("https://cdn-icons-png.freepik.com/512/2111/2111463.png?ga=GA1.1.2025074602.1718813500");
+  animation-delay: 1s;
+}
+
+.x {
+  background-image: url("https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?t=st=1720022408~exp=1720023008~hmac=4fe274d9aaff4ab640fb81d9b4b3ff00cf8c80c719f4ff3c8ef0454de9140c53");
+  animation-delay: 1.5s;
+}
+
+.facebook {
+  background-image: url("https://img.icons8.com/?size=256&id=118467&format=png");
+  background-color: white;
+  animation-delay: 2s;
+}
+
+
+@keyframes wave {
+  0%, 100% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  75% {
+    transform: translateY(-20px);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .icon::before {
+    top: -500px;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    align-items: center;
+    gap: 10px;
+  }
+  .icon {
+    height: 60px;
+    width: 60px;
+  }
+  .icon::before {
+    top: -500px;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .icon {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .icon {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+body{
+  margin:0;
+  background: black;
+  font-family:'Poiret One',sans-serif;
+}
+h1,h2,h3{
+  color:#f0f0f0;
+  text-align:center;
+}
+h1{
+  font-size:45px;
+}
+
+#effect:after{
+  z-index:200;
+  content:'';
+  width: 0;
+  position:absolute;
+  height: 0;
+  border-style: solid;
+  border-width: 120px 73px 0 73px;
+  border-color: none;
+  bottom:-120px;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  -webkit-filter: drop-shadow( 0 0 15px rgba(0,0,0,0.5) );
+}
+#effect:before{
+  z-index:300;
+  content:'';
+  width: 0;
+  position:absolute;
+  height: 0;
+  border-style: solid;
+  border-width: 96px 58px 0 58px;
+  border-color: none;
+  bottom:-96px;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+}
+#img img{
+  border-radius:100%;
+}
+#img{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  position:relative;
+  margin:0 auto;
+  margin-top:40px;
+  border-radius:50%;
+  border:4px solid #f0f0f0;
+  box-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+#design{
+  position:relative;
+  text-align:center;
+  padding-top:20px;
+  font-size:40px;
+  color:#f0f0f0;
+}
+#design2{
+  position:relative;
+  text-align:center;
+  font-family:Poiret One;
+  font-size:40px;
+  font-weight:700;
+  color:#009B77;
+}
+
+
+    </style>
+    
+</head>
+<body>
+
+  <div id="effect">
+    <div id="inner"></div>
+</div>
+<div id="info">
+    <div id="img">
+        <img src="/bhaskar.webp" height="100%" width="100%" />
+    </div>
+    <div id="design">I'm Bhaskar Sah Owner of this website.
+      <p>from Mirchaiya, (Siraha, Nepal) </p>
+      <p>I am glad to interact with all of</p>
+      <p>you here and share my excitement.</p>
+    </div>
+
+ </div>
+  <br>
+</div>
+
+
+
+    <div class="container">
+        <a class="icon instagram" aria-label="Instagram" href="https://www.instagram.com/bha__s__kar_" target="_blank"></a>
+        <a class="icon x" aria-label="X" href="https://x.com/wasu462" target="_blank"></a>
+        <a class="icon facebook" aria-label="facebook" href="https://www.facebook.com/profile.php?id=100086270988019" target="_blank"></a>
+    </div>
+
+    <script>
+      $(window).scroll(function () {
+        var wind = $(window).scrollTop();
+        var img = $('#aroundimg').offset();
+        var section = $('#content>.section:nth-child(2)').offset();
+        var sectionheight = section.top -100;
+        var imgheight = img.top - 70;
+        if (wind >= imgheight ) {
+          $("#scndImg").removeClass("animate");
+          $("#scndImg").addClass("turnDown");
+        }
+    });
+    $('.button').hover(function() {
+            $(this).find('fa-info').hide();
+            $(this).find('.avg_num').show();
+        }, function() {
+            $(this).find('.avg_num').hide();
+            $(this).find('.avg_words').show();
+    });
+    </script>
+    
+</body>
+</html>

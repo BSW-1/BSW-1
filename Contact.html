@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=">
+  <title>Contact Us Page</title>
+  <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://img.freepik.com/free-vector/data-security-technology-background-vector-blue-tone_53876-112201.jpg?t=st=1729858581~exp=1729862181~hmac=b8925b60e7ab09f74cb9832d876c85e70d901af0a68a83f59db3081cd3e379f6&w=740);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+section {
+  position: relative;
+  z-index: 3;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section-header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.section-header h2 {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.section-header p {
+  color: #FFF;
+}
+
+.row  {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-info {
+  width: 50%;
+}
+
+.contact-info-item {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.contact-info-icon {
+  height: 70px;
+  width: 70px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.contact-info-icon i {
+  font-size: 30px;
+  line-height: 70px;
+}
+
+.contact-info-content {
+  margin-left: 20px;
+}
+
+.contact-info-content h4 {
+  color: #1da9c0;
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+
+.contact-info-content p {
+  color: #FFF;
+  font-size: 1em;
+}
+
+label,
+input,
+textarea {
+    display: block;
+    width: 100%;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 0.3em;
+}
+span {
+    font-weight: 700;
+    color: white;
+    line-height: 3.5px;
+    line-height: 2.5rem;
+    font-size: 12px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+input[type="submit"] {
+    background: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 1.3em;
+}
+
+form {
+    background-color: none;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 40px;
+    padding-left: 0px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    color: white;
+    width: 150%;
+    
+}
+
+.required-star {
+    color: #fc4366;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 9px 20px;
+    border: 1px solid #e1e2eb;
+    background-color: #fff;
+    color: black;
+    caret-color: #829ab1;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-size: 1rem;
+    line-height: 29px;
+    line-height: 2rem;
+    box-shadow: inset 0 2px 4px 0 rgba(206, 209, 224, 0.2);
+    border-radius: 3px;
+    line-height: 29px;
+    line-height: 2rem;
+}
+
+
+
+@media (max-width: 991px) {
+  section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .row {
+    flex-direction: column;
+  }
+  
+  .contact-info {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  
+  .contact-form {
+    width: 100%;
+  }
+}
+
+.invalid-feedback,
+.empty-feedback {
+  display: none;
+}
+
+.was-validated :placeholder-shown:invalid ~ .empty-feedback {
+  display: block;
+  color: red;
+}
+
+.was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+  display: block;
+  color: red;
+}
+
+.is-invalid,
+.was-validated :invalid {
+  border-color: #dc3545;
+}
+
+
+  </style>
+
+</head>
+<body>
+  
+  <section>
+    
+    <div class="section-header">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>We appreciate your feedback! Please get in touch with us if you have any recommendations or questions regarding any topic. You may ask by sending me email or phone number </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">  
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            
+            <div class="contact-info-content">
+              <h4>Address</h4>
+              <p> Mirchaiya, Siraha <br/>Nepal</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            
+            <div class="contact-info-content">
+              <h4>Phone</h4>
+              <p>+977 9816798987</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            
+            <div class="contact-info-content">
+              <h4>Email</h4>
+             <p>bsw554@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+<div class="flex items-center min-h-screen bg-gray-100 dark:bg-gray-900">
+  <div class="container mx-auto">
+    <div class="max-w-xl mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
+      <div class="text-center">
+        <h1 class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">
+          Contact Us
+        </h1>
+        <p class="text-gray-400 dark:text-gray-400">
+        </p>
+      </div>
+      <div class="m-7">
+        <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation" novalidate>
+          <input type="hidden" name="access_key" value="a6bfc3b8-001c-4b78-b737-c5c26f97a7ec" />
+          <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+          <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+          <div class="flex mb-6 space-x-4">
+            <div class="w-full md:w-1/2">
+              <label for="fname" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">First Name</label>
+              <input type="text" name="name" id="first_name" placeholder="First Name" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
+              <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+               Please provide your first name.
+              </div>
+            </div>
+            <div class="w-full md:w-1/2">
+              <label for="lname" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Last Name</label>
+              <input type="text" name="last_name" id="lname" placeholder="Last Name" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
+              <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                Please provide your last name.
+              </div>
+            </div>
+          </div>
+
+          <div class="flex mb-6 space-x-4">
+            <div class="w-full md:w-1/2">
+              <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
+              <input type="email" name="email" id="email" placeholder="you@company.com" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
+              <div class="empty-feedback text-red-400 text-sm mt-1">
+                Please provide your email address.
+              </div>
+              <div class="invalid-feedback text-red-400 text-sm mt-1">
+                Please provide a valid email address.
+              </div>
+            </div>
+
+          <div class="mb-6">
+            <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Your Message</label>
+
+            <textarea rows="5" name="message" id="message" placeholder="Your Message" class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" required></textarea>
+            <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+              Please enter your message.
+            </div>
+          </div>
+          <div class="mb-6">
+            <button type="submit" class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">
+              Send Message
+            </button>
+          </div>
+          <p class="text-base text-center text-gray-400" id="result"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>      
+  </section>
+
+  <script>
+    (function () {
+      "use strict";
+      /*
+       * Form Validation
+       */
+    
+      // Fetch all the forms we want to apply custom validation styles to
+      const forms = document.querySelectorAll(".needs-validation");
+      const result = document.getElementById("result");
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener(
+          "submit",
+          function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+    
+              form.querySelectorAll(":invalid")[0].focus();
+            } else {
+              /*
+               * Form Submission using fetch()
+               */
+    
+              const formData = new FormData(form);
+              event.preventDefault();
+              event.stopPropagation();
+              const object = {};
+              formData.forEach((value, key) => {
+                object[key] = value;
+              });
+              const json = JSON.stringify(object);
+              result.innerHTML = "Please wait...";
+    
+              fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  Accept: "application/json"
+                },
+                body: json
+              })
+                .then(async (response) => {
+                  let json = await response.json();
+                  if (response.status == 200) {
+                    result.innerHTML = json.message;
+                    result.classList.remove("text-gray-500");
+                    result.classList.add("text-green-500");
+                  } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                    result.classList.remove("text-gray-500");
+                    result.classList.add("text-red-500");
+                  }
+                })
+                .catch((error) => {
+                  console.log(error);
+                  result.innerHTML = "Something went wrong!";
+                })
+                .then(function () {
+                  form.reset();
+                  form.classList.remove("was-validated");
+                  setTimeout(() => {
+                    result.style.display = "none";
+                  }, 5000);
+                });
+            }
+            form.classList.add("was-validated");
+          },
+          false
+        );
+      });
+    })();
+    
+  </script>
+  
+</body>
+</html>
