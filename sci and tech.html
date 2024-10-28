@@ -22,178 +22,345 @@
   <link rel="icon" href="/Logo1 2.png" type="image/icon type">
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&display=swap');
-*{
-    box-sizing: border-box;
+    body {
+  background: black;
+  background: linear-gradient(50deg, black 0%, black 67%, black);
+  margin: 30px 0 30px 0;
 }
-body{
-    margin: 0;
-    padding: 0;
-    background-image: url(https://img.freepik.com/free-photo/ai-nuclear-energy-industry-innovation-smart-grid-disruptive-technology_53876-143121.jpg?t=st=1730024966~exp=1730028566~hmac=aeb93dcc4f6992e49cdb3132c0ee8a4236fd0ffccecda3f3172d715aa8d235e5&w=740);
-    font-family: 'Oswald', sans-serif;
-}
-.container{
-    width: 70%;
-    margin: 0 auto;
-    height: 100vh;
-}
-.row{
-    display: flex;
-    width: 100%;
-    height: 500px;
-}
-.count_down_wrapper{
-    width: 60%;
-    display: flex;
-    margin: 3rem auto;
-    text-align: center;
-    flex-direction: column;
-}
-.content{
 
+main {
+  width: 750px;
+  height: auto;
+  margin: auto;
+  padding: 0px 0px 1px 0px;
+  font-family: "Averia Serif Libre", Garamond, serif;
+  background-color: #fff;
+  border-left: 2px solid #6c517b;
+  box-shadow: 9px 9px 5px gray;
 }
-.slogan{
-    font-size: 2.2em;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-}
-.launch_time{
-    font-size: 1.6em;
-    background-color: #fff;
-    display: inline-block;
-    padding: 5px 25px;
-}
-.counters{
-    width: 100%;
-    display: flex;
-}
-.items{
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
 
+footer {
+  width: 750px;
+  height: auto;
+  margin: auto;
+  padding: 5px 0px 30px 0px;
+  font-family: "Averia Serif Libre", Garamond, serif;
+  background-color: #fff;
+  border: 0px 2px solid #6c517b;
+  box-shadow: 9px 9px 5px #6c517b;
 }
-.items input{
-    width: 80%;
-    height: 80px;
-    background: linear-gradient(1deg, rgb(32, 38, 57) 11.4%, rgb(64 63 63) 70.2%);
-    border: 0;
-    outline: 0;
-    border-radius: 50px;
-    color: #fff;
-    font-size: 2.5em;
-    text-align: center;
-    font-weight: bold;
-    border: 6px solid #e9e9e9;
-    font-family: 'Oswald', sans-serif;
+
+hr {
+  height: 10px;
+  background-image: url(https://missymjwrites.neocities.org/IMAGES/Wavy%20Line%20Black.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  width: 675px;
+  padding: 8px;
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  background-size: contain;
 }
-.items label{
-    margin-top: 10px;
-    font-size: 1.3em;
-    font-weight: 300;
-    letter-spacing: 3px;
+
+h1 {
+  text-align: center;
+  font-family: "Averia Serif Libre", Garamond, serif;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+h1.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  padding: 55px 0px 25px 0px;
+  background-color: white;
+}
+
+h4 {
+  text-align: center;
+  font-family: "Averia Serif Libre", Garamond, serif;
+  text-transform: uppercase;
+  font-size: 23px;
+}
+
+p {
+  color: black;
+  text-align: justify;
+  padding: 0rem 4rem 0rem 4rem;
+  line-height: 2;
+}
+    
+.plinetwo {
+  text-indent: 3em;
+  }
+
+div.foottext {
+  color: black;
+  text-align: justify;
+  padding: 0rem 8rem 0rem 4rem;
+  line-height: 2.5;
+}
+
+a.one:link {
+  background-color: #8e5d5d;
+  color: white;
+  padding: 5px 5px 5px 5px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy; 
+}
+a.one:visited {
+  background-color: #7b5151;
+  color: white;
+  padding: 5px 5px 5px 5px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy; 
+}
+a.one:hover {
+  background-color: #a47474;
+  color: black;
+  padding: 5px 5px 5px 5px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy; 
+}
+
+a.two:link {
+  background-color: #5d698e;
+  color: white;
+  padding: 5px 5px 5px 5px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy; 
+}
+a.two:visited {
+  background-color: #47506c;
+  color: white;
+  padding: 5px 5px 5px 5px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy; 
+}
+a.two:hover {
+  background-color: #7480a4;
+  color: black;
+  padding: 5px 5px 5px 5px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy; 
+}
+
+a.icon:link {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  padding: 10px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+a.icon:visited {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  padding: 10px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+a.icon:hover {
+  background-color: #d9d9d9;
+  color: black;
+  border-radius: 5px;
+  padding: 10px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a:link {
+  background-color: white;
+  color: black;
+  padding: 5px 5px 5px 5px;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+a:visited {
+  background-color: white;
+  color: white;
+}
+
+a:hover {
+  background-color: white;
+  color: black;
+}
+
+a:active {
+  background-color: #93b893;
+  color: black;
+} 
+
+.trigger {
+  display: none;
+  text-align: center;
+}
+    
+.warn:hover + .trigger {
+  display: block;
+  font-size: 15px;
+  background-color: #c98282;
+  padding: 15px 0px 15px 0px;
+}
+
+/**
+ * Initialiazing a `footnotes` counter on the wrapper
+ */
+article {
+  counter-reset: footnotes;
+    color: black; /* 2 */
+  background-color: white;
+}
+
+
+a[aria-describedby="footnote-label"] {
+  counter-increment: footnotes; /* 1 */
+  text-decoration: none; /* 2 */
+  color: black; /* 2 */
+  cursor: default; /* 2 */
+  outline: none; /* 2 */
+  background-color: white;
+  padding: 0px 0px 0px 0px;
+}
+
+
+a[aria-describedby="footnote-label"]::after {
+  content: '[' counter(footnotes) ']'; /* 1 */
+  vertical-align: super; /* 2 */
+  font-size: 0.5em; /* 3 */
+  margin-left: 2px; /* 4 */
+  color: blue; /* 5 */
+  text-decoration: underline; /* 5 */
+  cursor: pointer; /* 5 */
+  padding: 0px 0px 0px 0px;
+  font-size: 14px;
+}
+
+/**
+ * Resetting the default focused styles on the number
+ */
+a[aria-describedby="footnote-label"]:focus::after {
+  outline: thin dotted;
+  outline-offset: 2px;
+  font-size: 14px;
+}
+
+footer :target {
+  background: #a587c5;
+  color: black;
+  padding: 10px;
+}
+
+a.footnotegoback:link {
+  background-color: white; 
+  color: black; 
+  font-size: 25px; 
+  line-height: 1;
+}
+a.footnotegoback:hover {
+  background-color: #d9d9d9; 
+  color: black; 
+  font-size: 25px; 
+  line-height: 1;
+}
+a.footnotegoback:visited {
+  background-color: white; 
+  color: black; 
+  font-size: 25px; 
+  line-height: 1;
+}
+
+.button {
+  text-align: center;
+  transition-duration: 0.4s;
+  font-size: 15px; 
+  border: none; 
+  color: #686191; 
+  padding: 15px 32px; 
+  text-decoration: none; 
+  display: inline-block; 
+  margin: 4px 2px; 
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #d9d9d9;
+  color: #4d4d4d;
+  border: 2px solid #404040;
+}
+
+.button1:hover {
+  background-color: #bfbfbf;
+  color: black;
 }
   </style>
-
 </head>
+
+
 <body>
-  <div class="container">
-    <div class="row">
-        <div class="count_down_wrapper">
-            <div class="content">
-                <h4 class="slogan">About Science and Technology
-                 <br> Coming Soon </h4>
-                 <h4 class="launch_time" id="launchTime"></h4>
-            </div>
-            <div class="counters">
-                <div class="items">
-                    <input type="text" id="days" value="00">
-                    <label for="days">Days</label>
-                </div>
-                <div class="items">
-                    <input type="text" id="hours" value="00">
-                    <label for="days">Hours</label>
-                </div>
-                <div class="items">
-                    <input type="text" id="min" value="00">
-                    <label for="days">Minutes</label>
-                </div>
-                <div class="items">
-                    <input type="text" id="sec" value="00">
-                    <label for="days">Seconds</label>
-                </div>
-            </div>
-        </div>
-    </div>
+
+  <main>
+    <div style="text-align: center; font-size: 12px; padding-top: 10px;">©️ Bhaskar Sah <br> October 27, 2024</div>
+    <h1 class="sticky">CYBER SECURITY<br><br>
+      <a class="icon" href="https://www.bhaskarsah.com.np" title="go home"><img src="https://i.postimg.cc/vTHGBZ4z/32bhome.png"></a>
+    </h1>
     
-</div>
+    <div class="warn" style="text-align: center; font-size: 18px;"></div>
+<div class="trigger"></div>
 
-<script>
-  Date.prototype.addDays = function(d) {
-    this.setTime(this.getTime() + d * 86400000);
-    return this;
-};
+<h1>Science and Technology</h1>
 
-function formatDate(date) {
-    const options = {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: true,
-    };
-    return date.toLocaleString('en-US', options);
-}
+<p>Technology and science are two intertwined subjects which not only defines our understanding towards the world but also enables certain applications. We think of science as the observation, experimentation and reasoning about things that happen in nature. It involves the study of physics, chemistry, biology and earth sciences. Each of those practices provides an exclusive perspective leading to our knowledge about the usual legal guidelines as well. Physics studies the rules of how matter and energy interact, while biology takes an in-depth look at life from cellular functions to habitats.</p>
 
-var time = new Date();
-time.addDays(2); 
+<p>In contrast, technology is the effective use of clinical understanding. It is anything that you design or build to help do tasks faster, better. In fact, science and technology have a symbiotic relationship: the advances made in some scientific fields call for new technological tools to exploit them fully and create additional avenues of research.</p>
 
+<br>
 
-var autoExtendedTime = formatDate(time);
-//const fixedEndTime = "11 October 2024 6:00 PM";
+<h1>Historical Context</h1>
 
+<p>This is the story of science and technology, of human creativity on steroids. Historically, ancient people such as the Egyptians and Greeks contributed much to mathematics, astronomy & engineering. Renaissance — This era saw revivial of science and led to ground breaking work on understanding human anatomy, physics and chemistry. Those serving this role include historical figures like Galileo Galilei and Isaac Newton, who established the norms of modern science with an empirical approach; only through combining experimentation with observation can we determine whether some idea is more or less probable.</p>
 
-const launchTime = autoExtendedTime;
-document.getElementById('launchTime').innerText = launchTime;
+<p>The 18th and 19th centuries truly are the golden ages of science-technology synergy, with its apex being the Industrial Revolution. Economies and societies were transformed by innovations like the steam engine, electricity, or mechanized manufacturing. This is also when scientific institutions emerged along with the professionalization of research and development, a phenomenon that led to great innovations in knowledge and technologies.</p>
 
-let daysEl = document.getElementById('days');
-let hoursEl = document.getElementById('hours');
-let minEl = document.getElementById('min');
-let scondsEl = document.getElementById('sec');
+<br>
 
-function timer(){
-    const end = new Date(launchTime);
-    const now = new Date();
-    const difference = (end - now) / 1000;
-    
-    if(difference < 0 ) return;
-    
+<h1>Modern Advances in Science and Technology</h1>
 
-    const days = Math.floor(difference / 3600 / 24);
-    const hours = Math.floor(difference / 3600) % 24;
-    const minutes = Math.floor(difference / 60 ) % 60;
-    const seconds = Math.floor(difference ) % 60;
+<p>Today we live in an age of technology and which has never been seen before. The digital revolution has transformed the way we communicate, educate ourselves and work. The internet, as a human invention has helped us create this network where we can access information from practically anywhere in the world or would it be galaxy? From social media platforms to e-commerce and online education, technology has revolutionized all aspects of our lives.</p>
+
+<p>Artificial intelligence (AI) is an example of technological innovation. These algorithms have the capability to digest extensive amounts of data, which has resulted in significant strides within natural language processing and image recognition or predictive analytics. AI applications are disrupting industries like healthcare (diagnosis, personalised treatments), finance (risk assessments, fraud detection).</p>
+
+<p>In addition, biotechnology has changed the face of medicine. The genomics and molecular biology fields have encountered tremendous gain with the availability of CRISPR gene editing technology for targeted modifications in DNA. This offers the prospects of treating genetic disorders, enhancing agricultural practices and eradicating diseases particularly cancer.</p>
+
+<br>
+
+<h1></h1>
 
 
-    daysEl.value = days;
-    hoursEl.value = hours;
-    minEl.value = minutes;
-    scondsEl.value = seconds;
-}
 
+</main>
+  
+<footer><h4>For Any Question Contact Me</h4>
+    <a href="/Contact.html">Contact me</a>
+    <div class="foottext">
+  <ol>
+  
+      </ol></div>
+</footer>
 
-setInterval(
-    () => {
-        timer()
-    },
-    1000
-)
-</script>
+<main>
+<div style="text-align: right; font-size: 20px; margin-bottom: 20px; margin-right: 20px; margin-top: -2rem"><button class="button button1" onclick="history.back()">Go Back</button></div>
+</main>
 
 </body>
 </html>
