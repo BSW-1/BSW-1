@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drak Web</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+/* RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #f1f1f1;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* TIMER STYLES */
+.timeContainer {
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeContainer .wrapper {
+  width: 800px;
+  padding: 20px
+  max-height: 400px;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.timeContainer .wrapper div {
+  color: #ccc;
+  text-align: center;
+  width: 24%;
+  height: 150px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.timeContainer .wrapper div:first-child{
+  background: #00A3D0;
+  color: white;
+}
+
+.timeContainer .wrapper div:nth-child(2){
+  background: #00A3D0;
+  color: white;
+}
+
+.timeContainer .wrapper div:nth-child(3){
+  background: #1C1C1C;
+  color: #fff;
+}
+
+.timeContainer .wrapper div:last-child{
+  background: #1C1C1C;
+  color: #fff;
+}
+
+.timeContainer .wrapper div h2 {
+  font-size: 4.4rem;
+}
+
+.circleDiv {
+  position: fixed;
+  z-index: -1;
+  top: calc(50% - 237px);
+  left: calc(-50% + 474px);
+  width: 474px;
+  height: 474px;
+  border-radius: 100%;
+  border: 6px dashed #00A3D0;
+  animation: rotatingCircle infinite linear 60s;
+}
+
+@keyframes rotatingCircle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* MOUSE TRAIL STYLE */
+#cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  pointer-events: none;
+  user-select: none;
+  backdrop-filter: invert(100%);
+}
+    </style>
+</head>
+<body>
+
+    <!-- MOUSE TRAIL -->
+<div id="cursor"></div>
+
+<!-- ROTATING CIRCLE-->
+<div class="circleDiv"></div>
+
+<!-- TIMER -->
+<section class="timeContainer">
+  <div class="wrapper">
+    <div class="days">
+      <h2 id="days">DD</h2>DAYS
+    </div>
+    <div class="hours">
+      <h2 id="hours">HH</h2>HOURS
+    </div>
+    <div class="minutes">
+      <h2 id="minutes">MM</h2>MINUTES
+    </div>
+    <div class="seconds">
+      <h2 id="seconds">SS</h2>SECONDS
+    </div>
+  </div>
+</section>
+
+
+    
+
+
+
+    <script>
+        // MOUSE TRAIL JS GSAP3
+document.addEventListener("mousemove", (ev) => {
+    const x = ev.clientX,
+      y = ev.clientY;
+  
+    // lag cursor behind mouse
+    gsap.to("#cursor", {
+      duration: (i) => 0.2 + i/10,
+      x,
+      y
+    });
+  });
+  
+  // TIMER JS
+  const __days = document.querySelector("#days")
+  const __hours = document.querySelector("#hours")
+  const __minutes = document.querySelector("#minutes")
+  const __seconds  = document.querySelector("#seconds")
+  
+  // Change the of this variable.
+  // ex: May 22 2024 18:00:00
+  // May 22, 2024 at 6PM
+  const newYearEnd = 'Jan 01 2025 00:00:00';
+  
+  function countdown(){
+      const newYearEndDate = new Date(newYearEnd);
+      const currentDate = new Date();
+  
+      const totalSeconds = (newYearEndDate-currentDate)/1000;
+      const days = Math.floor(totalSeconds / 3600 / 24);
+      const hours = Math.floor(totalSeconds / 3600 ) % 24;
+      const minutes = Math.floor(totalSeconds / 60 ) % 60;
+      const seconds = Math.floor(totalSeconds % 60);
+      
+      
+     __days.innerHTML =  formatTime(days);
+     __hours.innerHTML = formatTime(hours);
+     __minutes.innerHTML = formatTime(minutes);
+     __seconds.innerHTML = formatTime(seconds);
+      // console.log(seconds)
+      // console.log(minutes)
+      // console.log(hours)
+      
+  }
+  countdown();
+  
+  function formatTime(time){
+      return time < 10 ? `0${time}` : time;
+  }
+  
+  setInterval(countdown,1000);
+    </script>
+</body>
+</html>
