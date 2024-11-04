@@ -1,88 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3663278458751008"
-     crossorigin="anonymous"></script>
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TYFDVVX9W2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TYFDVVX9W2');
-</script>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secure Link Detector</title>
-    <link rel="icon" href="/Logo1 2.png" type="image/icon type">
-    
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
-            height: 100vh;        
-        }
+    <link rel="stylesheet" href="styles.css">
 
-        input[type="text"] {
-            width: 300px;
-            padding: 10px;
-            margin-right: 10px;
+    <style>
+        * {
+            box-sizing: border-box;
         }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f0f4f8, #e1e8ed);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 400px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        
         button {
-            padding: 10px 15px;
-            background-color: #28a745;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
             color: white;
             border: none;
+            border-radius: 6px;
+            font-size: 16px;
             cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
         }
+        
         button:hover {
-            background-color: #218838;
+            background-color: #0056b3;
+            transform: translateY(-2px);
         }
-        #result {
+        
+        .result {
             margin-top: 20px;
-            font-weight: bold;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .secure {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .insecure {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
         }
     </style>
-</head>
-<body>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3663278458751008"
-     crossorigin="anonymous"></script>
+</head>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3663278458751008"
+crossorigin="anonymous"></script>
 <!-- ad -->
 <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-3663278458751008"
-     data-ad-slot="2324050708"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+style="display:block"
+data-ad-client="ca-pub-3663278458751008"
+data-ad-slot="2324050708"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+(adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-    <h1>Secure Link Detector</h1>
-    <input type="text" id="urlInput" placeholder="Enter URL here">
-    <button onclick="checkSecureLink()">Check Link</button>
-    <div id="result"></div>
+<body>
+    <div class="container">
+        <h1>Secure Link Detector</h1>
+        <input type="text" id="urlInput" placeholder="Enter a URL (e.g., https://example.com)">
+        <button id="checkButton">Check Security</button>
+        <div id="result" class="result"></div>
+    </div>
+    <script src="script.js"></script>
 
     <script>
-        function checkSecureLink() {
-            const url = document.getElementById('urlInput').value;
+        document.getElementById('checkButton').addEventListener('click', function() {
+            const urlInput = document.getElementById('urlInput').value.trim();
             const resultDiv = document.getElementById('result');
-            if (url.startsWith('https://')) {
-                resultDiv.textContent = 'The link is secure.';
-                resultDiv.style.color = 'green';
-            } else {
-                resultDiv.textContent = 'The link is not secure.';
-                resultDiv.style.color = 'red';
+        
+            // Clear previous result
+            resultDiv.innerHTML = '';
+            resultDiv.className = 'result';
+        
+            // Validate URL format
+            const urlPattern = /^(https?:\/\/)/;
+            if (!urlPattern.test(urlInput)) {
+                resultDiv.innerHTML = 'Please enter a valid URL starting with http:// or https://';
+                resultDiv.className += ' insecure';
+                return;
             }
-        }
+        
+            // Check if the URL is secure (HTTPS)
+            if (urlInput.startsWith('https://')) {
+                resultDiv.innerHTML = 'This link is secure!';
+                resultDiv.className += ' secure';
+            } else {
+                resultDiv.innerHTML = 'This link is not secure. Consider using HTTPS.';
+                resultDiv.className += ' insecure';
+            }
+        });
     </script>
 
 </body>
