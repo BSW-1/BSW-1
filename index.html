@@ -23,18 +23,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <script type="application/ld+json">
-      {
-        "Context" : "https://bhaskarsah.com.np/"
-        "@type" : "WebSite"
-        "name" : "BSW"
-        "url" : "https://bhaskarsah.com.np/"
-      }
-    </script>
-
     <!-- title -->
     <title>BSW</title>
     <link rel="icon" href="/Logo1 2.png" type="image/icon type">
+
+    <script type="application/ld+json">
+      {
+        "@context" : "https://bhaskarsah.com.np",
+        "@type" : "WebSite",
+        "name" : "BSW,
+        "alternateName" : "BSW",
+        "url" : "https://bhaskarsah.com.np/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://bhaskarsah.com.np/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
     
 
     <!-- css -->
