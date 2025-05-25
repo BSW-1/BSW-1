@@ -1,975 +1,1306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3663278458751008"
-     crossorigin="anonymous"></script>
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CBZ0N600E4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CBZ0N600E4');
-</script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta content='IE=edge' http-equiv='X-UA-Compatible'/>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
-    <!-- title -->
-    <title>BSW</title>
-    <link rel="icon" href="/Logo1 2.png" type="image/icon type">
-
-    <script type="application/ld+json">
-      {
-        "@context" : "https://schema.org",
-        "@type" : "WebSite",
-        "name" : "BSW,
-        {"url" : "https://bhaskarsah.com.np/",
-        "logo": "https://www.bhaskarsah.com.np/Logo1 2.png"}
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://bhaskarsah.com.np/search?q={search_term_string}"
-          },
-          "query-input": "required name=search_term_string"
-        }
-      }
-    </script>
-    
-
-    <!-- css -->
-
+    <title>CyberWise - Your Tech Insights</title>
     <style>
-      html {
-  font-size: 62.5%;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* dispaly time and date */
-
-.header1{
-  font-family: "Lato", sans-serif;
-  background: white;
-  color: darkgoldenrod;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-}
-
-.fixed-header{
-  top: 0;
-}
-
-.display-date {
-  text-align: center;
-  top: 0%;
-  right: 47%;
-  position: absolute;
-  margin-bottom: 10px;
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-
-.display-time {
-  display: right;
-  position: absolute;
-  right: 30%;
-  font-size: 2rem;
-  font-weight: bold;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: ease-in-out 0.1s;
-  transition-property: background, box-shadow, color;
-  -webkit-box-reflect: below 2px
-    linear-gradient(transparent, rgba(255, 255, 255, 0.05));
-}
-
-.display-time:hover {
-  background: #ffd868;
-  box-shadow: 0 0 30px#ffd868;
-  color: #272727;
-  cursor: pointer;
-}
-
-/* upper header */
-
-header {
-  margin: 0;
-  padding: 0;
-  height: 35vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  font-family: Arial, sans-serif;
-  font-size: x-small;
-}
-
-
-.menu ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 20px;
-}
-
-.menu ul li {
-  position: relative;
-}
-
-.menu ul li a {
-  display: block;
-  padding: 10px 20px;
-  border: 2px solid #2e8b57;
-  border-radius: 20px;
-  color: #2e8b57;
-  text-decoration: none;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  transition: color 0.3s;
-}
-
-.menu ul li a::before {
-  content: "";
-  position: left;
-  top: 0%;
-  left: 0%;
-  width: 300%;
-  height: 300%;
-  background-color: #2e8b57;
-  transition: all 0.3s;
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  z-index: -1;
-  filter: blur(20px);
-}
-
-.menu ul li:hover a::before,
-.menu ul li.active a::before {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.menu ul li:hover a,
-.menu ul li.active a {
-  color: white;
-}
-
-.menu ul li.active a {
-  color: white;
-}
-
-.menu ul li a:hover {
-  color: white;
-}
-
-.menu ul li:hover a::before {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-/* nepal logo */
-
-.logo1
-{
-  position: absolute;
-  right: 0%;
-  top: 6%;
-  transform: translate(-50%, -50%);
-}
-
-/* web logo */
-
-.logo
-{
-  position: absolute;
-  left:20%;
-  top: 14%;
-  transform: translate(-50%, -50%);
-  font-size: xx-large;
-  color: #272727;
-}
-
-body {
-font-family: 'Roboto', Arial, sans-serif;
-}
-
-/* search box */
-
-.container{
-	position: absolute;
-	top: 20%;
-	left: 45%;
-	transform: translate(-50%,-50%);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-input, button{
-	border: none;
-	background: none;
-	outline: none;
-  padding: 0px;
-}
-
-button{
-	cursor: pointer;
-}
-
-.search-box{
-	display: flex;
-	background: white;
-	border-radius: 50px;
-}
-
-.search-box-input{
-	width: 0px;
-	font-size: 14px;
-	color: black;
-	transition: .5s;
-}
-
-.search-box-btn{
-
-	display: contents;
-  font-size: large;
-	border-radius: 50%;
-	width: 3em;
-	height: 3em;
-	background: white;
-	transition: .3s;
-}
-.search-box-icon{
-	margin: auto;
-	color: white;
-  font-weight: bold;
-}
-.search-box-input::placeholder{
-	color: black;
-	opacity: .7;
-}
-.search-box:hover .search-box-input{
-	padding-left: 2em;
-	padding-right: 1em;
-	width: 340px;
-}
-.search-box-btn:active{
-	transform: scale(.75);
-}
-
-
-    /* social media */
-
-.social ul{
-    position: relative;
-    display:flex;
-    flex-direction: verticle;
-    transform-style: preserve-3d;
-    right: -500px;
-    top: 35%;
-}
-
-.social ul li{
-    position: relative;
-    list-style: none;
-    width: 50px;
-    height: 50px;
-    margin: 1px 0px;
-}
-
-.social ul li::after{
-    content: '';
-    position: absolute;
-    left:-5px;
-    align-items: flex-end;
-    bottom: 0px;
-    width: 5px;
-    height: 100%;
-    background: #3f3f3f;
-    transform-origin: right;
-    transform: skewY(-15deg);
-}
-
-.social ul li span{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    background: #303030;
-    color: #9452ff77;
-    font-size: 30px !important;
-
-}
-
-.social ul li:hover span{
-    z-index: 10;
-    transition: 0.5s;
-    transition-timing-function: ease-out;
-    color: #fff;
-    box-shadow: -1px 1px 1px #f1f1f17e;
-}
-.social ul li:hover span:nth-child(1){
-    box-shadow: 0px 0px 0px !important;
-    background: #333 !important;
- }
-
- .social ul li:hover span:nth-child(2){
-    transform: translate(5px, -3px);
-    opacity: 0.2;
-}
-.social ul li:hover span:nth-child(3){
-    transform: translate(10px, -6px);
-    opacity: 0.4;
-
-}
-.social ul li:hover span:nth-child(4){
-    transform:translate(15px, -9px);
-    opacity: 0.6;
-
-}
-.social ul li:hover span:nth-child(5){
-    transform:translate(20px, -12px);
-    opacity: 0.8;
-
-}
-.social ul li:hover span:nth-child(6){
-    transform:translate(25px, -15px);
-    opacity: 1;
-}
-
-.social ul li:nth-child(1):hover span{
-    background: #3B5998;
-}
-
-.social ul li:nth-child(2):hover span{
-    background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
-}
-
-.social ul li:nth-child(3):hover span{
-    background: black;
-}
-
-hr {
-  height: 10px;
-  background-image: url(https://missymjwrites.neocities.org/IMAGES/Wavy%20Line%20Black.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  border: none;
-  width: 675px;
-  padding: 8px;
-  display: block;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  background-size: contain;
-}
-
-
-/* Cookies Consent Notice */
-.TW{position:fixed;right:0;left:0;bottom:-600px;z-index:50;width:100%;padding:20px;background:rgba(255, 255, 255, 1);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px); border: 3px solid #000000; border-radius:15px 15px 0 0;box-shadow:0 -10px 25px -5px rgba(0,0,0,.1);align-items:center;justify-content:center;text-align:center;animation:ckUp 2.5s forwards;animation-delay:1s;-webkit-animation:ckUp 2.5s forwards;-webkit-animation-delay:1s;}.TW.acptd{animation:ckDn 2.5s backwards;animation-delay:.3s;-webkit-animation:ckDn 2.5s backwards;-webkit-animation-delay:.3s}
-.TW.k2hide{display:none}.TW .TW-Main svg{width:50px;height:50px;fill:#08102b;stroke:#08102b;stroke-width:.8} .TW-Main h2{margin:0;color:#08102b;font-size:1.5rem;font-weight:800;font-family:inherit}
-.TW-Main p{margin:10px 0;line-height:1.7em;color:#08102b;font-size:0.9rem;font-weight:400;font-family:inherit} .TW .C-button{display:inline-flex;align-items:center;margin:0;padding:10px 15px;outline:0;border:0;border-radius:2px;line-height:20px;color:#ffffff;background-color:#000000;font-size:15px;font-family:inherit;text-decoration:none;white-space:nowrap;overflow:k2hide;max-width:100%;cursor:pointer;transition:all 0.3s ease} .TW .C-button:hover{opacity:.8;transform:scale(0.97)}.TW .C-button.outl{color:#08102b;margin-left:8px;background-color:transparent;border:1px solid #767676} .TW .C-button.outl:hover{border-color:#482dff} .dark .TW{background:rgba(50, 50, 50, 0.8)} .dark .TW .TW-Main svg{fill:#fefefe;stroke:#fefefe} .dark .TW-Main h2, .dark .TW-Main p, .dark .C-button.outl{color:#fefefe}
-@media screen and (min-width:768px){.TW{max-width:450px;border-radius:10px;left:auto;right:30px;bottom:-500px;box-shadow:0 5px 35px rgba(0,0,0,.1);animation:ckdeskUp 2.5s forwards;animation-delay:1s;-webkit-animation:ckdeskUp 2.5s forwards;-webkit-animation-delay:1s}.TW.acptd{animation:ckdeskDn 2.5s backwards;animation-delay:.3s;-webkit-animation:ckdeskDn 2.5s backwards;-webkit-animation-delay:0.3s}}
-@-webkit-keyframes ckUp{100%{bottom:0}} @keyframes ckUp{100%{bottom:0}} @-webkit-keyframes ckdeskUp{100%{bottom:30px}} @keyframes ckdeskUp{100%{bottom:30px}} @-webkit-keyframes ckDn{0%{bottom:0}100%{bottom:-600px}} @keyframes ckDn{0%{bottom:0}100%{bottom:-600px}} @-webkit-keyframes ckdeskDn{0%{bottom:30px}100%{bottom:-600px}} @keyframes ckdeskDn{0%{bottom:30px}100%{bottom:-600px}}
-
-     /* verticle side navbar */
-
-:root {
-            --primary-color: #4a90e2;
-            --bg-color: #f4f7fa;
-            --text-color: #333;
-            --sidebar-bg: #ffffff;
-            --sidebar-hover: #e6f0ff;
+        /* --- Global Reset & Basic Styling --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: white;
-            color: black;
+            background-color: #f4f7f6;
+            color: #333;
+            transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            line-height: 1.6;
         }
-        
-        .sidebar {
-            height: 100%;
-            width: 250px;
-            position: absolute;
-            z-index: 1;
-            top: 22%;
+
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #f1f1f1;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Prevents bottom space under images */
+        }
+
+        /* --- Loading Effect --- */
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
             left: 0;
-            background-color: var(--sidebar-bg);
-            overflow-x: hidden;
-            transition: 0.3s;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.7s ease-out, visibility 0.7s ease-out;
+        }
+
+        body.dark-mode .loader-wrapper {
+            background-color: #1a1a1a;
+        }
+
+        .loader-logo {
+            font-size: 4.5em;
+            font-weight: bold;
+            color: #3498db;
+            animation: pulseCW 1.5s infinite ease-in-out;
+            margin-bottom: 15px;
+        }
+        body.dark-mode .loader-logo {
+            color: #50fa7b;
+        }
+
+        @keyframes pulseCW {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+
+        .loader-quote {
+            font-size: 0.95em;
+            color: #777;
+            font-style: italic;
+            max-width: 70%;
+            text-align: center;
+            min-height: 20px;
+        }
+        body.dark-mode .loader-quote {
+            color: #aaa;
+        }
+
+        .loaded .loader-wrapper {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* --- Header & Navigation --- */
+        .site-header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), top 0.3s ease-in-out, box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .site-header.header-hidden {
+            top: -160px; 
+        }
+
+
+        body.dark-mode .site-header {
+            background-color: #2c2c2c;
+            box-shadow: 0 2px 5px rgba(255,255,255,0.05);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .logo-container .logo-text {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3498db;
+            transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        body.dark-mode .logo-container .logo-text {
+            color: #50fa7b;
+        }
+        .logo-container .logo-subtext {
+            font-size: 0.8em;
+            color: #777;
+            transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        body.dark-mode .logo-container .logo-subtext {
+            color: #aaa;
+        }
+
+         /* MODIFICATION: Style for the flag image in the logo container */
+        .logo-container img {
+            display: inline-block; 
+            vertical-align: middle; 
+            margin-left: 8px;       
+            height: 35px;           
+            width: 35px;            
+        }
+
+        .top-bar {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+        }
+
+        .date-time-container {
+            font-size: 0.9em;
+            color: #555;
+            text-align: right;
+            transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        body.dark-mode .date-time-container {
+            color: #ccc;
+        }
+
+        .controls-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .dark-mode-toggle {
+            background: none;
+            border: 1px solid #ccc;
+            color: #333;
+            padding: 6px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background-color 0.3s, border-color 0.3s;
+            width: 40px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .dark-mode-toggle svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            fill: #333;
+        }
+
+        .dark-mode-toggle .moon-icon {
+            display: none;
+        }
+
+        body.dark-mode .dark-mode-toggle {
+            background-color: #444;
+            border-color: #555;
+        }
+
+        body.dark-mode .dark-mode-toggle .sun-icon {
+            display: none;
+        }
+        body.dark-mode .dark-mode-toggle .moon-icon {
+            display: block;
+            fill: #f1f1f1;
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: #e0e0e0;
+        }
+        body.dark-mode .dark-mode-toggle:hover {
+            background-color: #555;
+        }
+
+
+        .main-nav {
+            margin-top: 15px;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+            transition: border-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        body.dark-mode .main-nav {
+            border-top: 1px solid #3a3a3a;
+        }
+
+        .main-nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            position: relative;
+        }
+
+        .main-nav ul li {
+            position: relative;
+        }
+
+        .main-nav ul li a {
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .main-nav ul li a:hover, .main-nav ul li a.active {
+            background-color: #3498db;
+            color: #fff;
+        }
+        body.dark-mode .main-nav ul li a:hover,
+        body.dark-mode .main-nav ul li a.active {
+            background-color: #50fa7b;
+            color: #1a1a1a;
+        }
+
+        .main-nav .dropdown-arrow {
+            font-size: 0.7em;
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+        .main-nav li:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .main-nav ul ul.dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 0 0 5px 5px;
+            padding: 5px 0;
+            min-width: 180px;
+            z-index: 1100;
+            flex-direction: column;
+            gap: 0;
+            transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        body.dark-mode .main-nav ul ul.dropdown-menu {
+            background-color: #2c2c2c;
+            box-shadow: 0 4px 8px rgba(255,255,255,0.08);
+        }
+
+        .main-nav ul li:hover > ul.dropdown-menu {
+            display: flex;
+        }
+
+        .main-nav ul ul.dropdown-menu li {
+            width: 100%;
+        }
+
+        .main-nav ul ul.dropdown-menu li a {
+            padding: 10px 15px;
+            border-radius: 0;
+            font-size: 0.95em;
             white-space: nowrap;
         }
-        .sidebar-header {
-            padding: 20px;
-            display: flex;
-            font-size: medium;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #e0e0e0;
+        .main-nav ul ul.dropdown-menu li a:hover {
+            background-color: #e9ecef;
+            color: #333;
         }
-        .sidebar-header h3 {
-            margin: 0;
-            font-size: 1.2em;
-            color: var(--primary-color);
+        body.dark-mode .main-nav ul ul.dropdown-menu li a:hover {
+            background-color: #3a3a3a;
+            color: #f1f1f1;
         }
-        .toggle-btn {
+
+
+        .mobile-nav-toggle {
+            display: none;
+            font-size: 1.8em;
             background: none;
             border: none;
-            color: var(--text-color);
-            font-size: 20px;
             cursor: pointer;
-            transition: 0.2s;
-            align-items: end;
+            color: #333;
+            transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
-        .toggle-btn:hover {
-            color: var(--primary-color);
+        body.dark-mode .mobile-nav-toggle {
+            color: #f1f1f1;
         }
-        .sidebar a {
-            padding: 15px 25px;
-            text-decoration: none;
-            font-size: 16px;
-            color: var(--text-color);
+
+
+        /* --- Search Bar Area --- */
+        .search-area {
+            padding: 30px 0;
+            background-color: #e9ecef;
+            text-align: center;
+            transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        body.dark-mode .search-area {
+            background-color: #252525;
+        }
+
+        .search-container {
+            position: relative;
+            width: 70%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 15px 20px;
+            padding-right: 50px;
+            font-size: 1.1em;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            outline: none;
+            transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode .search-bar {
+            background-color: #333;
+            border-color: #555;
+            color: #f1f1f1;
+        }
+        .search-bar:focus {
+            border-color: #3498db;
+        }
+        body.dark-mode .search-bar:focus {
+            border-color: #50fa7b;
+        }
+
+        .search-icon-svg {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            fill: #777;
+            cursor: pointer;
+            transition: fill 0.3s;
+        }
+        body.dark-mode .search-icon-svg {
+            fill: #aaa;
+        }
+
+        .suggestions-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 99;
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+            transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        body.dark-mode .suggestions-dropdown {
+            background-color: #2c2c2c;
+            border-color: #444;
+        }
+        .suggestions-dropdown div {
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .suggestions-dropdown div:hover {
+            background-color: #f0f0f0;
+        }
+        body.dark-mode .suggestions-dropdown div:hover {
+            background-color: #3a3a3a;
+        }
+
+
+        /* --- Blog Posts --- */
+        .blog-posts-section {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: #3498db;
+            transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        body.dark-mode .section-title {
+            color: #50fa7b;
+        }
+
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .post-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        body.dark-mode .post-card {
+            background-color: #2c2c2c;
+            box-shadow: 0 4px 15px rgba(255,255,255,0.05);
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+        body.dark-mode .post-card:hover {
+            box-shadow: 0 6px 20px rgba(255,255,255,0.1);
+        }
+
+        .post-thumbnail img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .post-content {
+            padding: 20px;
+        }
+
+        .post-category {
+            display: inline-block;
+            background-color: #3498db;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 0.8em;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode .post-category {
+            background-color: #50fa7b;
+            color: #1a1a1a;
+        }
+
+        .post-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #333; /* Will be overridden by body.dark-mode if active */
+            transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .post-title a {
+             color: inherit; /* Ensure title link inherits color */
+        }
+        body.dark-mode .post-title {
+            color: #f1f1f1;
+        }
+
+
+        .post-meta {
+            font-size: 0.85em;
+            color: #777;
+            margin-bottom: 15px;
+            transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        body.dark-mode .post-meta {
+            color: #aaa;
+        }
+
+        .post-excerpt {
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            color: #555;
+            transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        body.dark-mode .post-excerpt {
+            color: #ccc;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .read-more-btn:hover {
+            background-color: #555;
+        }
+        body.dark-mode .read-more-btn {
+            background-color: #f1f1f1;
+            color: #1a1a1a;
+        }
+        body.dark-mode .read-more-btn:hover {
+            background-color: #ddd;
+        }
+
+        /* --- Footer --- */
+        /* Resetting previous footer styles that might conflict */
+        .site-footer .footer-content { /* Old class, ensure it doesn't interfere if not removed from HTML */
+            display: block; /* Or whatever is appropriate if it's still in use elsewhere, for now, we target new classes */
+        }
+        .site-footer .social-media-links { /* Old class */
+            margin-bottom: 0;
+        }
+        .site-footer .footer-copyright { /* Old class */
+            font-size: inherit;
+        }
+
+        /* New Footer Styles */
+        .site-footer {
+            background-color: #222222; /* Dark background like Check Point */
+            color: #adb5bd; /* Light grey text */
+            padding: 50px 0 0; /* More padding at the top, no bottom padding here as bottom-bar will have it */
+            text-align: left; /* Align text to left for columns */
+            transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        body.dark-mode .site-footer {
+            background-color: #111111; /* Even darker for dark mode */
+            color: #9fa8b3;
+        }
+
+        .footer-main-content.container {
+            padding-bottom: 40px; /* Space before the bottom bar */
+        }
+
+        .footer-columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px; /* Gap between columns */
+            justify-content: space-between;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px; /* Minimum width for columns before they wrap */
+            margin-bottom: 30px; /* Space for columns on mobile when they stack */
+        }
+
+        .footer-column h4 {
+            color: #ffffff;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        body.dark-mode .footer-column h4 {
+            color: #f8f9fa;
+        }
+
+
+        .footer-column ul {
+            padding-left: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #adb5bd; /* Link color */
+            font-size: 0.95em;
+            transition: color 0.3s ease;
+        }
+        body.dark-mode .footer-column ul li a {
+            color: #9fa8b3;
+        }
+
+        .footer-column ul li a:hover {
+            color: #3498db; /* CyberWise primary color on hover */
+        }
+        body.dark-mode .footer-column ul li a:hover {
+            color: #50fa7b; /* CyberWise dark mode primary color on hover */
+        }
+
+        .footer-bottom-bar {
+            background-color: #1c1c1c; /* Slightly different shade for separation */
+            padding: 20px 0;
+            border-top: 1px solid #333; /* Subtle top border */
+        }
+        body.dark-mode .footer-bottom-bar {
+            background-color: #0a0a0a;
+            border-top: 1px solid #2a2a2a;
+        }
+
+        .footer-bottom-bar .container { /* Re-using .container for width */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-socials {
             display: flex;
             align-items: center;
-            transition: 0.2s;
+            gap: 10px;
         }
-        .sidebar a:hover {
-            background-color: var(--sidebar-hover);
-            color: var(--primary-color);
+        .footer-socials span {
+            font-size: 0.9em;
+            color: #ffffff;
+            margin-right: 5px;
         }
-        .sidebar a i {
-            min-width: 30px;
-            font-size: medium;
+        body.dark-mode .footer-socials span {
+            color: #f1f1f1;
         }
-        #main {
-            transition: margin-left .3s;
-            padding: 20px;
-            margin-left: 250px;
+
+        .footer-socials a svg {
+            width: 24px; /* Slightly smaller for a cleaner look */
+            height: 24px;
+            fill: #adb5bd;
+            transition: fill 0.3s ease;
         }
-        .sidebar.closed {
-            width: 70px;
+        body.dark-mode .footer-socials a svg {
+            fill: #9fa8b3;
         }
-        .sidebar.closed .sidebar-header h3 {
-            display: none;
+        .footer-socials a:hover svg {
+            fill: #3498db;
         }
-        .sidebar.closed a span {
-            display: none;
+        body.dark-mode .footer-socials a:hover svg {
+            fill: #50fa7b;
         }
-        .sidebar.closed ~ #main {
-            margin-left: 70px;
+
+        .footer-legal {
+            text-align: right;
+        }
+
+        .footer-copyright { /* This is the new copyright class used in the new HTML */
+            font-size: 0.85em;
+            margin-bottom: 5px;
+            color: #adb5bd;
+        }
+        body.dark-mode .footer-copyright {
+            color: #9fa8b3;
         }
 
 
+        .footer-legal-links {
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end; /* Align to right on larger screens */
+        }
 
-        @media screen and (max-width: 768px) {
-            .sidebar {
-                width: 70px;
+        .footer-legal-links a {
+            font-size: 0.85em;
+            color: #adb5bd;
+            transition: color 0.3s ease;
+        }
+        body.dark-mode .footer-legal-links a {
+            color: #9fa8b3;
+        }
+        .footer-legal-links a:hover {
+            color: #3498db;
+        }
+        body.dark-mode .footer-legal-links a:hover {
+            color: #50fa7b;
+        }
+
+
+        /* --- Responsive Design --- */
+        @media (max-width: 992px) {
+            .posts-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
-            .sidebar .sidebar-header h3 {
-                display: none;
+            .search-container {
+                width: 85%;
             }
-            .sidebar a span {
-                display: none;
+            .footer-columns {
+                justify-content: flex-start; /* Align columns to start on medium screens */
             }
-            #main {
-                margin-left: 70px;
+            .footer-column {
+                min-width: calc(50% - 15px); /* Two columns layout */
+                flex-basis: calc(50% - 15px);
             }
-            .sidebar.open {
-                width: 250px;
+        }
+
+        @media (max-width: 768px) {
+            .loader-logo {
+                font-size: 3.5em;
+                margin-bottom: 10px;
             }
-            .sidebar.open .sidebar-header h3 {
+            .loader-quote {
+                font-size: 0.85em;
+                max-width: 85%;
+                min-height: 30px;
+            }
+
+            .header-content {
+                flex-wrap: wrap; /* Allow items to wrap */
+                /* align-items: flex-start; */ /* Align items to the start */
+            }
+
+            .logo-container {
+                 margin-bottom: 0; /* Reset margin if any */
+                 width: auto; /* Allow natural width */
+                 /* flex-grow: 1; */ /* Allow logo to take available space if needed */
+            }
+            .top-bar {
+                /* order: 2; */ /* Ensure it's correctly positioned */
+                margin-left: auto; /* Push to the right */
+                 align-items: flex-end; /* Align its content to the right */
+            }
+
+
+            .mobile-nav-toggle {
                 display: block;
+                order: -1; /* Make it appear first in visual order for flex */
+                margin-right: 15px; /* Space between toggle and logo */
             }
-            .sidebar.open a span {
-                display: inline;
+             .logo-container { order: 0; flex-grow: 1;} /* Logo next */
+             .controls-container { order: 1; } /* Controls after logo */
+
+
+            .main-nav {
+                width: 100%;
+                border-top: none;
+                margin-top: 0;
+                position: absolute;
+                top: calc(100% + 1px); /* Position below the header content area */
+                left: 0;
+                background-color: #fdfdfd; /* Fallback, will be overridden by dark mode */
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                z-index: 999; /* Ensure it's above content but below sticky header if it detaches */
             }
-            .sidebar.open ~ #main {
-                margin-left: 250px;
+            .main-nav ul {
+                display: none; /* Hidden by default */
+                flex-direction: column;
+                width: 100%;
+                padding: 10px 0;
+            }
+            body.dark-mode .main-nav {
+                background-color: #222; /* Dark mode background for mobile nav */
+            }
+            .main-nav ul.active { /* Class to show mobile nav */
+                display: flex;
+            }
+            .main-nav ul li {
+                text-align: center;
+                width: 100%;
+            }
+            .main-nav ul li a {
+                display: block; /* Make links take full width */
+                padding: 12px 15px;
+                border-bottom: 1px solid #eee;
+                justify-content: center;
+            }
+            body.dark-mode .main-nav ul li a {
+                border-bottom: 1px solid #3a3a3a;
+            }
+            .main-nav ul li:last-child a {
+                border-bottom: none;
             }
 
+            .main-nav .dropdown-arrow {
+                display: inline-block; /* Ensure arrow is visible */
+            }
+            .main-nav ul ul.dropdown-menu { /* Mobile dropdown */
+                position: static; /* No absolute positioning */
+                display: none; /* Hidden by default */
+                box-shadow: none;
+                padding: 0;
+                background-color: rgba(0,0,0,0.05); /* Slightly different background */
+                border-radius: 0;
+                min-width: auto;
+            }
+            body.dark-mode .main-nav ul ul.dropdown-menu {
+                 background-color: rgba(255,255,255,0.05);
+            }
+            .main-nav ul ul.dropdown-menu.open { /* Class to show mobile dropdown */
+                display: flex;
+            }
+            .main-nav ul ul.dropdown-menu li a {
+                padding: 10px 25px; /* Indent dropdown items */
+                font-size: 0.9em;
+                border-bottom: 1px solid #e0e0e0; /* Separator for dropdown items */
+            }
+             body.dark-mode .main-nav ul ul.dropdown-menu li a {
+                border-bottom: 1px solid #4a4a4a;
+            }
+            .main-nav ul ul.dropdown-menu li:last-child a {
+                border-bottom: none;
+            }
+
+
+            .site-header.header-hidden {
+                top: -220px; /* Adjust based on actual header height on mobile */
+            }
+
+            .posts-grid {
+                grid-template-columns: 1fr;
+            }
+            .search-container {
+                width: 95%;
+            }
+            .post-thumbnail img {
+                height: 220px;
+            }
+            .section-title {
+                font-size: 1.8em;
+            }
+
+            /* Footer responsiveness for mobile */
+            .footer-columns {
+                flex-direction: column; /* Stack columns */
+                gap: 0; /* Remove gap as margin-bottom on column handles it */
+            }
+            .footer-column {
+                min-width: 100%; /* Full width for stacked columns */
+                margin-bottom: 30px;
+            }
+            .footer-column:last-child {
+                margin-bottom: 0;
+            }
+            .footer-bottom-bar .container {
+                flex-direction: column; /* Stack bottom bar items */
+                align-items: center; /* Center align items */
+                text-align: center;
+            }
+            .footer-socials {
+                order: 1; /* Social icons first in mobile stacked view */
+                margin-bottom: 15px;
+            }
+            .footer-legal {
+                order: 2; /* Legal info second */
+                text-align: center;
+            }
+            .footer-legal-links {
+                justify-content: center; /* Center legal links */
+                margin-top: 10px;
+            }
         }
-        
-
-        /* blog content */
-
-        :root {
-  --clr-gray-light: #d7dfe2;
-  --clr-gray-med: #616b74;
-  --clr-gray-dark: #414b56;
-  --clr-link: #4d97b2;
-  --clr-popular: #ef257a;
-  --clr-technology: #651fff;
-  --clr-psychology: #e85808;
-}
-
-    
-* {
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  margin: 2rem;
-  color: var(--clr-gray-dark);
-}
-
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.card {
-  overflow: hidden;
-  box-shadow: 0px 2px 20px var(--clr-gray-light);
-  background: white;
-  border-radius: 0.5rem;
-  position: relative;
-  width: 400px;
-  margin: 1rem;
-  transition: 250ms all ease-in-out;
-  cursor: pointer;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 2px 40px var(--clr-gray-light);
-}
-
-.banner-img {
-  position: absolute;
-  object-fit: cover;
-  height: 20rem;
-  width: 100%;
-}
-
-.category-tag {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: white;
-  background: yellowgreen;
-  padding: 0.5rem 1.3rem 0.5rem 1rem;
-  text-transform: uppercase;
-  position: absolute;
-  z-index: 1;
-  top: 1rem;
-  border-radius: 0 2rem 2rem 0;
-}
-
-.cyber-security {
-  background: var(--clr-cyber-security);
-}
-
-.science-and-technology {
-  background: var(--clr-science-and-technology);
-}
-
-.dark-web {
-  background: var(--clr-dark-web);
-}
-
-
-.card-body {
-  margin: 22rem 1.5rem 1.5rem 1.5rem;
-}
-
-.blog-hashtag {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--clr-link);
-}
-
-.blog-title {
-  line-height: 1.5rem;
-  margin: 1rem 0 0.5rem;
-}
-
-.blog-description {
-  color: var(--clr-gray-med);
-  font-size: 1.2rem;
-}
-
-.card-profile {
-  display: flex;
-  margin-top: 2rem;
-  align-items: center;
-}
-
-.profile-img {
-  width: 45px;
-  height: 45px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.card-profile-info {
-  margin-left: 1rem;
-}
-
-.profile-name {
-  font-size: 1rem;
-}
-
-.profile-followers {
-  color: var(--clr-gray-med);
-  font-size: 0.9rem;
-}
-
-  
     </style>
-
 </head>
+<body>
 
-<!-- header -->
-<meta content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5" name="viewport">
-
-<!-- dispaly date and time -->
-
-<div>
-  <div class="header1">
-      <div class="display-date">
-        <span id="day">day</span>,
-        <span id="daynum">00</span>
-        <span id="month">month</span>
-        <span id="year">0000</span>
-      </div>
-      <div class="display-time"></div>
+    <div class="loader-wrapper">
+        <div class="loader-logo">CW</div>
+        <div class="loader-quote" id="loaderQuote">Securing your digital world, one insight at a time.</div>
     </div>
 
-    <!-- nepal logo -->
-
-  <div class="logo1">
-      <img src="/Nepal flag.gif" height="70" alt="">
-  </div> 
-
-
-   <!-- upper menu  -->
-  <header>
-
-    <!-- search box  -->
-
-
-    <div class="container">
-      <div class="search-box">
-          <input type="text" class="search-box-input" placeholder="Search Engine">
-          <button class="search-box-btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
-      </div>
-  </div>
-
-    <!-- social media -->
-
-    <script src="https://kit.fontawesome.com/a9b2082fbc.js" crossorigin="anonymous"></script>
-  <nav class="social">
-    <ul><li><a href="https://www.facebook.com/bhaskar.sah.5621?mibextid=ZbWKwL" target="_main">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span class="fa fa-facebook"></span>
-    </a></li>
-    <li><a href="https://www.instagram.com/bha__s__kar_" target="_main">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span class="fa fa-instagram"></span>
-    </a></li>
-    <li><a href="https://x.com/wasu462" target="_main">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span><i class="fa-brands fa-x-twitter"></i></span>
-    </a></li>
-    </ul>
-  </nav>  
-
-  
-
-  
-  </header>
-
-  	<!--[ Cookies Consent Notice ]-->
-<div class='TW TWhide' id='TW_box'>
-	<div class='TW-Main'>
-	  <svg viewbox='0 0 50 50'><path d='M 25 4 C 13.414063 4 4 13.414063 4 25 C 4 36.585938 13.414063 46 25 46 C 36.585938 46 46 36.585938 46 25 C 46 24.378906 45.960938 23.78125 45.910156 23.203125 C 45.878906 22.855469 45.671875 22.546875 45.359375 22.390625 C 45.042969 22.234375 44.671875 22.253906 44.375 22.441406 C 43.824219 22.792969 43.191406 23 42.5 23 C 41.015625 23 39.769531 22.082031 39.253906 20.792969 C 39.148438 20.527344 38.933594 20.320313 38.667969 20.222656 C 38.398438 20.125 38.101563 20.144531 37.847656 20.28125 C 37.003906 20.738281 36.035156 21 35 21 C 31.675781 21 29 18.324219 29 15 C 29 13.964844 29.261719 12.996094 29.71875 12.152344 C 29.855469 11.898438 29.875 11.601563 29.777344 11.332031 C 29.679688 11.066406 29.472656 10.851563 29.207031 10.746094 C 27.917969 10.230469 27 8.984375 27 7.5 C 27 6.808594 27.207031 6.175781 27.558594 5.625 C 27.746094 5.328125 27.765625 4.957031 27.609375 4.640625 C 27.453125 4.328125 27.144531 4.121094 26.796875 4.089844 C 26.21875 4.039063 25.621094 4 25 4 Z M 38 4 C 36.894531 4 36 4.894531 36 6 C 36 7.105469 36.894531 8 38 8 C 39.105469 8 40 7.105469 40 6 C 40 4.894531 39.105469 4 38 4 Z M 25 6 C 25.144531 6 25.292969 6.015625 25.4375 6.023438 C 25.285156 6.519531 25 6.953125 25 7.5 C 25 9.4375 26.136719 10.984375 27.660156 11.960938 C 27.269531 12.90625 27 13.917969 27 15 C 27 19.40625 30.59375 23 35 23 C 36.082031 23 37.09375 22.730469 38.039063 22.339844 C 39.015625 23.863281 40.5625 25 42.5 25 C 43.046875 25 43.480469 24.714844 43.980469 24.5625 C 43.984375 24.707031 44 24.855469 44 25 C 44 35.503906 35.503906 44 25 44 C 14.496094 44 6 35.503906 6 25 C 6 14.496094 14.496094 6 25 6 Z M 36.5 12 C 35.671875 12 35 12.671875 35 13.5 C 35 14.328125 35.671875 15 36.5 15 C 37.328125 15 38 14.328125 38 13.5 C 38 12.671875 37.328125 12 36.5 12 Z M 21.5 15 C 20.671875 15 20 15.671875 20 16.5 C 20 17.328125 20.671875 18 21.5 18 C 22.328125 18 23 17.328125 23 16.5 C 23 15.671875 22.328125 15 21.5 15 Z M 45 15 C 44.449219 15 44 15.449219 44 16 C 44 16.550781 44.449219 17 45 17 C 45.550781 17 46 16.550781 46 16 C 46 15.449219 45.550781 15 45 15 Z M 15 20 C 13.34375 20 12 21.34375 12 23 C 12 24.65625 13.34375 26 15 26 C 16.65625 26 18 24.65625 18 23 C 18 21.34375 16.65625 20 15 20 Z M 24.5 24 C 23.671875 24 23 24.671875 23 25.5 C 23 26.328125 23.671875 27 24.5 27 C 25.328125 27 26 26.328125 26 25.5 C 26 24.671875 25.328125 24 24.5 24 Z M 17 31 C 15.894531 31 15 31.894531 15 33 C 15 34.105469 15.894531 35 17 35 C 18.105469 35 19 34.105469 19 33 C 19 31.894531 18.105469 31 17 31 Z M 30.5 32 C 29.121094 32 28 33.121094 28 34.5 C 28 35.878906 29.121094 37 30.5 37 C 31.878906 37 33 35.878906 33 34.5 C 33 33.121094 31.878906 32 30.5 32 Z'/></svg>
-	  <h2><b>Cookies Consent</b></h2>
-	  <p><h3>This website uses cookies to offer you a better Browsing Experience. By using our website, You agree to the use of Cookies</h3></p>
-	</div>
-	<button class='C-button' id='Cookie_btn'>Accept Cookies!</button>
-	
-  </div>
-  <body>
-    
-    <!-- web logo -->
-
-    <div class="logo">
-      <img src="/Logo1 2.png" height="35" alt=""><big>BSW</big>
-    </div>
-    
-    <!-- side bar menu -->
-
-    <div id="mySidebar" class="sidebar">
-      <div class="sidebar-header">
-          <h3>Web Platform</h3>
-          <button class="toggle-btn" onclick="toggleNav()">
-            <i class="fa-solid fa-bars-staggered"></i>
-          </button>
-      </div>
-      <a href="/secure.html"><i class="fa-solid fa-user-shield"></i><span><i><b>Secure Link</b></i></span></a>
-      <a href="#"><i class="fa-solid fa-tachograph-digital"></i><span><i><b>Generator &nbsp; &nbsp;<i class="fa-solid fa-caret-down"></i></b></i></span></a>
-        
-              <ul class="dropdown">
-                <li><a href="/password.html"><span><b>Password Generator</b></span></a></li>
-                <li><a href="/creditcard.html"><span><b>Credit Card Checker</b></span></a></li>
-                <li><a href=""><span><b>Random Address Generator</b></span></a></li>
-              </ul>
-            
-              <br>
-
-      <a href="/About Me.html"><i class="fa-regular fa-user"></i><span><b>Abour Author</b></i></span></a>        
-      <a href="/Disclaimer.html"><i class="fa-solid fa-d"></i><span><b>Disclaimer</b></i></span></a>
-      <a href="/privacy policy.html"><i class="fa-brands fa-pied-piper-pp"></i><span><b>Privacy Policy</b></i></span></a>
-      <a href="/contact.html"><i class="fa-solid fa-c"></i><span><b>Contact</b></i></span></a> 
-      
-      <a href=""><i class="fa-brands fa-facebook"></i></a>
-      <a href=""><i class="fa-brands fa-instagram"></i></a>
-      <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-        
-    </div>
-      
-
-      <!-- main blog content -->
-
-  <div id="main">
-      <h2><B><BIG>POST</BIG></B></h2>
-
-      <div class="wrapper">
-        <div class="card">
-          <div class="card-banner">
-            <p class="category-tag popular">Cyber Security</p>
-            <a href="/Cyber Security.html"><img class="banner-img" src='/Cyber security.jpeg' alt=''></a>
-          </div>
-          <div class="card-body"> 
-            <a href="/Cyber Security.html"><h2 class="blog-title">What is cyber security? Threats, Key Components,Future of Cybersecurity, Incident Response & Recovery,Education and Awareness</h2></a>
-            <p class="blog-description"></p>
-            
-    
-            <div class="card-profile">
-              <a href="/Cyber Security.html"></a><img class="profile-img" src='/bhaskar.webp' alt='' >
-              <div class="card-profile-info">
-                <h3 class="profile-name">Bhaskar Sah</h3>
-                <p class="profile-followers">October 25, 2024</p>
-              </div>
+    <header class="site-header" id="siteHeader">
+        <div class="header-content">
+            <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+            <div class="logo-container">
+                <a href="#" class="logo-text">CyberWise</a><img src="/Nepal flag.gif" width="30" height="13">
+                <div class="logo-subtext">Your Tech Insights</div>
             </div>
-          </div>  
-        </div>
-    
-        <div class="card">
-          <div class="card-banner">
-            <p class="category-tag technology">Science and Technology</p>
-            <a href="/sci and tech.html"><img class="banner-img" src='/sci and tech.jpg' alt=''></a>
-          </div>
-          <div class="card-body">
-            <a href="/sci and tech.html"><h2 class="blog-title">What is Science & Technology? Benefit of science and Technology in future</h2></a>
-            <p class="blog-description"></p>
-            
-    
-            <div class="card-profile">
-              <img class="profile-img" src='/bhaskar.webp' alt=''>
-              <div class="card-profile-info">
-                <h3 class="profile-name">Bhaskar Sah</h3>
-                <p class="profile-followers">October 27, 2024</p>
-              </div>
+
+            <div class="top-bar">
+                <div id="date-time-container" class="date-time-container"></div>
+                <div class="controls-container">
+                    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+                        <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V3M12 21V19M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M3 12H5M19 12H21M5.64 18.36L4.22 19.78M19.78 4.22L18.36 5.64M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg class="moon-icon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-  </div>
+        <nav class="main-nav" id="mainNav">
+            <ul>
+                <li class="has-dropdown">
+                    <a href="#"> Cyber Security <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Cybersecurity Insights</a></li>
+                        <li><a href="#">Data Privacy</a></li>
+                        <li><a href="#">Network Security</a></li>
+                        <li><a href="#">Endpoint Security</a></li>
+                        <li><a href="#">Vulnerability Management</a></li>
+                        <li><a href="#">Threat Intelligence</a></li>
+                        <li><a href="#">Incident Response</a></li>
+                        <li><a href="#">Digital Forensics</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"> Artificial Intelligence (AI) <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">AI & Machine Learning</a></li>
+                        <li><a href="#">Generative AI</a></li>
+                        <li><a href="#">AI Ethics</a></li>
+                        <li><a href="#">AI Applications</a></li>
+                         <li><a href="#">AI Development</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"> Science and Technology <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Emerging Tech</a></li>
+                        <li><a href="#">Innovations</a></li>
+                        <li><a href="#">Hardware & Gadgets</a></li>
+                        <li><a href="#">IoT (Internet of Things)</a></li>
+                        <li><a href="#">Future Tech</a></li>
+                    </ul>
+                </li>
+                  <li class="has-dropdown">
+                    <a href="#"> Dark Web <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dark Web Explained</a></li>
+                        <li><a href="#">Anonymity & Privacy</a></li>
+                        <li><a href="#">Hidden Services</a></li>
+                    </ul>
+                </li>
+                  <li class="has-dropdown">
+                    <a href="#"> IT Related <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">IT Management</a></li>
+                        <li><a href="#">Cloud Computing</a></li>
+                        <li><a href="#">DevOps</a></li>
+                        <li><a href="#">Blockchain & Web3</a></li>
+                        <li><a href="#">Data Science</a></li>
+                    </ul>
+                </li>
+            <li class="has-dropdown">
+                    <a href="#"> Account and Keys <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Microsoft and Windows Keys</a></li>
+                        <li><a href="#">Crunchyroll and CapCut premium account</a></li>
+                        <li><a href="#">VPN keys and Accounts</a></li>
+                        <li><a href="#">Others...</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Blog Post </a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <div class="wrapper">
-    <div class="card">
-      <div class="card-banner">
-        <p class="category-tag popular">Dark Web</p>
-        <a href="/Darkweb.html"><img class="banner-img" src='/Dark Web.png' alt=''></a>
-      </div>
-      <div class="card-body">
-        <a href="/Darkweb.html"><h2 class="blog-title">The Dark Web 101: You Need to Know </h2></a>
-        <p class="blog-description"></p>
-        
-
-        <div class="card-profile">
-          <a href="/Darkweb.html"></a><img class="profile-img" src='/bhaskar.webp' alt='' >
-          <div class="card-profile-info">
-            <h3 class="profile-name">Bhaskar Sah</h3>
-            <p class="profile-followers">November 01, 2024</p>
-          </div>
-        </div>
-      </div>  
-    </div>
-
-    <div class="wrapper">
-      <div class="card">
-        <div class="card-banner">
-          <p class="category-tag popular">IT Information</p>
-          <a href="/IT.html"><img class="banner-img" src='/IT 1.jpg' alt=''></a>
-        </div>
-        <div class="card-body"> 
-          <a href="/IT.html"><h2 class="blog-title">What is IT? IT Education, benefits</h2></a>
-          <p class="blog-description"></p>
-          
-  
-          <div class="card-profile">
-            <a href="/IT.html"></a><img class="profile-img" src='/bhaskar.webp' alt='' >
-            <div class="card-profile-info">
-              <h3 class="profile-name">Bhaskar Sah</h3>
-              <p class="profile-followers"></p>
+    <section class="search-area">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" id="searchBar" class="search-bar" placeholder="Search Engine">
+                <svg class="search-icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                </svg>
+                <div class="suggestions-dropdown" id="suggestionsDropdown">
+                    <div><a href="/Cyber Security.html" class="btn"></a>Cyber Security</div>
+                    <div>Artificial Intelligence (AI)</div>
+                    <div>Science and Technology</div>
+                    <div>Dark Web</div>
+                    <div>Data Science</div>
+                </div>
             </div>
-          </div>
-        </div>  
-      </div>
+        </div>
+    </section>
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3663278458751008"
-  crossorigin="anonymous"></script>
-<!-- ad -->
-<ins class="adsbygoogle"
-  style="display:block"
-  data-ad-client="ca-pub-3663278458751008"
-  data-ad-slot="2324050708"
-  data-ad-format="auto"
-  data-full-width-responsive="true"></ins>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+    <main class="blog-posts-section">
+        <div class="container">
+            <h2 class="section-title">Latest Articles</h2>
+            <div class="posts-grid">
+                <article class="post-card">
+                    <div class="post-thumbnail">
+                        <img src="/Cyber security.jpeg" alt="Cybersecurity Basics" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/ffffff?text=Image+Not+Found';">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">Cyber Security</span>
+                        <h3 class="post-title"><a href="/Cyber Security.html">What is cyber security? Threats, Key Components,Future of Cybersecurity, Incident Response & Recovery,Education and Awareness</a></h3>
+                        <p class="post-meta">By Bhaskar Sah | October 25, 2024</p>
+                        <p class="post-excerpt">Learn the key steps to protect your digital footprint and maintain your privacy in an increasingly connected world...</p>
+                        <a href="/Cyber Security.html" class="read-more-btn">Read More</a>
+                    </div>
+                </article>
 
-          
-        <!-- js - script -->
+                <article class="post-card">
+                    <div class="post-thumbnail">
+                        <img src="/sci and tech.jpg" alt="Web Development" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/ffffff?text=Image+Not+Found';">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">Science and Technology</span>
+                        <h3 class="post-title"><a href="#">About Science & Technology, benefit of science and Technology in future</a></h3>
+                        <p class="post-meta">By Bhaskar Sah | October 27, 2024</p>
+                        <p class="post-excerpt">Technology and science are two intertwined subjects which not only defines our understanding towards the world but also enables certain....</p>
+                        <a href="/sci and tech.html" class="read-more-btn">Read More</a>
+                    </div>
+                </article>
 
-        <script>
-          ScrollTrigger.create({
-            start: 'top -70',
-            end: 99999,
-            toggleClass: {className: 'header--scrolled', targets: '.header'}
-          });
-          
-        </script>
+                <article class="post-card">
+                    <div class="post-thumbnail">
+                        <img src="/Dark Web.png" alt="Gadget Review" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/ffffff?text=Image+Not+Found';">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">Dark Web</span>
+                        <h3 class="post-title"><a href="#"></a>The Dark Web 101: What is the dark web? Myths, realities and cybersecurity risks</h3>
+                        <p class="post-meta">By Bhaskar Sah | November 01, 2024</p>
+                        <p class="post-excerpt">Article might be 1 of possibly hundreds of many that currently appears in people's mind whenever you talk about a term Dark Web, something.....</p>
+                        <a href="/Darkweb.html" class="read-more-btn">Read More</a>
+                    </div>
+                </article>
 
-        <!-- dark light mode  -->
+                <article class="post-card">
+                    <div class="post-thumbnail">
+                        <img src="https://placehold.co/400x200/1abc9c/ffffff?text=Data+Science" alt="Data Science" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/ffffff?text=Image+Not+Found';">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">IT Related</span>
+                        <h3 class="post-title"><a href="#">The Future of Data: Trends in Big Data Analytics</a></h3>
+                        <p class="post-meta">By Bhaskar Sah | </p>
+                        <p class="post-excerpt">Exploring the evolving world of big data and how businesses are leveraging analytics for insights and growth...</p>
+                        <a href="#" class="read-more-btn">Read More</a>
+                    </div>
+                </article>
 
-        <script>
+            </div>
+        </div>
+    </main>
 
-        </script>
+    <footer class="site-footer">
+        <div class="footer-main-content container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Explore CyberWise</h4>
+                    <ul>
+                        <li><a href="#">Homepage</a></li>
+                        <li><a href="#">Latest Articles</a></li>
+                        <li><a href="#">Popular Topics</a></li>
+                        <li><a href="#">Tech News</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Key Topics</h4>
+                    <ul>
+                        <li><a href="#">Cybersecurity Threats</a></li>
+                        <li><a href="#">AI Ethics</a></li>
+                        <li><a href="#">Software Development Trends</a></li>
+                        <li><a href="#">Gadget Reviews</a></li>
+                        <li><a href="#">Data Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Glossary</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">E-books</a></li>
+                        <li><a href="#">Community Forum</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Contact CyberWise</a></li>
+                        <li><a href="#">Advertise With Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <div class="container">
+                <div class="footer-socials">
+                    <span>Follow Us:</span>
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.213 0-.425-.015-.637A9.935 9.935 0 0024 4.59z"/></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667h-3.556v-11.85h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.684zM6.737 6.952c-1.132 0-2.049-.917-2.049-2.048s.917-2.049 2.049-2.049 2.048.918 2.048 2.049-.917 2.048-2.048 2.048zm1.777 13.5h-3.554v-11.85h3.554v11.85zM22.225 0h-20.45c-.979 0-1.775.796-1.775 1.775v20.45c0 .979.796 1.775 1.775 1.775h20.45c.979 0 1.775-.796 1.775-1.775v-20.45c0-.979-.796-1.775-1.775-1.775z"/></svg>
+                    </a>
+                    <a href="#" aria-label="GitHub">
+                         <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                </div>
+                <div class="footer-legal">
+                    <p class="footer-copyright">&copy; <span id="currentYear"></span> CyberWise. All Rights Reserved.</p>
+                    <nav class="footer-legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Cookie Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-        <!-- date and time -->
-
-     <script>
-          const displayTime = document.querySelector(".display-time");
-  // Time
-  function showTime() {
-    let time = new Date();
-    displayTime.innerText = time.toLocaleTimeString("en-US", { hour12: false });
-    setTimeout(showTime, 1000);
-  }
-  
-  showTime();
-  
-  // Date
-  function updateDate() {
-    let today = new Date();
-  
-    // return number
-    let dayName = today.getDay(),
-      dayNum = today.getDate(),
-      month = today.getMonth(),
-      year = today.getFullYear();
-  
-    const months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-    const dayWeek = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ];
-    // value -> ID of the html element
-    const IDCollection = ["day", "daynum", "month", "year"];
-    // return value array with number as a index
-    const val = [dayWeek[dayName], dayNum, months[month], year];
-    for (let i = 0; i < IDCollection.length; i++) {
-      document.getElementById(IDCollection[i]).firstChild.nodeValue = val[i];
-    }
-  }
-  
-  updateDate();
-  
-      </script>
-
-      <!-- cookie js -->
-
-      <script>
-        /*<![CDATA[*/ 
-var TW_box=document.querySelector("#TW_box"),Cookie_btn=document.querySelector("#Cookie_btn"),ckErrMes="Cookie can't be set! Please unblock this site from the cookie setting of your browser.";if(null!=TW_box){Cookie_btn.onclick=()=>{document.cookie="CookieConsentByFineshop=Accepted; max-age=2592000; path=/",document.cookie?TW_box.classList.add("acptd"):alert(ckErrMes)};let e=document.cookie.indexOf("CookieConsentByFineshop=Accepted");-1!=e?TW_box.classList.add("TWhide"):TW_box.classList.remove("TWhide")} 
-/*]]>*/
-
-      </script>
-
-      <!-- side bar navigation -->
-
-      <script>
-        function toggleNav() {
-            const sidebar = document.getElementById("mySidebar");
-            const main = document.getElementById("main");
-            sidebar.classList.toggle("closed");
-            if (window.innerWidth <= 768) {
-                sidebar.classList.toggle("open");
+    <script>
+        // --- Loading Effect ---
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 500); // Added a 500ms delay for the loader
+            // Update loader quote dynamically
+            const quotes = [
+                "Securing your digital world, one insight at a time."
+            ];
+            const loaderQuoteElement = document.getElementById('loaderQuote');
+            if (loaderQuoteElement) {
+                loaderQuoteElement.textContent = quotes[Math.floor(Math.random() * quotes.length)];
             }
-        }
-      </script>
+        });
 
-</head>
+        // --- Dark Mode Toggle ---
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                // Optional: Save preference to localStorage
+                if (document.body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        }
+        // Optional: Check for saved theme preference on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+             // --- Dynamic Date & Time ---
+            const dateTimeContainer = document.getElementById('date-time-container');
+            function updateDateTime() {
+                if (dateTimeContainer) {
+                    const now = new Date();
+                    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+                    dateTimeContainer.textContent = now.toLocaleDateString('en-US', options);
+                }
+            }
+            updateDateTime();
+            setInterval(updateDateTime, 60000); // Update every minute
+
+            // --- Copyright Year ---
+            const yearSpan = document.getElementById('currentYear');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+
+            // --- Mobile Navigation Toggle ---
+            const mobileNavToggle = document.getElementById('mobileNavToggle');
+            const mainNavUl = document.querySelector('.main-nav ul');
+            if (mobileNavToggle && mainNavUl) {
+                mobileNavToggle.addEventListener('click', () => {
+                    mainNavUl.classList.toggle('active');
+                    const isExpanded = mainNavUl.classList.contains('active');
+                    mobileNavToggle.setAttribute('aria-expanded', isExpanded);
+                    mobileNavToggle.textContent = isExpanded ? '✕' : '☰'; // Change icon
+                });
+            }
+
+            // --- Mobile Dropdown Toggle ---
+            const dropdownLinks = document.querySelectorAll('.main-nav .has-dropdown > a');
+            dropdownLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    if (window.innerWidth <= 768) { // Only for mobile
+                        event.preventDefault(); // Prevent navigation for main dropdown link
+                        const dropdownMenu = this.nextElementSibling;
+                        if (dropdownMenu) {
+                            dropdownMenu.classList.toggle('open');
+                            const arrow = this.querySelector('.dropdown-arrow');
+                            if(arrow) arrow.style.transform = dropdownMenu.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+                        }
+                    }
+                });
+            });
+
+
+            // --- Search Bar Suggestions ---
+            const searchBar = document.getElementById('searchBar');
+            const suggestionsDropdown = document.getElementById('suggestionsDropdown');
+            const allPossibleSuggestions = [ // More comprehensive list
+                "Cyber Security", 
+                "Protecting Your Privacy Online", 
+                "Latest Smartphone Reviews",
+                "Web Development Basics",
+                 "Cybersecurity for Beginners", 
+                 "Machine Learning Applications",
+                "Cloud Computing Explained", 
+                "IoT Security Risks", 
+                "Top Programming Languages 2025",
+                "Best Antivirus Software", 
+                "Understanding Blockchain", 
+                "Future of Quantum Computing",
+                "Data Science Careers", 
+                "Ethical Hacking Techniques", 
+                "Remote Work Security Tips"
+            ];
+
+            if (searchBar && suggestionsDropdown) {
+                searchBar.addEventListener('focus', () => {
+                    if (searchBar.value.trim() === '' && suggestionsDropdown.children.length > 0) {
+                         suggestionsDropdown.style.display = 'block';
+                    }
+                });
+
+                searchBar.addEventListener('input', () => {
+                    const inputText = searchBar.value.toLowerCase();
+                    suggestionsDropdown.innerHTML = ''; // Clear previous suggestions
+                    if (inputText.length > 0) {
+                        const filteredSuggestions = allPossibleSuggestions.filter(s => s.toLowerCase().includes(inputText));
+                        filteredSuggestions.slice(0, 5).forEach(suggestionText => { // Show max 5
+                            const div = document.createElement('div');
+                            div.textContent = suggestionText;
+                            div.addEventListener('click', () => {
+                                searchBar.value = suggestionText;
+                                suggestionsDropdown.style.display = 'none';
+                                // Perform search or navigate
+                                console.log('Searching for:', suggestionText);
+                            });
+                            suggestionsDropdown.appendChild(div);
+                        });
+                        suggestionsDropdown.style.display = filteredSuggestions.length > 0 ? 'block' : 'none';
+                    } else {
+                        // Show some default suggestions if input is empty but focused
+                         allPossibleSuggestions.slice(0,4).forEach(suggestionText => {
+                            const div = document.createElement('div');
+                            div.textContent = suggestionText;
+                            div.addEventListener('click', () => {
+                                searchBar.value = suggestionText;
+                                suggestionsDropdown.style.display = 'none';
+                                console.log('Searching for:', suggestionText);
+                            });
+                            suggestionsDropdown.appendChild(div);
+                        });
+                        suggestionsDropdown.style.display = 'block';
+                    }
+                });
+
+                // Hide suggestions when clicking outside
+                document.addEventListener('click', (event) => {
+                    if (!searchBar.contains(event.target) && !suggestionsDropdown.contains(event.target)) {
+                        suggestionsDropdown.style.display = 'none';
+                    }
+                });
+            }
+
+            // --- Sticky Header with Hide on Scroll Down, Show on Scroll Up ---
+            const header = document.getElementById('siteHeader');
+            let lastScrollTop = 0;
+            if(header){
+                window.addEventListener('scroll', function() {
+                    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight) {
+                        // Scroll Down
+                        header.classList.add('header-hidden');
+                    } else {
+                        // Scroll Up
+                        header.classList.remove('header-hidden');
+                    }
+                    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+                }, false);
+            }
+        });
+
+    </script>
 </body>
+</html>
