@@ -1205,7 +1205,7 @@
                         event.preventDefault(); // Prevent navigation for main dropdown link
                         const dropdownMenu = this.nextElementSibling;
                         if (dropdownMenu) {
-                            dropdownMenu.classList.toggle('open');
+                            dropdownMenu.classList.toggle('close');
                             const arrow = this.querySelector('.dropdown-arrow');
                             if(arrow) arrow.style.transform = dropdownMenu.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
                         }
