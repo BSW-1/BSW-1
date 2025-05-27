@@ -5,587 +5,1081 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3663278458751008"
      crossorigin="anonymous"></script>
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TYFDVVX9W2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TYFDVVX9W2');
-</script>
-
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Dark Web 101: You Need to Know - BSW</title>
-  <link rel="icon" href="/Logo1 2.png" type="image/icon type">
-
-  <style>
-    body {
-  background: black;
-  background: linear-gradient(50deg, black 0%, black 67%, black);
-  margin: 30px 0 30px 0;
-}
-
-main {
-  width: 750px;
-  height: auto;
-  margin: auto;
-  padding: 0px 0px 1px 0px;
-  font-family: "Averia Serif Libre", Garamond, serif;
-  background-color: #fff;
-  border-left: 2px solid #6c517b;
-  box-shadow: 9px 9px 5px gray;
-}
-
-footer {
-  width: 750px;
-  height: auto;
-  margin: auto;
-  padding: 5px 0px 30px 0px;
-  font-family: "Averia Serif Libre", Garamond, serif;
-  background-color: #fff;
-  border: 0px 2px solid #6c517b;
-  box-shadow: 9px 9px 5px #6c517b;
-}
-
-hr {
-  height: 10px;
-  background-image: url(https://missymjwrites.neocities.org/IMAGES/Wavy%20Line%20Black.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  border: none;
-  width: 675px;
-  padding: 8px;
-  display: block;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  background-size: contain;
-}
-
-h1 {
-  text-align: center;
-  font-family: "Averia Serif Libre", Garamond, serif;
-  text-transform: uppercase;
-  font-size: 30px;
-}
-
-h1.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  padding: 55px 0px 25px 0px;
-  background-color: white;
-}
-
-h4 {
-  text-align: center;
-  font-family: "Averia Serif Libre", Garamond, serif;
-  text-transform: uppercase;
-  font-size: 23px;
-}
-
-p {
-  color: black;
-  text-align: justify;
-  padding: 0rem 4rem 0rem 4rem;
-  line-height: 2;
-}
-    
-.plinetwo {
-  text-indent: 3em;
-  }
-
-div.foottext {
-  color: black;
-  text-align: justify;
-  padding: 0rem 8rem 0rem 4rem;
-  line-height: 2.5;
-}
-
-a.one:link {
-  background-color: #8e5d5d;
-  color: white;
-  padding: 5px 5px 5px 5px;
-  text-decoration-line: underline;
-  text-decoration-style: wavy; 
-}
-a.one:visited {
-  background-color: #7b5151;
-  color: white;
-  padding: 5px 5px 5px 5px;
-  text-decoration-line: underline;
-  text-decoration-style: wavy; 
-}
-a.one:hover {
-  background-color: #a47474;
-  color: black;
-  padding: 5px 5px 5px 5px;
-  text-decoration-line: underline;
-  text-decoration-style: wavy; 
-}
-
-a.two:link {
-  background-color: #5d698e;
-  color: white;
-  padding: 5px 5px 5px 5px;
-  text-decoration-line: underline;
-  text-decoration-style: wavy; 
-}
-a.two:visited {
-  background-color: #47506c;
-  color: white;
-  padding: 5px 5px 5px 5px;
-  text-decoration-line: underline;
-  text-decoration-style: wavy; 
-}
-a.two:hover {
-  background-color: #7480a4;
-  color: black;
-  padding: 5px 5px 5px 5px;
-  text-decoration-line: underline;
-  text-decoration-style: wavy; 
-}
-
-a.icon:link {
-  background-color: white;
-  color: black;
-  border-radius: 5px;
-  padding: 10px;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-}
-a.icon:visited {
-  background-color: white;
-  color: black;
-  border-radius: 5px;
-  padding: 10px;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-}
-a.icon:hover {
-  background-color: #d9d9d9;
-  color: black;
-  border-radius: 5px;
-  padding: 10px;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-a:link {
-  background-color: white;
-  color: black;
-  padding: 5px 5px 5px 5px;
-  font-size: large;
-  display: flex;
-  justify-content: center;
- 
-}
-
-a:visited {
-  background-color: white;
-  color: white;
-}
-
-a:hover {
-  background-color: white;
-  color: black;
-}
-
-a:active {
-  background-color: #93b893;
-  color: black;
-} 
-
-.trigger {
-  display: none;
-  text-align: center;
-}
-    
-.warn:hover + .trigger {
-  display: block;
-  font-size: 15px;
-  background-color: #c98282;
-  padding: 15px 0px 15px 0px;
-}
-
-/**
- * Initialiazing a `footnotes` counter on the wrapper
- */
-article {
-  counter-reset: footnotes;
-    color: black; /* 2 */
-  background-color: white;
-}
-
-
-a[aria-describedby="footnote-label"] {
-  counter-increment: footnotes; /* 1 */
-  text-decoration: none; /* 2 */
-  color: black; /* 2 */
-  cursor: default; /* 2 */
-  outline: none; /* 2 */
-  background-color: white;
-  padding: 0px 0px 0px 0px;
-}
-
-
-a[aria-describedby="footnote-label"]::after {
-  content: '[' counter(footnotes) ']'; /* 1 */
-  vertical-align: super; /* 2 */
-  font-size: 0.5em; /* 3 */
-  margin-left: 2px; /* 4 */
-  color: blue; /* 5 */
-  text-decoration: underline; /* 5 */
-  cursor: pointer; /* 5 */
-  padding: 0px 0px 0px 0px;
-  font-size: 14px;
-}
-
-/**
- * Resetting the default focused styles on the number
- */
-a[aria-describedby="footnote-label"]:focus::after {
-  outline: thin dotted;
-  outline-offset: 2px;
-  font-size: 14px;
-}
-
-footer :target {
-  background: #a587c5;
-  color: black;
-  padding: 10px;
-}
-
-a.footnotegoback:link {
-  background-color: white; 
-  color: black; 
-  font-size: 25px; 
-  line-height: 1;
-}
-a.footnotegoback:hover {
-  background-color: #d9d9d9; 
-  color: black; 
-  font-size: 25px; 
-  line-height: 1;
-}
-a.footnotegoback:visited {
-  background-color: white; 
-  color: black; 
-  font-size: 25px; 
-  line-height: 1;
-}
-
-.button {
-  text-align: center;
-  transition-duration: 0.4s;
-  font-size: 15px; 
-  border: none; 
-  color: #686191; 
-  padding: 15px 32px; 
-  text-decoration: none; 
-  display: inline-block; 
-  margin: 4px 2px; 
-  cursor: pointer;
-}
-
-.button1 {
-  background-color: #d9d9d9;
-  color: #4d4d4d;
-  border: 2px solid #404040;
-}
-
-.button1:hover {
-  background-color: #bfbfbf;
-  color: black;
-}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Cyber Security? - CyberWise</title>
+    <link rel="icon" href="/Logo1 2.png" type="image/icon type">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
+<style>
+    /* General Body and Container */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f5f6; /* Default Light Mode Background */
+    color: #333; /* Default Light Mode Text Color */
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a2e; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+
+body.dark-mode .main-header,
+body.dark-mode .main-content,
+body.dark-mode .table-of-contents,
+body.dark-mode .ad-unit,
+body.dark-mode .similar-posts,
+body.dark-mode .post-card {
+    background-color: #2e3b55; /* Slightly lighter dark background */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .main-header {
+    border-bottom-color: #444;
+}
+
+body.dark-mode .logo a,
+body.dark-mode .main-nav ul li a,
+body.dark-mode .blog-post h1,
+body.dark-mode .post-body h2,
+body.dark-mode .post-body h3,
+body.dark-mode .table-of-contents h3,
+body.dark-mode .similar-posts h2,
+body.dark-mode .post-card h3 a {
+    color: #fff; /* White for headings/important text */
+}
+
+body.dark-mode .main-nav ul li a:hover,
+body.dark-mode .table-of-contents ul li a:hover,
+body.dark-mode .table-of-contents ul li a.active,
+body.dark-mode .post-card h3 a:hover,
+body.dark-mode .footer-links li a:hover,
+body.dark-mode .social-media a:hover {
+    color: #87ceeb; /* Lighter blue for hover/active in dark mode */
+}
+
+body.dark-mode .post-meta,
+body.dark-mode .table-of-contents ul li a,
+body.dark-mode .table-of-contents ul ul li a,
+body.dark-mode .ad-unit p,
+body.dark-mode .post-card p {
+    color: #ccc; /* Lighter gray for general text */
+}
+
+body.dark-mode .table-of-contents ul ul {
+    border-left-color: #555;
+}
+
+body.dark-mode .ad-unit {
+    border-color: #555;
+}
+
+body.dark-mode .post-card {
+    border-color: #555;
+}
+
+body.dark-mode .post-meta,
+body.dark-mode .similar-posts h2 {
+    border-bottom-color: #444;
+}
+
+body.dark-mode .post-body h2 {
+    border-left-color: #87ceeb; /* Match the lighter blue */
+}
+
+body.dark-mode #dark-mode-toggle {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Dark Mode Toggle Icon Switch */
+.dark-mode-toggle .fa-moon {
+    display: block; /* Show moon by default (for light mode) */
+}
+.dark-mode-toggle .fa-sun {
+    display: none; /* Hide sun by default */
+}
+body.dark-mode .dark-mode-toggle .fa-moon {
+    display: none; /* Hide moon when in dark mode */
+}
+body.dark-mode .dark-mode-toggle .fa-sun {
+    display: block; /* Show sun when in dark mode */
+    color: #ffeb3b; /* Yellow for sun icon in dark mode */
+}
+
+body.dark-mode .menu-toggle {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Header Styling */
+.main-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.logo-container .logo-text {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3498db;
+            transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        body.dark-mode .logo-container .logo-text {
+            color: #50fa7b;
+        }
+        .logo-container .logo-subtext {
+            font-size: 0.8em;
+            color: #777;
+            transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        body.dark-mode .logo-container .logo-subtext {
+            color: #aaa;
+        }
+
+         /* MODIFICATION: Style for the flag image in the logo container */
+        .logo-container img {
+            display: inline-block; 
+            vertical-align: middle; 
+            margin-left: 8px;       
+            height: 35px;           
+            width: 35px;            
+        }
+
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #007bff;
+}
+
+.header-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#current-date-time {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+}
+
+/* Main Content Area */
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 0 15px;
+}
+
+.main-content {
+    flex: 3;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.blog-post h1 {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.post-body h2 {
+    font-size: 28px;
+    color: #222;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    border-left: 5px solid #007bff;
+    padding-left: 10px;
+}
+
+.post-body h3 {
+    font-size: 22px;
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.post-body p {
+    margin-bottom: 15px;
+}
+
+.post-body ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.post-body ul li {
+    margin-bottom: 8px;
+}
+
+/* Sidebars and Ads */
+.left-sidebar,
+.right-sidebar {
+    flex: 1; /* Equal space */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Hide left sidebar by default on all screen sizes unless explicitly made visible via media query */
+.left-sidebar {
+    display: none;
+}
+
+/* Control ad visibility based on data attribute */
+.ads-container[data-ad-status="hidden"] {
+    display: none !important; /* Force hide if status is hidden */
+}
+
+/* TOC Styling */
+.table-of-contents {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 20px;
+}
+
+.table-of-contents h3 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.table-of-contents ul {
+    list-style: none;
+    padding: 0;
+}
+
+.table-of-contents ul li {
+    margin-bottom: 8px;
+}
+
+.table-of-contents ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+    display: block;
+    padding: 5px 0;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.table-of-contents ul li a:hover,
+.table-of-contents ul li a.active {
+    color: #007bff;
+    padding-left: 5px;
+}
+
+.table-of-contents ul ul {
+    margin-left: 15px;
+    border-left: 1px solid #eee;
+    padding-left: 10px;
+}
+
+.table-of-contents ul ul li a {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Ad Unit Styling */
+.ad-unit {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    text-align: center;
+    border: 1px dashed #ddd;
+}
+
+.ad-unit img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.ad-unit p {
+    font-size: 14px;
+    color: #777;
+}
+
+
+/* Similar Posts Section */
+.similar-posts {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    margin-top: 30px;
+}
+
+.similar-posts h2 {
+    font-size: 26px;
+    color: #222;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.post-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+}
+
+.post-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.post-card h3 {
+    font-size: 18px;
+    padding: 15px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.post-card h3 a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.2s ease;
+}
+
+.post-card h3 a:hover {
+    color: #0056b3;
+}
+
+.post-card p {
+    font-size: 14px;
+    color: #666;
+    padding: 0 15px 15px;
+    margin-top: 0;
+}
+
+
+/* Footer Styling */
+.main-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 25px 0;
+    margin-top: 40px;
+}
+
+body.dark-mode .main-footer {
+    background-color: #1a1a2e;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    flex-wrap: wrap;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.footer-links li {
+    margin-left: 20px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+    color: #007bff;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #007bff;
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .main-content,
+    .right-sidebar,
+    .similar-posts {
+        margin-bottom: 20px;
+    }
+
+    /* Move right sidebar (TOC/Ads) above main content on smaller screens */
+    .right-sidebar {
+        order: -1;
+    }
+
+    /* Hide TOC for mobile view */
+    .table-of-contents {
+        display: none; /* Hide TOC on screens 992px and narrower */
+        position: static; /* Remove sticky behavior */
+        top: auto;
+    }
+
+    /* Always hide left sidebar on mobile (and other smaller screens) */
+    .left-sidebar {
+        display: none;
+    }
+
+    /* Hide ads on screens 992px and narrower, regardless of data-ad-status */
+    .ads-container {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        flex-basis: 50%; /* Take half width */
+    }
+
+    .header-meta {
+        flex-basis: 50%; /* Take half width */
+        justify-content: flex-end; /* Push items to right */
+    }
+
+    .main-nav {
+        /* Mobile navigation menu */
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff; /* Ensure it's visible against default header if needed */
+        position: absolute;
+        top: 70px; /* Adjust based on header height */
+        left: 0;
+        z-index: 100;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        padding: 0; /* Remove default padding from nav */
+    }
+
+    body.dark-mode .main-nav {
+        background-color: #2e3b55;
+    }
+
+    .main-nav.active {
+        display: flex; /* Show when active */
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .main-nav ul li {
+        margin: 0;
+        width: 100%;
+    }
+
+    .main-nav ul li a {
+        padding: 12px 20px;
+        border-bottom: 1px solid #eee;
+        display: block;
+    }
+
+    body.dark-mode .main-nav ul li a {
+        border-bottom-color: #444;
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu toggle on mobile */
+    }
+
+    #current-date-time {
+        display: none; /* Hide date/time on very small screens to save space */
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .blog-post h1 {
+        font-size: 28px;
+    }
+
+    .post-body h2 {
+        font-size: 24px;
+    }
+
+    .post-body h3 {
+        font-size: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links li {
+        margin: 5px 0;
+    }
+
+    .social-media {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .post-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 
 <body>
+    <header class="main-header">
+        <div class="header-content">
+             <div class="logo-container">
+                <a class="logo-text">CyberWise</a><img src="/Nepal flag.gif" width="30" height="13">
+                <div class="logo-subtext">Your Tech Insights</div>
+            </div>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="/Darkweb.html">Dark Web</a></li>
+                    <li><a href="/About Me.html">About Me</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-meta">
+                <span id="current-date-time"></span>
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="left-sidebar">
+            <div class="ads-container left-ads" data-ad-status="hidden">
+                <div class="ad-unit">
+                    <img src="https://via.placeholder.com/300x600?text=Left+Ad+Space" alt="Advertisement">
+                    <p>Left Ad Area</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <article class="blog-post">
+                <header class="post-header">
+                    <h1>What is dark web? How to access it? Everything You Should Know About the Dark Web.</h1>
+                    <div class="post-meta">
+                        <span>By Bhaskar Sah</span> |
+                        <span>November 01, 2024</span> |
+                        <span>Dark Web</span>
+                    </div>
+                </header>
+
+                <div class="post-body">
+                    <p>When people think of the term Dark Web, they often picture illegal dealings secret markets, or a haven for hackers. However, the Dark Web involves much more than shady activities. It serves as a complex system built to serve a variety of purposes. This article explores the meaning of the Dark Web how it is structured and operates, its ethical and legal limits, and other aspects of this hidden part of the internet.</p>
+
+                    <h2>1. What is the Dark Web?</h2>
+                    <p>The Dark Web is a part of the internet that common search engines like Google or Bing can't index. To access it, you need special software and settings, or specific permission. The Dark Web is part of the larger "deep web," which includes all parts of the internet that aren't indexed - such as private databases and password-protected sites. But there's more to the Dark Web than meets the eye. Its very nature is concealed, and people often access it through networks built for anonymity, like Tor (The Onion Router).</p>
+
+                    <h2>2. Understanding the Dark Web</h2>
+                    <h3>2.1 Structure of the Internet </h3>
+
+                    <p>To get your head around the dark web, you first have to understand how the internet is built:</p>
+                    
+                    <ul>
+                        <li>
+                            Surface Web: This is the part of the internet that is available to the public and is indexed by search engines. Websites, the social media platform, blog, you name it.
+                        </li>
+
+                        <li>
+                            Deep Web:this part involves information that is not part of the search engines. Examples of these are non-public databases, medical information, tutorial assets, organizational intranets and more. The deep web, for the most part, is pretty innocent.
+                        </li>
+
+                        <li>
+                            The Dark Web: A small subset of the deep web needing specialized software and a lot of configuration to access. This is purposefully hidden and quite often, requires the necessities of utility of anonymization tools like Tor (The Onion Router).
+                        </li>
+                    </ul>
+
+                    <h2>3. How to access the dark web</h2>
+
+                    <p>The dark web normally can be accessed through the use of Tor, which is a network that anonymizes internet traffic by routing your connection through a series of volunteer-operated servers obscuring your IP and location. It's that anonymity that draws users wanting to engage in activities that might be illegal or censored in their home countries.</p>
+
+                    <p>Moreover, dark web sites have special domains that end with .onion and can be opened only in the Tor browser. It helps to keep both users and hosts of such resources anonymous.</p>
+                    
+                    
 
 
-  <main>
-    <div style="text-align: center; font-size: 12px; padding-top: 10px;">©️ Bhaskar Sah <br> November 01, 2024</div>
-    <h1 class="sticky">The Dark Web 101: You Need to Know<br><br>
-      <a class="icon" href="https://www.bhaskarsah.com.np" title="go home"><img src="https://i.postimg.cc/vTHGBZ4z/32bhome.png"></a>
-    </h1>
-    
-    <div class="warn" style="text-align: center; font-size: 18px;"></div>
-<div class="trigger"></div>
+            <h2>4. Activities on the Dark Web</h2>
 
-<h1> Introduction</h1>
+            <p>The dark web has a wide range of practices, both ethical and unethical, therefore mentions the following basic categories:-</p>
 
-<p>Article might be 1 of possibly hundreds of many that currently appears in people's mind whenever you talk about a term Dark Web, something like illegal activities, marketplace, a safe place for hackers, and etc. Still, the Dark Web is more than just a dark underbelly — it is an intricate ecosystem designed for several different functions. In this article, we delve into the Dark Web The definition of the Dark Web, the structure and operation of the Dark Web, as well as the legal and ethical boundaries of the Internet and more details.</p>
+            <h3>4.1. Illegal Activities</h3>
+            <ul>
+                <li>
+                    Drug Trafficking: There are many drugs being sold on the dark web in the marketplace. Boarding favorite substances becomes easy as vendors employ rating mechanisms popularized by e-commerce shops.
+                </li>
 
-<br>
-    
-   <h1> What is the Dark Web?</h1>
+                <li>
+                    Weapons Sales: Similarly, the firearms and ammo can be laid hands upon the dark net. Such deals are often very low risk of interception by police hence the worry about gun running.
+                </li>
 
-   <p> Dark Web is a section of the Web that the usual search engines like Google or Bing cannot index. You need specialized software and settings to gain access, or special permission to do so. The Dark Web falls within a broader context referred to as the "deep web," which encompasses all sections of the Web that are not indexed — including private databases, password-protected sites, and more. In contrast, the Dark Web is more than what it seems because its very essence is hidden and many times accessed through networks designed for anonymity such as Tor (The Onion Router).</p>
+                <li>
+                    Stolen Data and Hacking Services: The web sells hacked personal information like credit card, social securities, email address and so much more. Cybercrime services are also available on the dark web.
+                </li>
 
-   <br>
-   <br>
+                <li>
+                    Human Trafficking and Exploitation: Regrettably, the more despicable practices of human subjugation, child abuse as well as illegal pornography are on sale on the dark internet as well.
+                </li>
+            </ul>
 
-   <h1><u>Understanding the Dark Web</u></h1>
+            <h3>4.2. Legal Uses</h3>
+
+            <p>The dark web is not entirely made up of illegal activities. On the other hand, this platform is preferred by some individuals for legitimate purposes such as:-</p>
+
+            <ul>
+                <li>
+                    Whistleblowing and Freedom of Speech: In oppressive regimes, journalists and activists who use dark web technology communication share their work and their pieces of information to the community without worrying about being prosecuted.
+                </li>
+
+                <li>
+                    Privacy Protection: In most cases, the people who care about the surveillance governments or companies issue may decide to turn to the dark web to achieve both the highest degree of privacy and the best security.
+                </li>
+
+                <li>
+                    Research Purposes: The dark web is a fertile ground for security professionals and academics to study, for example, criminal behaviors and thereby come up with countermeasures to cyber dangers.
+                </li>
+            </ul>
+                    
+
+                    <h2>5. Risks of the Dark Web</h2>
+                    <p>Engagement with the dark web comes with some major dangers, including:-</p>
+
+                    <h3>5.1. Legal Consequences</h3>
+                  <ul>
+                    <li>
+                        To use or to be part of any illegal activities on the dark web can cause one to be charged or convicted with a crime that is very serious. The police have arrested people involved with the dark web e-commerce businesses many times during the past years.
+                    </li>
+                  </ul>
+
+                  <h3>5.2. Cybersecurity Threats</h3>
+                  <ul>
+                    <li>
+                        The dark web is swarming with all kinds of malware including the phishing scams and whatnot, which have made users who try to plead victim among cyber attacks become one. Any person who downloads files or clicks on unreliable links might be unknowingly harmed by the device or might have their personal data compromised.
+                    </li>
+                  </ul>
+
+                  <h3>5.3. Scams and Fraud</h3>
+                  <ul>
+                    <li>
+                        There are many sellers on the dark web that are not trustworthy. Users may lose the money they paid to scams, where products or services were delivered late or never.
+                    </li>
+                  </ul>
+                    
+
+                    <h2>6. The function of law enforcement</h2>
+
+                    <p>
+                        Law enforcement agencies worldwide have made the dark web a top concern. Are implementing strategies to combat criminal activities on this platform.
+                    </p>
+
+                    <ul>
+                        <li>
+                            Undercover Operations: The agencies might penetrate the marketplaces of the dark web, which would enable them to collect evidence and then convict the criminals.
+                        </li>
+
+                        <li>
+                            Seizing Domains and Assets: Some of the platforms like Silk Road and AlphaBay have been shut down through the legal process, and seizures have been made to grab assets linked to illegal operations.
+                        </li>
+
+                        <li>
+                            International Cooperation: Considering that the dark web is a worldwide issue, law enforcement agency cooperation is of paramount importance in the fight against transnational cybercrime.
+                        </li>
+                    </ul>
+                    
+
+                    <h2>7. The future of the dark web</h2>
+                   <p>As technology evolves, so does the Dark Web. Emerging trends include:-</p>
+
+                   <ul>
+                    <li>
+                        Improved anonymity tools: New technologies are constantly being developed to improve user anonymity and security on the dark web.
+                    </li>
+
+                    <li>
+                        Regulatory review: The government is exploring ways to regulate dark web activity. It balances the need for privacy and freedom with the risk of illegal content.
+                    </li>
+
+                    <li>
+                        Landscape Change: In Response to Law Enforcement Actions Black web markets can develop A new platform has emerged to replace the one that was shut down...
+                    </li>
+                   </ul>
+
+                    <h2>8. Conclusion</h2>
+                    <p>The Dark Web is a complex and diverse part of the internet. Although often associated with illegal activities But it also serves as a haven for privacy. freedom of speech and research as well To navigate the digital landscape responsibly It is critical to understand the structure, risks, and impacts as technology advances. The dynamics of the dark web are likely to change. This makes continued awareness and education important for users and policy makers.</p>
+
+                </div>
+            </article>
+
+            <section class="similar-posts">
+                <h2>Similar or Recent Posts</h2>
+                <div class="post-grid">
+                    <div class="post-card">
+                        <img src="https://via.placeholder.com/300x200" alt="Post Thumbnail">
+                        <h3><a href="#">How to Protect Your Data Online</a></h3>
+                        <p>Learn essential tips to keep your personal and professional data safe from cyber threats.</p>
+                    </div>
+                    <div class="post-card">
+                        <img src="https://via.placeholder.com/300x200" alt="Post Thumbnail">
+                        <h3><a href="#">The Rise of Ransomware Attacks</a></h3>
+                        <p>An in-depth look into the increasing menace of ransomware and how to mitigate its risks.</p>
+                    </div>
+                    <div class="post-card">
+                        <img src="https://via.placeholder.com/300x200" alt="Post Thumbnail">
+                        <h3><a href="#">Understanding Phishing Scams</a></h3>
+                        <p>Identify common phishing techniques and protect yourself from deceptive online traps.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside class="right-sidebar">
+            <div class="table-of-contents" id="toc-container">
+                <h3>Table of Contents</h3>
+                <ul id="toc-list">
+                    </ul>
+            </div>
+            <div class="ads-container right-ads" data-ad-status="hidden">
+                <div class="ad-unit">
+                    <img src="https://via.placeholder.com/300x250?text=Right+Ad+Space+1" alt="Advertisement">
+                    <p>Right Ad Area 1</p>
+                </div>
+                <div class="ad-unit">
+                    <img src="https://via.placeholder.com/300x600?text=Right+Ad+Space+2" alt="Advertisement">
+                    <p>Right Ad Area 2</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 CyberWise. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="/About Me.html">About Author</a></li>
+                <li><a href="/privacy policy.html">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="/Disclaimer.html">Disclaimer</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="https://www.facebook.com/bhaskar.sah.5621" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/wasu462" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/bha__s__kar_/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // 1. Header Date and Time
+    const currentDateTimeElement = document.getElementById('current-date-time');
+    function updateDateTime() {
+        const now = new Date();
+        const options = {
+            weekday: 'long', // e.g., 'Monday'
+            year: 'numeric', // e.g., '2025'
+            month: 'long',   // e.g., 'May'
+            day: 'numeric',  // e.g., '25'
+            hour: '2-digit', // e.g., '04'
+            minute: '2-digit',// e.g., '55'
+            second: '2-digit',// e.g., '41'
+            hour12: true     // Use AM/PM
+        };
+        
+        const formatter = new Intl.DateTimeFormat('en-US', options);
+        currentDateTimeElement.textContent = formatter.format(now);
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000); 
+
    
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
 
-   <h4>1. Structure of the Internet</h4> 
-
-   <p>
-    <b>
-      To wrap your head around the dark web, you first need to know how the internet is structured:
-    </b>
-
-    <br>
-    <br>
-
-
-   <li>
-    <b><u>Surface Web:</u></b> The portion of the internet that is open to the general public and searchable through standard search engines. Anything from websites, the social media platform, and blogs.
-  </li>
-
-  <br>
-  <br>
-
-
-   <li>
-    <b><u>Deep Web:</u></b>This part includes information which search engines do not include. These consist of private databases, health-related files, tutorial assets, company intranets, and extra. The vast majority of the deep web is above board and benign.
-  </li>
-
-  <br>
-  <br>
-
-
-   <li>
-    <b><u>The Dark Web:</u></b> A small subset of the deep web needing specialized software and a lot of configuration to access. This is purposefully hidden and quite often, requires the necessities of utility of anonymization tools like Tor (The Onion Router).
-  </li>
-
-  <br>
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3663278458751008"
-crossorigin="anonymous"></script>
-<!-- ad -->
-<ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-3663278458751008"
-data-ad-slot="2324050708"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-   </p>
-
-   <h4>2. How to access the dark web</h4>
-
-   <p>The dark web normally can be accessed through the use of Tor, which is a network that anonymizes internet traffic by routing your connection through a series of volunteer-operated servers obscuring your IP and location. It's that anonymity that draws users wanting to engage in activities that might be illegal or censored in their home countries.
     
-    <br>
-    <br>
-
-    Moreover, dark web sites have special domains that end with .onion and can be opened only in the Tor browser. It helps to keep both users and hosts of such resources anonymous.</p>
-
-    <p>
-      <li><b><u>Note:- I'll make another post to accesss DARK WEB practically.</u></b></li>
-    </p>
-
-    <br>
-    <br>
-
-    <h1><u>Activities on the Dark Web</u></h1>
-
-    <p>The dark web has a wide range of practices, both ethical and unethical, E. L. Wheaton therefore mentions the following basic categories:
-    </p>
-
-    <br>
-
-    <h4>1. Illegal Activities</h4>
-
-    <p>
-
-      <li>
-        <b><u>Drug Trafficking:</u></b> There are many drugs being sold on the dark web in the marketplace. Boarding favorite substances becomes easy as vendors employ rating mechanisms popularized by e-commerce shops.
-      </li>
-
-      <br>
-      <br>
-
-      <li>
-        <b><u>Weapons Sales:</u></b> Similarly, the firearms and ammo can be laid hands upon the dark net. Such deals are often very low risk of interception by police hence the worry about gun running.
-      </li>
-
-      <br>
-      <br>
-
-      <li>
-        <b><u>Stolen Data and Hacking Services: </u></b>The web sells hacked personal information like credit card, social securities, email address and so much more. Cybercrime services are also available on the dark web.
-      </li>
-
-      <br>
-      <br>
-
-      <li>
-        <b><u>Human Trafficking and Exploitation: </u></b>Regrettably, the more despicable practices of human subjugation, child abuse as well as illegal pornography are on sale on the dark internet as well.
-      </li>
-
-    </p>
-
-    <br>
-
-    <h4>2. Legal Uses</h4>
-
-    <p>
-      The dark web is not entirely made up of illegal activities. On the other hand, this platform is preferred by some individuals for legitimate purposes such as:
-    </p>
-
-    <br>
-    <br>
-
-    <li>
-      <b><u>Whistleblowing and Freedom of Speech:</u></b> In oppressive regimes, journalists and activists who use dark web technology communication share their work and their pieces of information to the community without worrying about being prosecuted.
-    </li>
-
-    <br>
-    <br>
-
-    <li>
-      <b><u>Privacy Protection:</u></b> In most cases, the people who care about the surveillance governments or companies issue may decide to turn to the dark web to achieve both the highest degree of privacy and the best security.
-    </li>
-
-    <br>
-    <br>
-
-    <li>
-      <b><u>Research Purposes:</u></b> The dark web is a fertile ground for security professionals and academics to study, for example, criminal behaviors and thereby come up with countermeasures to cyber dangers.
-    </li>
-
-    <br>
-    <br>
-
-    <h1>Risks of the Dark Web</h1>
-
-    <p>Engagement with the dark web comes with some major dangers, including:</p>
-
-    <br>
-
-    <h4>1. Legal Consequences</h4>
-
-    <p>To use or to be part of any illegal activities on the dark web can cause one to be charged or convicted with a crime that is very serious. The police have arrested people involved with the dark web e-commerce businesses many times during the past years.</p>
-
-    <br>
-
-    <h4>2. Cybersecurity Threats</h4>
-
-    <p>The dark web is swarming with all kinds of malware including the phishing scams and whatnot, which have made users who try to plead victim among cyber attacks become one. Any person who downloads files or clicks on unreliable links might be unknowingly harmed by the device or might have their personal data compromised.</p>
-
-    <br>  
-
-    <h4>3. Scams and Fraud</h4>
-
-    <p>There are many sellers on the dark web that are not trustworthy. Users may lose the money they paid to scams, where products or services were delivered late or never.</p>
-
-    <br>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3663278458751008"
-crossorigin="anonymous"></script>
-<!-- ad -->
-<ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-3663278458751008"
-data-ad-slot="2324050708"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-    <h1>The function of law enforcement</h1>
-
-    <p>Law enforcement agencies worldwide have made the dark web a top concern. Are implementing strategies to combat criminal activities on this platform.
-
-      <br>
-      
-
-      <li>
-        <b><u>Undercover Operations: </u></b>The agencies might penetrate the marketplaces of the dark web, which would enable them to collect evidence and then convict the criminals.
-      </li>
-
-      <br>
-      <br>
-
-      <li>
-        <b><u>Seizing Domains and Assets:</u></b> Some of the platforms like Silk Road and AlphaBay have been shut down through the legal process, and seizures have been made to grab assets linked to illegal operations.
-      </li>
-
-      <br>
-      <br>
-
-      <li>
-        <b><u>International Cooperation:</u></b> Considering that the dark web is a worldwide issue, law enforcement agency cooperation is of paramount importance in the fight against transnational cybercrime.x
-      </li>
-
-    </p>  
-
-    <br>
-    <br>
-
-    <h1>The future of the dark web</h1>
-
-    <p>As technology evolves, so does the Dark Web. Emerging trends include:
-
-      <br>
-
-      <li>
-        <b><u>Improved anonymity tools:</u></b> New technologies are constantly being developed to improve user anonymity and security on the dark web.
-      </li>
-
-      <br>
-      <br>
-
-      <li>
-        <b><u>Regulatory review:</u></b> The government is exploring ways to regulate dark web activity. It balances the need for privacy and freedom with the risk of illegal content.
-      </li>
-
-      <br>
-      <br>
-
-      <li>
-        <b><u>Landscape Change:</u></b> In Response to Law Enforcement Actions Black web markets can develop A new platform has emerged to replace the one that was shut down...
-      </li>
-
-    </p>
-
-    <br>
-    <br>
-
-    <h1>Gathering Together</h1>
-
-    <p>The Dark Web is a complex and diverse part of the internet. Although often associated with illegal activities But it also serves as a haven for privacy. freedom of speech and research as well To navigate the digital landscape responsibly It is critical to understand the structure, risks, and impacts as technology advances. The dynamics of the dark web are likely to change. This makes continued awareness and education important for users and policy makers.</p>
-
-
-
-
-
-</main>
-  
-<footer><h4>For Any Question Contact Me</h4>
-    <a href="/contact.html">Contact me</a>
-    <div class="foottext">
-  <ol>
-  
-      </ol></div>
-</footer>
-
-<main>
-<div style="text-align: right; font-size: 20px; margin-bottom: 20px; margin-right: 20px; margin-top: -2rem"><button class="button button1" onclick="history.back()">Go Back</button></div>
-</main>
-
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+    }
+
+    darkModeToggle.addEventListener('click', function() {
+        body.classList.toggle('dark-mode');
+        
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    });
+
+    
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    menuToggle.addEventListener('click', function() {
+        mainNav.classList.toggle('active');
+        
+        const icon = menuToggle.querySelector('i');
+        if (mainNav.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times'); 
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars'); 
+        }
+    });
+
+   
+    mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+               
+                menuToggle.querySelector('i').classList.remove('fa-times');
+                menuToggle.querySelector('i').classList.add('fa-bars');
+            }
+        });
+    });
+
+
+    
+    const tocList = document.getElementById('toc-list');
+    const postBody = document.querySelector('.post-body');
+    const headings = postBody.querySelectorAll('h2, h3'); 
+
+    if (tocList && headings.length > 0) {
+        headings.forEach((heading, index) => {
+            
+            const id = heading.textContent.toLowerCase()
+                             .replace(/[^a-z0-9\s-]/g, '') 
+                             .trim() 
+                             .replace(/\s+/g, '-'); 
+            heading.id = id; 
+
+            const listItem = document.createElement('li');
+            const anchor = document.createElement('a');
+            anchor.href = `#${id}`;
+            anchor.textContent = heading.textContent;
+            anchor.classList.add(`toc-level-${heading.tagName.toLowerCase()}`); 
+
+            
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById(id).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start' 
+                });
+               
+                document.querySelectorAll('#toc-list a').forEach(link => link.classList.remove('active'));
+                
+                this.classList.add('active');
+            });
+
+            
+            if (heading.tagName === 'H3') {
+                let parentH2ListItem = listItem.previousElementSibling;
+                
+                while (parentH2ListItem && !parentH2ListItem.querySelector('.toc-level-h2')) {
+                    parentH2ListItem = parentH2ListItem.previousElementSibling;
+                }
+                if (parentH2ListItem) {
+                    let ul = parentH2ListItem.querySelector('ul');
+                    if (!ul) { 
+                        ul = document.createElement('ul');
+                        parentH2ListItem.appendChild(ul);
+                    }
+                    ul.appendChild(listItem);
+                } else {
+                    tocList.appendChild(listItem); 
+                }
+            } else { 
+                tocList.appendChild(listItem);
+            }
+            listItem.appendChild(anchor);
+        });
+
+       
+        const observerOptions = {
+            root: null, 
+            rootMargin: '0px 0px -50% 0px', 
+            threshold: 0 
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const id = entry.target.id;
+                const tocLink = document.querySelector(`#toc-list a[href="#${id}"]`);
+
+                if (tocLink) {
+                    if (entry.isIntersecting) {
+                        
+                        document.querySelectorAll('#toc-list a').forEach(link => link.classList.remove('active'));
+                        
+                        tocLink.classList.add('active');
+                    } else {
+                        
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe each heading
+        headings.forEach(heading => {
+            observer.observe(heading);
+        });
+    }
+});
+    </script>
+    
 </body>
 </html>

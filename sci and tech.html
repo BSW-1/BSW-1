@@ -918,18 +918,18 @@ body.dark-mode .main-footer {
             second: '2-digit',// e.g., '41'
             hour12: true     // Use AM/PM
         };
-        // Explicitly format for the current location's timezone or specify 'Asia/Kathmandu'
+        
         const formatter = new Intl.DateTimeFormat('en-US', options);
         currentDateTimeElement.textContent = formatter.format(now);
     }
     updateDateTime();
-    setInterval(updateDateTime, 1000); // Update every second
+    setInterval(updateDateTime, 1000); 
 
-    // 2. Dark Mode Toggle
+    
     const darkModeToggle = document.getElementById('dark-mode-toggle');
     const body = document.body;
 
-    // Check for saved dark mode preference in local storage
+   
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         body.classList.add('dark-mode');
@@ -937,7 +937,7 @@ body.dark-mode .main-footer {
 
     darkModeToggle.addEventListener('click', function() {
         body.classList.toggle('dark-mode');
-        // Save preference to localStorage
+        
         if (body.classList.contains('dark-mode')) {
             localStorage.setItem('theme', 'dark');
         } else {
@@ -945,29 +945,29 @@ body.dark-mode .main-footer {
         }
     });
 
-    // 3. Mobile Navigation Toggle
+    
     const menuToggle = document.getElementById('menu-toggle');
     const mainNav = document.getElementById('main-nav');
 
     menuToggle.addEventListener('click', function() {
         mainNav.classList.toggle('active');
-        // Change icon based on menu state
+        
         const icon = menuToggle.querySelector('i');
         if (mainNav.classList.contains('active')) {
             icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times'); // 'x' icon
+            icon.classList.add('fa-times'); 
         } else {
             icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars'); // Hamburger icon
+            icon.classList.add('fa-bars'); 
         }
     });
 
-    // Close mobile nav when a link is clicked
+    
     mainNav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             if (mainNav.classList.contains('active')) {
                 mainNav.classList.remove('active');
-                // Reset icon to hamburger
+                
                 menuToggle.querySelector('i').classList.remove('fa-times');
                 menuToggle.querySelector('i').classList.add('fa-bars');
             }
@@ -975,67 +975,66 @@ body.dark-mode .main-footer {
     });
 
 
-    // 4. Dynamic Table of Contents (TOC) with Smooth Scrolling
+    
     const tocList = document.getElementById('toc-list');
     const postBody = document.querySelector('.post-body');
-    const headings = postBody.querySelectorAll('h2, h3'); // Select h2 and h3 elements for TOC
+    const headings = postBody.querySelectorAll('h2, h3'); 
 
     if (tocList && headings.length > 0) {
         headings.forEach((heading, index) => {
-            // Generate a unique ID for the heading (e.g., "1-understanding-cyber-security")
+            
             const id = heading.textContent.toLowerCase()
-                             .replace(/[^a-z0-9\s-]/g, '') // Remove special characters except spaces/hyphens
-                             .trim() // Trim whitespace
-                             .replace(/\s+/g, '-'); // Replace spaces with hyphens
-            heading.id = id; // Assign the generated ID to the heading
+                             .replace(/[^a-z0-9\s-]/g, '') 
+                             .trim() 
+                             .replace(/\s+/g, '-'); 
+            heading.id = id; 
 
             const listItem = document.createElement('li');
             const anchor = document.createElement('a');
             anchor.href = `#${id}`;
             anchor.textContent = heading.textContent;
-            anchor.classList.add(`toc-level-${heading.tagName.toLowerCase()}`); // Add class for styling different levels (h2, h3)
+            anchor.classList.add(`toc-level-${heading.tagName.toLowerCase()}`); 
 
-            // Add click event for smooth scroll
+            
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 document.getElementById(id).scrollIntoView({
                     behavior: 'smooth',
-                    block: 'start' // Scroll to the top of the element
+                    block: 'start' 
                 });
-                // Remove 'active' class from all other TOC links
+                
                 document.querySelectorAll('#toc-list a').forEach(link => link.classList.remove('active'));
-                // Add 'active' class to the clicked link
+               
                 this.classList.add('active');
             });
 
-            // Handle nested TOC items for h3 under h2
+            
             if (heading.tagName === 'H3') {
                 let parentH2ListItem = listItem.previousElementSibling;
-                // Find the closest preceding H2 list item to nest the H3 under
+                
                 while (parentH2ListItem && !parentH2ListItem.querySelector('.toc-level-h2')) {
                     parentH2ListItem = parentH2ListItem.previousElementSibling;
                 }
                 if (parentH2ListItem) {
                     let ul = parentH2ListItem.querySelector('ul');
-                    if (!ul) { // Create a sub-list if it doesn't exist
+                    if (!ul) { 
                         ul = document.createElement('ul');
                         parentH2ListItem.appendChild(ul);
                     }
                     ul.appendChild(listItem);
                 } else {
-                    tocList.appendChild(listItem); // Fallback if H3 has no preceding H2
+                    tocList.appendChild(listItem); 
                 }
-            } else { // H2 headings are appended directly to the main TOC list
+            } else { 
                 tocList.appendChild(listItem);
             }
             listItem.appendChild(anchor);
         });
 
-        // Highlight TOC item on scroll using Intersection Observer
         const observerOptions = {
-            root: null, // The viewport is the root
-            rootMargin: '0px 0px -50% 0px', // Trigger when target is 50% from the bottom of the viewport
-            threshold: 0 // As soon as target enters/leaves root
+            root: null, 
+            rootMargin: '0px 0px -50% 0px', 
+            threshold: 0 
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -1045,13 +1044,12 @@ body.dark-mode .main-footer {
 
                 if (tocLink) {
                     if (entry.isIntersecting) {
-                        // Remove 'active' from all other links
+                        
                         document.querySelectorAll('#toc-list a').forEach(link => link.classList.remove('active'));
-                        // Add 'active' to the currently intersecting link
+                        
                         tocLink.classList.add('active');
                     } else {
-                        // Optional: remove 'active' class when heading leaves view
-                        // tocLink.classList.remove('active');
+                       
                     }
                 }
             });
@@ -1063,29 +1061,6 @@ body.dark-mode .main-footer {
         });
     }
 
-    // 5. Manage Ad Visibility (data-ad-status="hidden" in HTML)
-    // To make ads visible, you need to change 'data-ad-status="hidden"' to 'data-ad-status="visible"'
-    // on the respective .ads-container divs in your index.html file.
-    // For example:
-    // <div class="ads-container right-ads" data-ad-status="visible">
-    // <div class="ads-container left-ads" data-ad-status="visible">
-
-    // If you wish to manage this programmatically (e.g., after an API call confirming ad approval):
-    // const rightAdsContainer = document.querySelector('.right-ads');
-    // const leftAdsContainer = document.querySelector('.left-ads');
-    // Example: Make ads visible after 5 seconds (for demonstration purposes only)
-    /*
-    setTimeout(() => {
-        if (rightAdsContainer) {
-            rightAdsContainer.dataset.adStatus = 'visible';
-            console.log('Right ads are now visible.');
-        }
-        if (leftAdsContainer) {
-            leftAdsContainer.dataset.adStatus = 'visible';
-            console.log('Left ads are now visible.');
-        }
-    }, 5000);
-    */
 });
     </script>
     
