@@ -1,113 +1,1122 @@
-<!-- countdown timer  BSW -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3663278458751008"
+     crossorigin="anonymous"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT</title>
+    <title>What is IT? - CyberWise</title>
     <link rel="icon" href="/Logo1 2.png" type="image/icon type">
-
-    <style>
-        * {
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        body {
-            background: url("/IT\ 1.jpg");
-            background-size: cover;
-            margin: 0;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            align-content: space-around;
-        }
-        html {
-            height: 100%;
-        }
-        .count-down {
-            width: 550px;
-            height: 378px;
-            margin: auto;
-            padding: 20px;
-            color: white;
-        }
-        .count-down .flipdown {
-            margin: auto;
-            width: 600px;
-            margin-top: 30px;
-        }
-        .count-down h1 {
-            text-align: center;
-            font-weight: 400;
-            font-size: 3em;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-        @media (max-width: 550px) {
-            .count-down {
-                width: 100%;
-                height: 362px;
-            }
-            .count-down h1 {
-                font-size: 2.5em;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
+<style>
+    /* General Body and Container */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f5f6; /* Default Light Mode Background */
+    color: #333; /* Default Light Mode Text Color */
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a2e; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+
+body.dark-mode .main-header,
+body.dark-mode .main-content,
+body.dark-mode .table-of-contents,
+body.dark-mode .ad-unit,
+body.dark-mode .similar-posts,
+body.dark-mode .post-card {
+    background-color: #2e3b55; /* Slightly lighter dark background */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .main-header {
+    border-bottom-color: #444;
+}
+
+body.dark-mode .logo a,
+body.dark-mode .main-nav ul li a,
+body.dark-mode .blog-post h1,
+body.dark-mode .post-body h2,
+body.dark-mode .post-body h3,
+body.dark-mode .table-of-contents h3,
+body.dark-mode .similar-posts h2,
+body.dark-mode .post-card h3 a {
+    color: #fff; /* White for headings/important text */
+}
+
+body.dark-mode .main-nav ul li a:hover,
+body.dark-mode .table-of-contents ul li a:hover,
+body.dark-mode .table-of-contents ul li a.active,
+body.dark-mode .post-card h3 a:hover,
+body.dark-mode .footer-links li a:hover,
+body.dark-mode .social-media a:hover {
+    color: #87ceeb; /* Lighter blue for hover/active in dark mode */
+}
+
+body.dark-mode .post-meta,
+body.dark-mode .table-of-contents ul li a,
+body.dark-mode .table-of-contents ul ul li a,
+body.dark-mode .ad-unit p,
+body.dark-mode .post-card p {
+    color: #ccc; /* Lighter gray for general text */
+}
+
+body.dark-mode .table-of-contents ul ul {
+    border-left-color: #555;
+}
+
+body.dark-mode .ad-unit {
+    border-color: #555;
+}
+
+body.dark-mode .post-card {
+    border-color: #555;
+}
+
+body.dark-mode .post-meta,
+body.dark-mode .similar-posts h2 {
+    border-bottom-color: #444;
+}
+
+body.dark-mode .post-body h2 {
+    border-left-color: #87ceeb; /* Match the lighter blue */
+}
+
+body.dark-mode #dark-mode-toggle {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Dark Mode Toggle Icon Switch */
+.dark-mode-toggle .fa-moon {
+    display: block; /* Show moon by default (for light mode) */
+}
+.dark-mode-toggle .fa-sun {
+    display: none; /* Hide sun by default */
+}
+body.dark-mode .dark-mode-toggle .fa-moon {
+    display: none; /* Hide moon when in dark mode */
+}
+body.dark-mode .dark-mode-toggle .fa-sun {
+    display: block; /* Show sun when in dark mode */
+    color: #ffeb3b; /* Yellow for sun icon in dark mode */
+}
+
+body.dark-mode .menu-toggle {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Header Styling */
+.main-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.logo-container .logo-text {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3498db;
+            transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        body.dark-mode .logo-container .logo-text {
+            color: #50fa7b;
+        }
+        .logo-container .logo-subtext {
+            font-size: 0.8em;
+            color: #777;
+            transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        body.dark-mode .logo-container .logo-subtext {
+            color: #aaa;
+        }
+
+         /* MODIFICATION: Style for the flag image in the logo container */
+        .logo-container img {
+            display: inline-block; 
+            vertical-align: middle; 
+            margin-left: 8px;       
+            height: 35px;           
+            width: 35px;            
+        }
+
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #007bff;
+}
+
+.header-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#current-date-time {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+}
+
+/* Main Content Area */
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 0 15px;
+}
+
+.main-content {
+    flex: 3;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.blog-post h1 {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.post-body h2 {
+    font-size: 28px;
+    color: #222;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    border-left: 5px solid #007bff;
+    padding-left: 10px;
+}
+
+.post-body h3 {
+    font-size: 22px;
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.post-body p {
+    margin-bottom: 15px;
+}
+
+.post-body ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.post-body ul li {
+    margin-bottom: 8px;
+}
+
+/* Sidebars and Ads */
+.left-sidebar,
+.right-sidebar {
+    flex: 1; /* Equal space */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Hide left sidebar by default on all screen sizes unless explicitly made visible via media query */
+.left-sidebar {
+    display: none;
+}
+
+/* Control ad visibility based on data attribute */
+.ads-container[data-ad-status="hidden"] {
+    display: none !important; /* Force hide if status is hidden */
+}
+
+/* TOC Styling */
+.table-of-contents {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 20px;
+}
+
+.table-of-contents h3 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.table-of-contents ul {
+    list-style: none;
+    padding: 0;
+}
+
+.table-of-contents ul li {
+    margin-bottom: 8px;
+}
+
+.table-of-contents ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+    display: block;
+    padding: 5px 0;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.table-of-contents ul li a:hover,
+.table-of-contents ul li a.active {
+    color: #007bff;
+    padding-left: 5px;
+}
+
+.table-of-contents ul ul {
+    margin-left: 15px;
+    border-left: 1px solid #eee;
+    padding-left: 10px;
+}
+
+.table-of-contents ul ul li a {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Ad Unit Styling */
+.ad-unit {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    text-align: center;
+    border: 1px dashed #ddd;
+}
+
+.ad-unit img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.ad-unit p {
+    font-size: 14px;
+    color: #777;
+}
+
+
+/* Similar Posts Section */
+.similar-posts {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    margin-top: 30px;
+}
+
+.similar-posts h2 {
+    font-size: 26px;
+    color: #222;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.post-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+}
+
+.post-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.post-card h3 {
+    font-size: 18px;
+    padding: 15px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.post-card h3 a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.2s ease;
+}
+
+.post-card h3 a:hover {
+    color: #0056b3;
+}
+
+.post-card p {
+    font-size: 14px;
+    color: #666;
+    padding: 0 15px 15px;
+    margin-top: 0;
+}
+
+
+/* Footer Styling */
+.main-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 25px 0;
+    margin-top: 40px;
+}
+
+body.dark-mode .main-footer {
+    background-color: #1a1a2e;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    flex-wrap: wrap;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.footer-links li {
+    margin-left: 20px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+    color: #007bff;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #007bff;
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .main-content,
+    .right-sidebar,
+    .similar-posts {
+        margin-bottom: 20px;
+    }
+
+    /* Move right sidebar (TOC/Ads) above main content on smaller screens */
+    .right-sidebar {
+        order: -1;
+    }
+
+    /* Hide TOC for mobile view */
+    .table-of-contents {
+        display: none; /* Hide TOC on screens 992px and narrower */
+        position: static; /* Remove sticky behavior */
+        top: auto;
+    }
+
+    /* Always hide left sidebar on mobile (and other smaller screens) */
+    .left-sidebar {
+        display: none;
+    }
+
+    /* Hide ads on screens 992px and narrower, regardless of data-ad-status */
+    .ads-container {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        flex-basis: 50%; /* Take half width */
+    }
+
+    .header-meta {
+        flex-basis: 50%; /* Take half width */
+        justify-content: flex-end; /* Push items to right */
+    }
+
+    .main-nav {
+        /* Mobile navigation menu */
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff; /* Ensure it's visible against default header if needed */
+        position: absolute;
+        top: 70px; /* Adjust based on header height */
+        left: 0;
+        z-index: 100;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        padding: 0; /* Remove default padding from nav */
+    }
+
+    body.dark-mode .main-nav {
+        background-color: #2e3b55;
+    }
+
+    .main-nav.active {
+        display: flex; /* Show when active */
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .main-nav ul li {
+        margin: 0;
+        width: 100%;
+    }
+
+    .main-nav ul li a {
+        padding: 12px 20px;
+        border-bottom: 1px solid #eee;
+        display: block;
+    }
+
+    body.dark-mode .main-nav ul li a {
+        border-bottom-color: #444;
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu toggle on mobile */
+    }
+
+    #current-date-time {
+        display: none; /* Hide date/time on very small screens to save space */
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .blog-post h1 {
+        font-size: 28px;
+    }
+
+    .post-body h2 {
+        font-size: 24px;
+    }
+
+    .post-body h3 {
+        font-size: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links li {
+        margin: 5px 0;
+    }
+
+    .social-media {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .post-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
 <body>
-
-    <html lang="en">
-    <head>
-        <title>Comming Soon</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans&display=swap"
-            rel="stylesheet">
-        <!-- Style Flipdown -->
-        <link href="https://pbutcher.uk/flipdown/css/flipdown/flipdown.css" rel="stylesheet" />
-        <!-- Font Awesome -->
-        <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet" />
-        <!-- ALL MIN CSS -->
-        <link rel="stylesheet" href="assets/css/all.min.css">
-        <!-- File Normalization -->
-        <link rel="stylesheet" href="assets/css/normalize.css">
-        <!-- Import CSS Files -->
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-    <body>
-        <div class="count-down">
-            <h1>Comming Soon</h1>
-            <div class="flipdown" id="flipdown"></div>
+    <header class="main-header">
+        <div class="header-content">
+             <div class="logo-container">
+                <a class="logo-text">CyberWise</a><img src="/Nepal flag.gif" width="30" height="13">
+                <div class="logo-subtext">Your Tech Insights</div>
+            </div>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="/IT.html">Information Technology (IT)</a></li>
+                    <li><a href="/About Me.html">About Me</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-meta">
+                <span id="current-date-time"></span>
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
-        
-        <!-- Scripts -->
-        <script src="https://pbutcher.uk/flipdown/js/flipdown/flipdown.js"></script>
-        <script src="vendor/js/main.js"></script>
-    </body>
-</html>
-    
+    </header>
 
+    <div class="container">
+        <aside class="left-sidebar">
+            <div class="ads-container left-ads" data-ad-status="hidden">
+                <div class="ad-unit">
+                    <img src="https://via.placeholder.com/300x600?text=Left+Ad+Space" alt="Advertisement">
+                    <p>Left Ad Area</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <article class="blog-post">
+                <header class="post-header">
+                    <h1>What is information technology? | Full Explanation with Points & Detailed Overview - CyberWise</h1>
+                    <div class="post-meta">
+                        <span>By Bhaskar Sah</span> |
+                        <span>December 12, 2024</span> |
+                        <span>Cyber Security</span>
+                    </div>
+                </header>
+
+                <div class="post-body">
+                    <p>The development of technology over the years has completely reshaped the activities in today's society. Industries and consumers alike are over reliant on the internet today and Information Technology is playing its part silently. Whether you are scrolling through your phone or a managing multi-national company, Information Technology plays a role in everything. In this post we aim to succinct explain Information Technology to cater for the needs of everyone: academics, working professionals or learning enthusiasts.</p>
+
+                    <h2>1. What is Information Technology</h2>
+                    <p>Information Technology (IT) covers the use of computers, software, networks, and electronic devices to perform various operations such as creating, processing, storing, safeguarding, and transmitting of all types of electronic information. It includes all domains related to computing technology, and it extends across a number of business, educational, healthcare, government, and entertainment sectors.</p>
+
+                    <p>IT is what makes a company economically viable, wherein we can certainly talk about, safety guaranteed data storage, worldwide communication, business process automation, and data-based business insight. It's not only hardware and software but also the methods, people, and environment that help computer systems to operate smoothly.</p>
+
+                    <h2>2. Key Components of Information Technology</h2>
+
+                    <ul>
+                        <li>
+                            Hardware:- Physical devices like computers, servers, routers and storage drives.These are the physical parts of an IT system that are used in the input, output, storage, and data processing of the system.
+                        </li>
+
+                        <li>
+                            Software:- Those are the programs and applications to control hardware for the work of tasks.This comprises the operating systems (Windows, Linux), the office suite (MS Office), and home-grown software.
+                        </li>
+
+                        <li>
+                            Networks:- The systems that are joining the devices to share resources and data.They connect and link the company and organization internally and externally through the network.They connect and link the company and organization together through the network inside and outside the company.Examples are LAN, WAN, the internet, and wireless technologies such as Wi-Fi and 5G.
+                        </li>
+
+                        <li>
+                            Data:- It refers to the raw or structured facts that are sources of information to be processed and analyzed.The data is essentially the lifeblood of IT as it powers decisions, automation, and personalization.
+                        </li>
+
+                        <li>
+                            People:- IT professionals who are into software development, computer, storage, network performance, business operations, or customer support.They are responsible for the implementation, testing, and maintenance of IT infrastructure and services.
+                        </li>
+
+                        <li>
+                            Processes:- Methods and approaches that help to manage information technology in a business organization effectively.Along with that are methodologies like ITIL, Agile, DevOps, and cybersecurity protocols
+                        </li>
+                    </ul>
+
+
+            <h2>3. What Technologies Do IT Use?</h2>
+            <p>
+                The Information Technology sector has several subfields which are specifically interesting to the tech community as each of them contributes to the whole digital ecosystem in a unique way:-
+            </p>
+
+            <ul>
+                <li>
+                    Data and Computer Science: Software Development: - Making and writing applications, websites, and corporate systems.
+                </li>
+
+                <li>
+                    Networking and Infrastructure: - Setting up and managing the DM (Data Model) system.
+                </li>
+
+                <li>
+                    Cybersecurity: - Guarding the privacy of networks and data from illegal access and sabotages.
+                </li>
+
+                <li>
+                    Database Administration: - Being responsible for, retrieving, and processing structured data.
+                </li>
+
+                <li>
+                    Cloud Computing: - Reaching out to the internet computing services (AWS, Azure).
+                </li>
+
+                <li>
+                    Artificial Intelligence: The AI Project: R&D, and Research on machine learning, NLP (Natural Language Processing), Prof X,
+                </li>
+
+                <li>
+                    IT Assistance and Call Desk: - Resolving users' technical issues and keeping IT platforms in a good working order.
+                </li>
+
+                <li>
+                    Statistics and Data Science - The extraction of insights and trends from big data through analyses.
+                </li>
+            </ul>
+
+                    <h2>4. The Importance of Information Technology</h2>
+                    <p>Information Technology is one of the essential elements that drive the world in a certain direction. We have tried to set out some of the really crucial reasons below:-</p>
+                    <ul>
+                        <li>
+                            Helps in Communication:- The use of emails, instant messaging, video conferencing tools enables people to interconnect globally.
+                        </li>
+
+                        <li>
+                            Leads to High Businefficiencyss Solution:- It avoids the need for manual tasks, improves the accuracy, and increases efficiency in the processes.
+                        </li>
+
+                        <li>
+                            Enables Global Operations:- Digital platforms are utilized by companies to reach out to customers in all parts of the world.
+                        </li>
+
+                        <li>
+                            Supports Decision-Making:- Leaders are supported with vast data that is analyzed and processed by using business intelligence and analytics.
+                        </li>
+
+                        <li>
+                            Advances Healthcare:- Some of the contributions from technology include Telemedicine, which has digital records of patient health and AI diagnostics that diagnose and treat patients.
+                        </li>
+
+                        <li>
+                            Transforms Education:- There are now online learning platforms and virtual classrooms where the knowledge has become accessible across various locations.
+                        </li>
+
+                        <li>
+                            Leads to New Business Models:- The transactions of online banking, digital wallets, and blockchain have indeed introduced new dimensions to the financial industry.
+                        </li>
+
+                       <p><b> Paradoxically, IT is not only a support function but a strategic asset that can drive innovation, ensure competitiveness, and promote growth.</b></p>
+                    </ul>
+
+
+                    <h2>5. Challenges in the IT Industry</h2>
+                    <p>Even as it proves to be very efficient, the IT sector has to confront some tough issues:-</p>
+
+                    <ul>
+                        <li>
+                            Cybersecurity Threats:- Data breaches, ransomware, and phishing attacks are the main targets for cybercriminals all over the world.
+                        </li>
+
+                        <li>
+                             High Costs: The construction of secure, scalable IT infrastructure is neither easy nor inexpensive.
+                        </li>
+
+                        <li>
+                              Rapid Technological Change: IT professionals must learn new generations of skills and keep their systems current regularly.
+                        </li>
+
+                        <li>
+                             Compliance and Regulations: Compliance is the foremost confirmation of the regulations such as GDPR and HIPAA even though it is difficult.
+                        </li>
+
+                        <li>
+                            Talent Shortage: There is always not enough supply to meet the demand for skilled professionals of IT field.
+                        </li>
+
+                        <p><b>Companies should be more agile and be able to manage risks and to plan and implement strategically to be in positions better than their competitors.</b></p>
+                        
+                    </ul>
+
+                    <h2>6. Future Trends in Information Technology </h2>
+                    <p>The field of IT has a bright future with extraordinary inventions that will change the way we live and work.</p>
+
+                    <ul>
+                        <li>
+                            Internet of Things (IoT) - The intelligence of interconnected smart devices extended to households, cities, and industries.
+                        </li>
+
+                        <li>
+                            Hybrid Cloud and Edge Computing - Faster data processing and more flexibility achieved at the network edge.
+                        </li>
+
+                        <li>
+                            5G Networks - A super-fast and stable internet capability for real-time apps and teleworking.
+                        </li>
+
+                        <li>
+                            AI and Machine Learning - More advanced automation, personal services, and analytical work done intelligently.
+                        </li>
+
+                        <li>
+                            Blockchain Technology - Systems of decentralized and secure data exchange.
+                        </li>
+
+                        <li>
+                            Quantum Computing - Who can know or solve the problems that today's computers are unable to do?
+                        </li>
+
+                        <p>
+                            <b>
+                                As a matter of fact, these trends are not only futuristic but are also completely transforming sectors like finance, health, retail, and manufacturing.
+                            </b>
+                        </p>
+                    </ul>
+
+                    <h2>9. Conclusion</h2>
+                    <p>Information Technology no longer remains only a technical field, it is now a central factor in the human progress and digital transformation. Firstly, IT is the one keeping the world going, it is architected to be sustainable and competitive resources for innovative business(the word 'at that time') and also have to keep moving with the changes. It is worth noting that the last sentence is a little bit of a repetition of the first sentence so it might be better if it were to be replaced by the previous paragraph.</p>
+
+                    <p>To survive and prosper in the 21st century, people should be computer literate on top of the professionals who need that to organize their tasks.</p>
+
+                </div>
+            </article>
+
+            <section class="similar-posts">
+                <h2>Similar or Recent Posts</h2>
+                <div class="post-grid">
+                    <div class="post-card">
+                        <img src="https://via.placeholder.com/300x200" alt="Post Thumbnail">
+                        <h3><a href="#">How to Protect Your Data Online</a></h3>
+                        <p>Learn essential tips to keep your personal and professional data safe from cyber threats.</p>
+                    </div>
+                    <div class="post-card">
+                        <img src="https://via.placeholder.com/300x200" alt="Post Thumbnail">
+                        <h3><a href="#">The Rise of Ransomware Attacks</a></h3>
+                        <p>An in-depth look into the increasing menace of ransomware and how to mitigate its risks.</p>
+                    </div>
+                    <div class="post-card">
+                        <img src="https://via.placeholder.com/300x200" alt="Post Thumbnail">
+                        <h3><a href="#">Understanding Phishing Scams</a></h3>
+                        <p>Identify common phishing techniques and protect yourself from deceptive online traps.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside class="right-sidebar">
+            <div class="table-of-contents" id="toc-container">
+                <h3>Table of Contents</h3>
+                <ul id="toc-list">
+                    </ul>
+            </div>
+            <div class="ads-container right-ads" data-ad-status="hidden">
+                <div class="ad-unit">
+                    <img src="https://via.placeholder.com/300x250?text=Right+Ad+Space+1" alt="Advertisement">
+                    <p>Right Ad Area 1</p>
+                </div>
+                <div class="ad-unit">
+                    <img src="https://via.placeholder.com/300x600?text=Right+Ad+Space+2" alt="Advertisement">
+                    <p>Right Ad Area 2</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 CyberWise. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="/About Me.html">About Author</a></li>
+                <li><a href="/privacy policy.html">Privacy Policy</a></li>
+                <li><a href="/terms&condition.html">Terms and condition</a></li>
+                <li><a href="/Disclaimer.html">Disclaimer</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="https://www.facebook.com/bhaskar.sah.5621" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/wasu462" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/bha__s__kar_/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 
     <script>
-        // The End Of Year Date To Countdown Date
+        document.addEventListener('DOMContentLoaded', function() {
+    // 1. Header Date and Time
+    const currentDateTimeElement = document.getElementById('current-date-time');
+    function updateDateTime() {
+        const now = new Date();
+        const options = {
+            weekday: 'long', // e.g., 'Monday'
+            year: 'numeric', // e.g., '2025'
+            month: 'long',   // e.g., 'May'
+            day: 'numeric',  // e.g., '25'
+            hour: '2-digit', // e.g., '04'
+            minute: '2-digit',// e.g., '55'
+            second: '2-digit',// e.g., '41'
+            hour12: true     // Use AM/PM
+        };
+        
+        const formatter = new Intl.DateTimeFormat('en-US', options);
+        currentDateTimeElement.textContent = formatter.format(now);
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000); 
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Unix timestamp (in seconds) to count down to
-    var toDayFromNow = (new Date("June 01, 2025 23:59:59").getTime() / 1000) + (3600 / 60 / 60 / 24) - 1;
-    // Set Up FlipDown
-    var flipdown = new FlipDown(toDayFromNow)
+   
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
 
-    // Start The Count Down
-    .start()
-    // Do Something When The Countdown Ends
-    .ifEnded(() => {
-        document.querySelector(".flipdown").innerHTML = `<h2>Timer is ended</h2>`;
+    
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+    }
+
+    darkModeToggle.addEventListener('click', function() {
+        body.classList.toggle('dark-mode');
+        
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
     });
+
+    
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    menuToggle.addEventListener('click', function() {
+        mainNav.classList.toggle('active');
+        
+        const icon = menuToggle.querySelector('i');
+        if (mainNav.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times'); 
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars'); 
+        }
+    });
+
+   
+    mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+               
+                menuToggle.querySelector('i').classList.remove('fa-times');
+                menuToggle.querySelector('i').classList.add('fa-bars');
+            }
+        });
+    });
+
+
+    
+    const tocList = document.getElementById('toc-list');
+    const postBody = document.querySelector('.post-body');
+    const headings = postBody.querySelectorAll('h2, h3'); 
+
+    if (tocList && headings.length > 0) {
+        headings.forEach((heading, index) => {
+            
+            const id = heading.textContent.toLowerCase()
+                             .replace(/[^a-z0-9\s-]/g, '') 
+                             .trim() 
+                             .replace(/\s+/g, '-'); 
+            heading.id = id; 
+
+            const listItem = document.createElement('li');
+            const anchor = document.createElement('a');
+            anchor.href = `#${id}`;
+            anchor.textContent = heading.textContent;
+            anchor.classList.add(`toc-level-${heading.tagName.toLowerCase()}`); 
+
+            
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById(id).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start' 
+                });
+               
+                document.querySelectorAll('#toc-list a').forEach(link => link.classList.remove('active'));
+                
+                this.classList.add('active');
+            });
+
+            
+            if (heading.tagName === 'H3') {
+                let parentH2ListItem = listItem.previousElementSibling;
+                
+                while (parentH2ListItem && !parentH2ListItem.querySelector('.toc-level-h2')) {
+                    parentH2ListItem = parentH2ListItem.previousElementSibling;
+                }
+                if (parentH2ListItem) {
+                    let ul = parentH2ListItem.querySelector('ul');
+                    if (!ul) { 
+                        ul = document.createElement('ul');
+                        parentH2ListItem.appendChild(ul);
+                    }
+                    ul.appendChild(listItem);
+                } else {
+                    tocList.appendChild(listItem); 
+                }
+            } else { 
+                tocList.appendChild(listItem);
+            }
+            listItem.appendChild(anchor);
+        });
+
+       
+        const observerOptions = {
+            root: null, 
+            rootMargin: '0px 0px -50% 0px', 
+            threshold: 0 
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const id = entry.target.id;
+                const tocLink = document.querySelector(`#toc-list a[href="#${id}"]`);
+
+                if (tocLink) {
+                    if (entry.isIntersecting) {
+                        
+                        document.querySelectorAll('#toc-list a').forEach(link => link.classList.remove('active'));
+                        
+                        tocLink.classList.add('active');
+                    } else {
+                        
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe each heading
+        headings.forEach(heading => {
+            observer.observe(heading);
+        });
+    }
 });
     </script>
+    
 </body>
 </html>
