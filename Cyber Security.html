@@ -154,7 +154,6 @@ body.dark-mode .menu-toggle {
             color: #aaa;
         }
 
-         /* MODIFICATION: Style for the flag image in the logo container */
         .logo-container img {
             display: inline-block; 
             vertical-align: middle; 
@@ -299,7 +298,6 @@ body.dark-mode .menu-toggle {
     gap: 20px;
 }
 
-/* Hide left sidebar by default on all screen sizes unless explicitly made visible via media query */
 .left-sidebar {
     display: none;
 }
@@ -542,7 +540,6 @@ body.dark-mode .main-footer {
         top: auto;
     }
 
-    /* Always hide left sidebar on mobile (and other smaller screens) */
     .left-sidebar {
         display: none;
     }
@@ -571,16 +568,16 @@ body.dark-mode .main-footer {
 
     .main-nav {
         /* Mobile navigation menu */
-        display: none; /* Hidden by default */
+        display: none; 
         flex-direction: column;
         width: 100%;
-        background-color: #fff; /* Ensure it's visible against default header if needed */
+        background-color: #fff; 
         position: absolute;
-        top: 70px; /* Adjust based on header height */
+        top: 70px; 
         left: 0;
         z-index: 100;
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        padding: 0; /* Remove default padding from nav */
+        padding: 0;
     }
 
     body.dark-mode .main-nav {
@@ -588,7 +585,7 @@ body.dark-mode .main-footer {
     }
 
     .main-nav.active {
-        display: flex; /* Show when active */
+        display: flex; 
     }
 
     .main-nav ul {
@@ -614,11 +611,11 @@ body.dark-mode .main-footer {
     }
 
     .menu-toggle {
-        display: block; /* Show menu toggle on mobile */
+        display: block; 
     }
 
     #current-date-time {
-        display: none; /* Hide date/time on very small screens to save space */
+        display: none; 
     }
 
     .main-content {
