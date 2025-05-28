@@ -537,17 +537,16 @@ body.dark-mode .main-footer {
 
     /* Hide TOC for mobile view */
     .table-of-contents {
-        display: none; /* Hide TOC on screens 992px and narrower */
-        position: static; /* Remove sticky behavior */
+        display: none; 
+        position: static; 
         top: auto;
     }
 
-    /* Always hide left sidebar on mobile (and other smaller screens) */
+    
     .left-sidebar {
         display: none;
     }
 
-    /* Hide ads on screens 992px and narrower, regardless of data-ad-status */
     .ads-container {
         display: none;
     }
@@ -555,32 +554,32 @@ body.dark-mode .main-footer {
 
 @media (max-width: 768px) {
     .header-content {
-        flex-wrap: wrap; /* Allow wrapping */
+        flex-wrap: wrap; 
         justify-content: space-between;
         align-items: center;
     }
 
     .logo {
-        flex-basis: 50%; /* Take half width */
+        flex-basis: 50%; 
     }
 
     .header-meta {
-        flex-basis: 50%; /* Take half width */
-        justify-content: flex-end; /* Push items to right */
+        flex-basis: 50%; 
+        justify-content: flex-end; 
     }
 
     .main-nav {
         /* Mobile navigation menu */
-        display: none; /* Hidden by default */
+        display: none;
         flex-direction: column;
-        width: 100%;
-        background-color: #fff; /* Ensure it's visible against default header if needed */
+        width: 250px;     
+        background-color: #fff;
         position: absolute;
-        top: 70px; /* Adjust based on header height */
-        left: 0;
+        top: 70px;
+        right: 0;         
         z-index: 100;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        padding: 0; /* Remove default padding from nav */
+        box-shadow: -5px 0 10px rgba(0,0,0,0.1); 
+        padding: 0;
     }
 
     body.dark-mode .main-nav {
@@ -661,6 +660,20 @@ body.dark-mode .main-footer {
     .post-grid {
         grid-template-columns: 1fr;
     }
+
+    /* Inside @media (max-width: 768px) */
+.logo-container {
+    flex-basis: calc(100% - 100px); 
+}
+.header-meta {
+    flex-basis: auto; 
+}
+
+/* Inside @media (max-width: 480px) */
+.logo-container {
+    flex-basis: calc(100% - 60px);
+}
+
 }
 </style>
 
@@ -726,15 +739,15 @@ body.dark-mode .main-footer {
                     
                     <ul>
                         <li>
-                            Surface Web: This is the part of the internet that is available to the public and is indexed by search engines. Websites, the social media platform, blog, you name it.
+                            <strong>Surface Web:</strong> This is the part of the internet that is available to the public and is indexed by search engines. Websites, the social media platform, blog, you name it.
                         </li>
 
                         <li>
-                            Deep Web:this part involves information that is not part of the search engines. Examples of these are non-public databases, medical information, tutorial assets, organizational intranets and more. The deep web, for the most part, is pretty innocent.
+                            <strong>Deep Web:</strong>this part involves information that is not part of the search engines. Examples of these are non-public databases, medical information, tutorial assets, organizational intranets and more. The deep web, for the most part, is pretty innocent.
                         </li>
 
                         <li>
-                            The Dark Web: A small subset of the deep web needing specialized software and a lot of configuration to access. This is purposefully hidden and quite often, requires the necessities of utility of anonymization tools like Tor (The Onion Router).
+                            <strong>The Dark Web:</strong> A small subset of the deep web needing specialized software and a lot of configuration to access. This is purposefully hidden and quite often, requires the necessities of utility of anonymization tools like Tor (The Onion Router).
                         </li>
                     </ul>
 
@@ -754,19 +767,19 @@ body.dark-mode .main-footer {
             <h3>4.1. Illegal Activities</h3>
             <ul>
                 <li>
-                    Drug Trafficking: There are many drugs being sold on the dark web in the marketplace. Boarding favorite substances becomes easy as vendors employ rating mechanisms popularized by e-commerce shops.
+                    <strong>Drug Trafficking:</strong> There are many drugs being sold on the dark web in the marketplace. Boarding favorite substances becomes easy as vendors employ rating mechanisms popularized by e-commerce shops.
                 </li>
 
                 <li>
-                    Weapons Sales: Similarly, the firearms and ammo can be laid hands upon the dark net. Such deals are often very low risk of interception by police hence the worry about gun running.
+                    <strong>Weapons Sales:</strong> Similarly, the firearms and ammo can be laid hands upon the dark net. Such deals are often very low risk of interception by police hence the worry about gun running.
                 </li>
 
                 <li>
-                    Stolen Data and Hacking Services: The web sells hacked personal information like credit card, social securities, email address and so much more. Cybercrime services are also available on the dark web.
+                   <strong> Stolen Data and Hacking Services:</strong> The web sells hacked personal information like credit card, social securities, email address and so much more. Cybercrime services are also available on the dark web.
                 </li>
 
                 <li>
-                    Human Trafficking and Exploitation: Regrettably, the more despicable practices of human subjugation, child abuse as well as illegal pornography are on sale on the dark internet as well.
+                   <strong> Human Trafficking and Exploitation:</strong> Regrettably, the more despicable practices of human subjugation, child abuse as well as illegal pornography are on sale on the dark internet as well.
                 </li>
             </ul>
 
@@ -776,15 +789,15 @@ body.dark-mode .main-footer {
 
             <ul>
                 <li>
-                    Whistleblowing and Freedom of Speech: In oppressive regimes, journalists and activists who use dark web technology communication share their work and their pieces of information to the community without worrying about being prosecuted.
+                    <strong>Whistleblowing and Freedom of Speech:</strong> In oppressive regimes, journalists and activists who use dark web technology communication share their work and their pieces of information to the community without worrying about being prosecuted.
                 </li>
 
                 <li>
-                    Privacy Protection: In most cases, the people who care about the surveillance governments or companies issue may decide to turn to the dark web to achieve both the highest degree of privacy and the best security.
+                   <strong> Privacy Protection:</strong> In most cases, the people who care about the surveillance governments or companies issue may decide to turn to the dark web to achieve both the highest degree of privacy and the best security.
                 </li>
 
                 <li>
-                    Research Purposes: The dark web is a fertile ground for security professionals and academics to study, for example, criminal behaviors and thereby come up with countermeasures to cyber dangers.
+                   <strong> Research Purposes:</strong> The dark web is a fertile ground for security professionals and academics to study, for example, criminal behaviors and thereby come up with countermeasures to cyber dangers.
                 </li>
             </ul>
                     
@@ -822,15 +835,15 @@ body.dark-mode .main-footer {
 
                     <ul>
                         <li>
-                            Undercover Operations: The agencies might penetrate the marketplaces of the dark web, which would enable them to collect evidence and then convict the criminals.
+                            <strong>Undercover Operations:</strong> The agencies might penetrate the marketplaces of the dark web, which would enable them to collect evidence and then convict the criminals.
                         </li>
 
                         <li>
-                            Seizing Domains and Assets: Some of the platforms like Silk Road and AlphaBay have been shut down through the legal process, and seizures have been made to grab assets linked to illegal operations.
+                            <strong>Seizing Domains and Assets:</strong> Some of the platforms like Silk Road and AlphaBay have been shut down through the legal process, and seizures have been made to grab assets linked to illegal operations.
                         </li>
 
                         <li>
-                            International Cooperation: Considering that the dark web is a worldwide issue, law enforcement agency cooperation is of paramount importance in the fight against transnational cybercrime.
+                            <strong>International Cooperation:</strong> Considering that the dark web is a worldwide issue, law enforcement agency cooperation is of paramount importance in the fight against transnational cybercrime.
                         </li>
                     </ul>
                     
@@ -840,15 +853,15 @@ body.dark-mode .main-footer {
 
                    <ul>
                     <li>
-                        Improved anonymity tools: New technologies are constantly being developed to improve user anonymity and security on the dark web.
+                       <strong> Improved anonymity tools:</strong> New technologies are constantly being developed to improve user anonymity and security on the dark web.
                     </li>
 
                     <li>
-                        Regulatory review: The government is exploring ways to regulate dark web activity. It balances the need for privacy and freedom with the risk of illegal content.
+                       <strong> Regulatory review:</strong> The government is exploring ways to regulate dark web activity. It balances the need for privacy and freedom with the risk of illegal content.
                     </li>
 
                     <li>
-                        Landscape Change: In Response to Law Enforcement Actions Black web markets can develop A new platform has emerged to replace the one that was shut down...
+                        <strong>Landscape Change: </strong>In Response to Law Enforcement Actions Black web markets can develop A new platform has emerged to replace the one that was shut down...
                     </li>
                    </ul>
 

@@ -569,18 +569,18 @@ body.dark-mode .main-footer {
         justify-content: flex-end; /* Push items to right */
     }
 
-    .main-nav {
+   .main-nav {
         /* Mobile navigation menu */
-        display: none; /* Hidden by default */
+        display: none;
         flex-direction: column;
-        width: 100%;
-        background-color: #fff; /* Ensure it's visible against default header if needed */
+        width: 250px;     
+        background-color: #fff;
         position: absolute;
-        top: 70px; /* Adjust based on header height */
-        left: 0;
+        top: 70px;
+        right: 0;         
         z-index: 100;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        padding: 0; /* Remove default padding from nav */
+        box-shadow: -5px 0 10px rgba(0,0,0,0.1); 
+        padding: 0;
     }
 
     body.dark-mode .main-nav {
@@ -661,6 +661,20 @@ body.dark-mode .main-footer {
     .post-grid {
         grid-template-columns: 1fr;
     }
+
+        /* Inside @media (max-width: 768px) */
+.logo-container {
+    flex-basis: calc(100% - 100px); 
+}
+.header-meta {
+    flex-basis: auto; 
+}
+
+/* Inside @media (max-width: 480px) */
+.logo-container {
+    flex-basis: calc(100% - 60px);
+}
+
 }
 </style>
 
@@ -794,41 +808,41 @@ body.dark-mode .main-footer {
                     <ul>
 
                         <li>
-                            Health Sector Improvements:- This includes boosting health through medical gadgets and tools, DNA treatment, and keeping an eye on patients from afar, like through TV screens.
+                            <strong>Health Sector Improvements:-</strong> This includes boosting health through medical gadgets and tools, DNA treatment, and keeping an eye on patients from afar, like through TV screens.
                         </li>
 
-                        <li>Green House Gases:- Building storage systems for unused energy sources like sunlight, wind, or bioenergy will reduce the need to use available fossil fuels. This has an impact on fighting climate change.</li>
+                        <li><strong>Green House Gases:-</strong> Building storage systems for unused energy sources like sunlight, wind, or bioenergy will reduce the need to use available fossil fuels. This has an impact on fighting climate change.</li>
 
                         <li>
-                            Agricultural Sector Improvements:- Bioengineering and modern farming methods like precision agriculture have an impact on reducing environmental stress. These approaches boost food production and help crops withstand global climate change more .
-                        </li>
-
-                        <li>
-                            Global Information Sharing:- Communication technology will make distances shorter, let people work from home, and help share information worldwide in no time.
+                           <strong> Agricultural Sector Improvements:-</strong> Bioengineering and modern farming methods like precision agriculture have an impact on reducing environmental stress. These approaches boost food production and help crops withstand global climate change more .
                         </li>
 
                         <li>
-                            Automated Intelligence and Machine Learning:- Technology allows regulators to do business and create chances while facing fewer operational risks and spending less on mistakes people make. In factories, automation helps use resources better to finish making products, which cuts down on worker costs.
+                            <strong>Global Information Sharing:-</strong> Communication technology will make distances shorter, let people work from home, and help share information worldwide in no time.
                         </li>
 
                         <li>
-                            Smart Urbanism And Smart Infrastructure:- Urban area growth in developing nations' infrastructure and service delivery, would also help to lessen the load and boost city life quality.
+                            <strong>Automated Intelligence and Machine Learning:-</strong> Technology allows regulators to do business and create chances while facing fewer operational risks and spending less on mistakes people make. In factories, automation helps use resources better to finish making products, which cuts down on worker costs.
                         </li>
 
                         <li>
-                            Environmental Monitoring:- Ground sensors unmanned aerial vehicles, and satellite clusters will gather data to create a changing baseline. This baseline will help assess shifts in the environment, grasp changes in biodiversity, and oversee the use of natural resources.
+                            <strong>Smart Urbanism And Smart Infrastructure:- </strong>Urban area growth in developing nations' infrastructure and service delivery, would also help to lessen the load and boost city life quality.
                         </li>
 
                         <li>
-                            Space Expansion:- The space age and space industry control technology offer significant advantages. These benefits extend to Earth and enhance life on our planet. They include new discoveries, space-based communication systems, and solutions to address global warming and other challenges.
+                            <strong>Environmental Monitoring:-</strong> Ground sensors unmanned aerial vehicles, and satellite clusters will gather data to create a changing baseline. This baseline will help assess shifts in the environment, grasp changes in biodiversity, and oversee the use of natural resources.
                         </li>
 
                         <li>
-                            Education Technologies:- Technology the internet, has an impact on education. It enables distant learning and teacher-led settings. It also allows for game-like learning environments. Plus, it lets teachers customize lessons for students. This gives everyone a chance to access information and gain knowledge.
+                            <strong>Space Expansion:- </strong>The space age and space industry control technology offer significant advantages. These benefits extend to Earth and enhance life on our planet. They include new discoveries, space-based communication systems, and solutions to address global warming and other challenges.
                         </li>
 
                         <li>
-                            Economic Growth:- Advances in technology also have an impact on encouraging green investments.
+                           <strong> Education Technologies:- </strong>Technology the internet, has an impact on education. It enables distant learning and teacher-led settings. It also allows for game-like learning environments. Plus, it lets teachers customize lessons for students. This gives everyone a chance to access information and gain knowledge.
+                        </li>
+
+                        <li>
+                            <strong>Economic Growth:-</strong> Advances in technology also have an impact on encouraging green investments.
                         </li>
 
                     </ul>

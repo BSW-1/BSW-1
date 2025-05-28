@@ -552,34 +552,34 @@ body.dark-mode .main-footer {
 
 @media (max-width: 768px) {
     .header-content {
-        flex-wrap: wrap; /* Allow wrapping */
+        flex-wrap: wrap; 
         justify-content: space-between;
         align-items: center;
     }
 
     .logo {
-        flex-basis: 50%; /* Take half width */
+        flex-basis: 50%; 
     }
 
     .header-meta {
-        flex-basis: 50%; /* Take half width */
-        justify-content: flex-end; /* Push items to right */
+        flex-basis: 50%; 
+        justify-content: flex-end; 
     }
 
     .main-nav {
         /* Mobile navigation menu */
-        display: none; 
+        display: none;
         flex-direction: column;
-        width: 100%;
-        background-color: #fff; 
+        width: 250px;     
+        background-color: #fff;
         position: absolute;
-        top: 70px; 
-        left: 0;
+        top: 70px;
+        right: 0;         
         z-index: 100;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        box-shadow: -5px 0 10px rgba(0,0,0,0.1); 
         padding: 0;
     }
-
+    
     body.dark-mode .main-nav {
         background-color: #2e3b55;
     }
@@ -658,6 +658,20 @@ body.dark-mode .main-footer {
     .post-grid {
         grid-template-columns: 1fr;
     }
+
+    /* Inside @media (max-width: 768px) */
+.logo-container {
+    flex-basis: calc(100% - 100px); 
+}
+.header-meta {
+    flex-basis: auto; 
+}
+
+/* Inside @media (max-width: 480px) */
+.logo-container {
+    flex-basis: calc(100% - 60px); 
+}
+
 }
 </style>
 
@@ -719,29 +733,29 @@ body.dark-mode .main-footer {
                     <h3>1.1 Types of Cyber Security</h3>
                     <p>There are several types of cyber security, each focusing on different aspects of protection:</p>
                     <ul>
-                        <li>Network Security:- Protecting computer networks from intruders.</li>
-                        <li>Application Security:- Protecting software and devices from threats.</li>
-                        <li>Information Security:- Protecting the integrity and privacy of data.</li>
-                        <li>Operational Security:- Protecting the processes and decisions for handling and protecting data assets.</li>
-                        <li>Disaster Recovery and Business Continuity:- How an organization responds to a cyber security incident or any other event that causes loss of operations or data.</li>
+                        <li><strong>Network Security:-</strong> Protecting computer networks from intruders.</li>
+                        <li><strong>Application Security:-</strong> Protecting software and devices from threats.</li>
+                        <li><strong>Information Security:-</strong> Protecting the integrity and privacy of data.</li>
+                        <li><strong>Operational Security:-</strong> Protecting the processes and decisions for handling and protecting data assets.</li>
+                        <li><strong>Disaster Recovery and Business Continuity:-</strong> How an organization responds to a cyber security incident or any other event that causes loss of operations or data.</li>
                     </ul>
 
                     <h2>2. Common Cyber Threats</h2>
                     <p>The scope of cyber threats is deep and intricate Common ones include:-</p>
                     <ul>
                          <li>
-         Malware:- It is a number of malicious software types including viruses, worms trojans as well as Ransomware which are intended to either cause harm or earn money from systems. Especially ransomware, which is notorious for encrypting a victim's data and then demanding they pay.
+        <strong> Malware:-</strong> It is a number of malicious software types including viruses, worms trojans as well as Ransomware which are intended to either cause harm or earn money from systems. Especially ransomware, which is notorious for encrypting a victim's data and then demanding they pay.
     </li>
 
     <li>
-        Phishing:- This type of attack usually involves emails with malicious intent to steal information like passwords or credit card numbers. The problem is that these emails might seem to be official looking email and therefore are very hard for the average person.
+        <strong>Phishing:-</strong> This type of attack usually involves emails with malicious intent to steal information like passwords or credit card numbers. The problem is that these emails might seem to be official looking email and therefore are very hard for the average person.
     </li>
         
        <li> 
-           Denial of Service (DoS) Attack:- An attack that intends to render a system unavailability by flooding the target with excessive traffic. These malicious Distributed Denial-of-Service (DDoS) attacks are harder to prevent since they typically involve an attacker using multiple compromised systems in an effort to saturate a single server.
+           <strong>Denial of Service (DoS) Attack:-</strong> An attack that intends to render a system unavailability by flooding the target with excessive traffic. These malicious Distributed Denial-of-Service (DDoS) attacks are harder to prevent since they typically involve an attacker using multiple compromised systems in an effort to saturate a single server.
         </li>
         <li>
-            Man-in-the-Middle (MitM) Attacks:- In these attacks, a hacker sets up malicious communication between the two parties and in some cases might even try to phish out private information from regular users.
+            <strong>Man-in-the-Middle (MitM) Attacks:- </strong>In these attacks, a hacker sets up malicious communication between the two parties and in some cases might even try to phish out private information from regular users.
         </li>
         
         <br>
@@ -756,20 +770,20 @@ body.dark-mode .main-footer {
 
                     <ul>
                         <li>
-                     Network Security:- It refers to the authenticity, privacy, and accessibility of information over the networks. Firewalls, intrusion detection systems, and virtual private systems are common measures taken to protect network traffic and monitor the same for unusual activities.
+                     <strong>Network Security:-</strong> It refers to the authenticity, privacy, and accessibility of information over the networks. Firewalls, intrusion detection systems, and virtual private systems are common measures taken to protect network traffic and monitor the same for unusual activities.
               </li>
 
 <li>
-    Application Security:- Ensuring that the software applications are secure, free from vulnerabilities, is very vital since most of these breaches attack weaknesses in software. The effective ways to ensure this include secure coding practices, periodic updating, and testing for security during the software development life cycle.
+   <strong> Application Security:-</strong> Ensuring that the software applications are secure, free from vulnerabilities, is very vital since most of these breaches attack weaknesses in software. The effective ways to ensure this include secure coding practices, periodic updating, and testing for security during the software development life cycle.
 </li>
 
 <li>
-    Data Security:- This will protect sensitive information through encryption, access controls, and data masking. Every organization needs to set up policies to guarantee data access and that its storage is available only for the authorized users.
+    <strong>Data Security:-</strong> This will protect sensitive information through encryption, access controls, and data masking. Every organization needs to set up policies to guarantee data access and that its storage is available only for the authorized users.
 </li>
 
 
 <li>
-    Endpoint Security:- Due to remote working and mobile working, endpoint security is becoming very significant. It involves protecting individual devices, such as laptops, smartphones, and tablets, from cyber threats by installing antivirus software, firewalls, and using their secure configuration.
+    <strong>Endpoint Security:-</strong> Due to remote working and mobile working, endpoint security is becoming very significant. It involves protecting individual devices, such as laptops, smartphones, and tablets, from cyber threats by installing antivirus software, firewalls, and using their secure configuration.
 </li>
 
 <br>    
@@ -794,27 +808,27 @@ body.dark-mode .main-footer {
 
                     <ul>
                          <li>
-                    Preparation:- Organizations need to be able to formulate and continually update an incident response plan, with everyone in their team fully informed of their roles in case a breach occurs.
+                    <strong>Preparation:-</strong> Organizations need to be able to formulate and continually update an incident response plan, with everyone in their team fully informed of their roles in case a breach occurs.
                 </li>
           
                 <li>
-                    Detection and Analysis:- The recognition of the security incident needs to be done as quickly as possible. This might include a system, log, and alert monitoring for events that could indicate there is a breach.
+                    <strong>Detection and Analysis:-</strong> The recognition of the security incident needs to be done as quickly as possible. This might include a system, log, and alert monitoring for events that could indicate there is a breach.
                 </li>
 
                 <li>
-                    Containment:- When an incident has been identified, there needs to be containment immediately to avoid any further damage. Such actions might include keeping the affected systems or networks in quarantine.
+                   <strong> Containment:-</strong> When an incident has been identified, there needs to be containment immediately to avoid any further damage. Such actions might include keeping the affected systems or networks in quarantine.
                 </li>
 
                 <li>
-                    Eradication:- The organization needs to locate and eradicate the source of such incidents after the containment stage is complete, which can involve removal of malware or closure of vulnerabilities.
+                    <strong>Eradication:-</strong> The organization needs to locate and eradicate the source of such incidents after the containment stage is complete, which can involve removal of malware or closure of vulnerabilities.
                 </li>
 
                 <li>
-                    Recovery:- Restoring systems and data to normal functioning is important. This might involve restoring data from backups and ensuring that all vulnerabilities are fixed.
+                    <strong>Recovery:- </strong>Restoring systems and data to normal functioning is important. This might involve restoring data from backups and ensuring that all vulnerabilities are fixed.
                 </li>
 
                 <li>
-                    Post-Incident Review:- Once the incident has been contained and resolved, organizational learning and improvements can be made for future responses.
+                    <strong>Post-Incident Review:-</strong> Once the incident has been contained and resolved, organizational learning and improvements can be made for future responses.
                 </li>
                     </ul>
 
@@ -829,19 +843,19 @@ body.dark-mode .main-footer {
 
                     <ul>
                         <li>
-                            Artificial Intelligence:- AI has an application as a rising technology, and machine learning has an impact on boosting the ability of organizations to spot and handle threats. These tools can look at huge amounts of data to find patterns and odd things that point to cyber dangers.
+                            <strong>Artificial Intelligence:-</strong> AI has an application as a rising technology, and machine learning has an impact on boosting the ability of organizations to spot and handle threats. These tools can look at huge amounts of data to find patterns and odd things that point to cyber dangers.
                         </li>
 
                         <li>
-                            Zero Trust Security:- This security approach assumes dangers exist both outside and inside the network. Tough checks hinge on the person trying to access resources and their location.
+                            <strong>Zero Trust Security:- </strong>This security approach assumes dangers exist both outside and inside the network. Tough checks hinge on the person trying to access resources and their location.
                         </li>
 
                         <li>
-                            Cloud Security:- As companies shift to cloud services, there's a need to safeguard cloud environments. This covers everything from shared responsibility models to figuring out what security steps should be taken to protect data stored in the cloud.
+                            <strong>Cloud Security:-</strong> As companies shift to cloud services, there's a need to safeguard cloud environments. This covers everything from shared responsibility models to figuring out what security steps should be taken to protect data stored in the cloud.
                         </li>
 
                         <li>
-                            IoT Security:- The explosion in IoT devices brings a range of weak spots. Protecting these gadgets is crucial since they often lack strong safety measures.
+                            <strong>IoT Security:-</strong> The explosion in IoT devices brings a range of weak spots. Protecting these gadgets is crucial since they often lack strong safety measures.
                         </li>
 
                     </ul>

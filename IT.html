@@ -571,16 +571,16 @@ body.dark-mode .main-footer {
 
     .main-nav {
         /* Mobile navigation menu */
-        display: none; /* Hidden by default */
+        display: none;
         flex-direction: column;
-        width: 100%;
-        background-color: #fff; /* Ensure it's visible against default header if needed */
+        width: 250px;     
+        background-color: #fff;
         position: absolute;
-        top: 70px; /* Adjust based on header height */
-        left: 0;
+        top: 70px;
+        right: 0;         
         z-index: 100;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        padding: 0; /* Remove default padding from nav */
+        box-shadow: -5px 0 10px rgba(0,0,0,0.1); 
+        padding: 0;
     }
 
     body.dark-mode .main-nav {
@@ -661,6 +661,20 @@ body.dark-mode .main-footer {
     .post-grid {
         grid-template-columns: 1fr;
     }
+
+        /* Inside @media (max-width: 768px) */
+.logo-container {
+    flex-basis: calc(100% - 100px); 
+}
+.header-meta {
+    flex-basis: auto; 
+}
+
+/* Inside @media (max-width: 480px) */
+.logo-container {
+    flex-basis: calc(100% - 60px);
+}
+
 }
 </style>
 
@@ -725,27 +739,27 @@ body.dark-mode .main-footer {
 
                     <ul>
                         <li>
-                            Hardware:- Physical devices like computers, servers, routers and storage drives.These are the physical parts of an IT system that are used in the input, output, storage, and data processing of the system.
+                           <strong> Hardware:- </strong>Physical devices like computers, servers, routers and storage drives.These are the physical parts of an IT system that are used in the input, output, storage, and data processing of the system.
                         </li>
 
                         <li>
-                            Software:- Those are the programs and applications to control hardware for the work of tasks.This comprises the operating systems (Windows, Linux), the office suite (MS Office), and home-grown software.
+                            <strong>Software:-</strong> Those are the programs and applications to control hardware for the work of tasks.This comprises the operating systems (Windows, Linux), the office suite (MS Office), and home-grown software.
                         </li>
 
                         <li>
-                            Networks:- The systems that are joining the devices to share resources and data.They connect and link the company and organization internally and externally through the network.They connect and link the company and organization together through the network inside and outside the company.Examples are LAN, WAN, the internet, and wireless technologies such as Wi-Fi and 5G.
+                            <strong>Networks:-</strong> The systems that are joining the devices to share resources and data.They connect and link the company and organization internally and externally through the network.They connect and link the company and organization together through the network inside and outside the company.Examples are LAN, WAN, the internet, and wireless technologies such as Wi-Fi and 5G.
                         </li>
 
                         <li>
-                            Data:- It refers to the raw or structured facts that are sources of information to be processed and analyzed.The data is essentially the lifeblood of IT as it powers decisions, automation, and personalization.
+                           <strong> Data:-</strong> It refers to the raw or structured facts that are sources of information to be processed and analyzed.The data is essentially the lifeblood of IT as it powers decisions, automation, and personalization.
                         </li>
 
                         <li>
-                            People:- IT professionals who are into software development, computer, storage, network performance, business operations, or customer support.They are responsible for the implementation, testing, and maintenance of IT infrastructure and services.
+                            <strong>People:-</strong> IT professionals who are into software development, computer, storage, network performance, business operations, or customer support.They are responsible for the implementation, testing, and maintenance of IT infrastructure and services.
                         </li>
 
                         <li>
-                            Processes:- Methods and approaches that help to manage information technology in a business organization effectively.Along with that are methodologies like ITIL, Agile, DevOps, and cybersecurity protocols
+                            <strong>Processes:-</strong> Methods and approaches that help to manage information technology in a business organization effectively.Along with that are methodologies like ITIL, Agile, DevOps, and cybersecurity protocols
                         </li>
                     </ul>
 
@@ -757,35 +771,35 @@ body.dark-mode .main-footer {
 
             <ul>
                 <li>
-                    Data and Computer Science: Software Development: - Making and writing applications, websites, and corporate systems.
+                    <strong>Data and Computer Science: Software Development:-</strong> Making and writing applications, websites, and corporate systems.
                 </li>
 
                 <li>
-                    Networking and Infrastructure: - Setting up and managing the DM (Data Model) system.
+                    <strong>Networking and Infrastructure:-</strong> Setting up and managing the DM (Data Model) system.
                 </li>
 
                 <li>
-                    Cybersecurity: - Guarding the privacy of networks and data from illegal access and sabotages.
+                   <strong> Cybersecurity:- </strong>Guarding the privacy of networks and data from illegal access and sabotages.
                 </li>
 
                 <li>
-                    Database Administration: - Being responsible for, retrieving, and processing structured data.
+                    <strong>Database Administration:-</strong> Being responsible for, retrieving, and processing structured data.
                 </li>
 
                 <li>
-                    Cloud Computing: - Reaching out to the internet computing services (AWS, Azure).
+                    <strong>Cloud Computing:-</strong> Reaching out to the internet computing services (AWS, Azure).
                 </li>
 
                 <li>
-                    Artificial Intelligence: The AI Project: R&D, and Research on machine learning, NLP (Natural Language Processing), Prof X,
+                   <strong> Artificial Intelligence:-</strong> The AI Project: R&D, and Research on machine learning, NLP (Natural Language Processing), Prof X,
                 </li>
 
                 <li>
-                    IT Assistance and Call Desk: - Resolving users' technical issues and keeping IT platforms in a good working order.
+                    <strong>IT Assistance and Call Desk:- </strong>Resolving users' technical issues and keeping IT platforms in a good working order.
                 </li>
 
                 <li>
-                    Statistics and Data Science - The extraction of insights and trends from big data through analyses.
+                    <strong>Statistics and Data Science:-</strong> The extraction of insights and trends from big data through analyses.
                 </li>
             </ul>
 
@@ -793,31 +807,31 @@ body.dark-mode .main-footer {
                     <p>Information Technology is one of the essential elements that drive the world in a certain direction. We have tried to set out some of the really crucial reasons below:-</p>
                     <ul>
                         <li>
-                            Helps in Communication:- The use of emails, instant messaging, video conferencing tools enables people to interconnect globally.
+                            <strong>Helps in Communication:-</strong> The use of emails, instant messaging, video conferencing tools enables people to interconnect globally.
                         </li>
 
                         <li>
-                            Leads to High Businefficiencyss Solution:- It avoids the need for manual tasks, improves the accuracy, and increases efficiency in the processes.
+                           <strong> Leads to High Businefficiencyss Solution:-</strong> It avoids the need for manual tasks, improves the accuracy, and increases efficiency in the processes.
                         </li>
 
                         <li>
-                            Enables Global Operations:- Digital platforms are utilized by companies to reach out to customers in all parts of the world.
+                           <strong> Enables Global Operations:-</strong> Digital platforms are utilized by companies to reach out to customers in all parts of the world.
                         </li>
 
                         <li>
-                            Supports Decision-Making:- Leaders are supported with vast data that is analyzed and processed by using business intelligence and analytics.
+                            <strong>Supports Decision-Making:-</strong> Leaders are supported with vast data that is analyzed and processed by using business intelligence and analytics.
                         </li>
 
                         <li>
-                            Advances Healthcare:- Some of the contributions from technology include Telemedicine, which has digital records of patient health and AI diagnostics that diagnose and treat patients.
+                            <strong>Advances Healthcare:-</strong> Some of the contributions from technology include Telemedicine, which has digital records of patient health and AI diagnostics that diagnose and treat patients.
                         </li>
 
                         <li>
-                            Transforms Education:- There are now online learning platforms and virtual classrooms where the knowledge has become accessible across various locations.
+                            <strong>Transforms Education:-</strong> There are now online learning platforms and virtual classrooms where the knowledge has become accessible across various locations.
                         </li>
 
                         <li>
-                            Leads to New Business Models:- The transactions of online banking, digital wallets, and blockchain have indeed introduced new dimensions to the financial industry.
+                            <strong>Leads to New Business Models:-</strong> The transactions of online banking, digital wallets, and blockchain have indeed introduced new dimensions to the financial industry.
                         </li>
 
                        <p><b> Paradoxically, IT is not only a support function but a strategic asset that can drive innovation, ensure competitiveness, and promote growth.</b></p>
@@ -829,23 +843,23 @@ body.dark-mode .main-footer {
 
                     <ul>
                         <li>
-                            Cybersecurity Threats:- Data breaches, ransomware, and phishing attacks are the main targets for cybercriminals all over the world.
+                           <strong> Cybersecurity Threats:</strong> Data breaches, ransomware, and phishing attacks are the main targets for cybercriminals all over the world.
                         </li>
 
                         <li>
-                             High Costs: The construction of secure, scalable IT infrastructure is neither easy nor inexpensive.
+                             <strong>High Costs:</strong> The construction of secure, scalable IT infrastructure is neither easy nor inexpensive.
                         </li>
 
                         <li>
-                              Rapid Technological Change: IT professionals must learn new generations of skills and keep their systems current regularly.
+                              <strong>Rapid Technological Change:</strong> IT professionals must learn new generations of skills and keep their systems current regularly.
                         </li>
 
                         <li>
-                             Compliance and Regulations: Compliance is the foremost confirmation of the regulations such as GDPR and HIPAA even though it is difficult.
+                            <strong> Compliance and Regulations:</strong> Compliance is the foremost confirmation of the regulations such as GDPR and HIPAA even though it is difficult.
                         </li>
 
                         <li>
-                            Talent Shortage: There is always not enough supply to meet the demand for skilled professionals of IT field.
+                            <strong>Talent Shortage:</strong> There is always not enough supply to meet the demand for skilled professionals of IT field.
                         </li>
 
                         <p><b>Companies should be more agile and be able to manage risks and to plan and implement strategically to be in positions better than their competitors.</b></p>
@@ -857,27 +871,27 @@ body.dark-mode .main-footer {
 
                     <ul>
                         <li>
-                            Internet of Things (IoT) - The intelligence of interconnected smart devices extended to households, cities, and industries.
+                            <strong>Internet of Things (IoT):-</strong> The intelligence of interconnected smart devices extended to households, cities, and industries.
                         </li>
 
                         <li>
-                            Hybrid Cloud and Edge Computing - Faster data processing and more flexibility achieved at the network edge.
+                            <strong>Hybrid Cloud and Edge Computing:-</strong> Faster data processing and more flexibility achieved at the network edge.
                         </li>
 
                         <li>
-                            5G Networks - A super-fast and stable internet capability for real-time apps and teleworking.
+                            <strong>5G Networks:-</strong> A super-fast and stable internet capability for real-time apps and teleworking.
                         </li>
 
                         <li>
-                            AI and Machine Learning - More advanced automation, personal services, and analytical work done intelligently.
+                           <strong> AI and Machine Learning:-</strong> More advanced automation, personal services, and analytical work done intelligently.
                         </li>
 
                         <li>
-                            Blockchain Technology - Systems of decentralized and secure data exchange.
+                           <strong> Blockchain Technology:-</strong> Systems of decentralized and secure data exchange.
                         </li>
 
                         <li>
-                            Quantum Computing - Who can know or solve the problems that today's computers are unable to do?
+                            <strong>Quantum Computing:-</strong> Who can know or solve the problems that today's computers are unable to do?
                         </li>
 
                         <p>
