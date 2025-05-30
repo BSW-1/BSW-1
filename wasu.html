@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What is Artificial Intelligence (AI)? Types, Applications, Benefits & Future Described - CyberWise</title>
+    <title>What is information technology? | Full Explanation with Points & Detailed Overview</title>
     <link rel="icon" href="/Logo1 2.png" type="image/icon type">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -18,16 +18,16 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f4f5f6; /* Default Light Mode Background */
-        color: #333; /* Default Light Mode Text Color */
+        background-color: #f4f5f6; 
+        color: #333;
         line-height: 1.6;
         transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     /* Dark Mode Styles */
     body.dark-mode {
-        background-color: #1a1a2e; /* Dark background */
-        color: #e0e0e0; /* Light text */
+        background-color: #1a1a2e;
+        color: #e0e0e0; 
     }
 
     body.dark-mode .main-header,
@@ -36,7 +36,7 @@
     body.dark-mode .ad-unit,
     body.dark-mode .similar-posts,
     body.dark-mode .post-card {
-        background-color: #2e3b55; /* Slightly lighter dark background */
+        background-color: #2e3b55; 
         box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
@@ -52,7 +52,7 @@
     body.dark-mode .table-of-contents h3,
     body.dark-mode .similar-posts h2,
     body.dark-mode .post-card h3 a {
-        color: #fff; /* White for headings/important text */
+        color: #fff; 
     }
 
     body.dark-mode .main-nav ul li a:hover,
@@ -61,7 +61,7 @@
     body.dark-mode .post-card h3 a:hover,
     body.dark-mode .footer-links li a:hover,
     body.dark-mode .social-media a:hover {
-        color: #87ceeb; /* Lighter blue for hover/active in dark mode */
+        color: #87ceeb; 
     }
 
     body.dark-mode .post-meta,
@@ -69,7 +69,7 @@
     body.dark-mode .table-of-contents ul ul li a,
     body.dark-mode .ad-unit p,
     body.dark-mode .post-card p {
-        color: #ccc; /* Lighter gray for general text */
+        color: #ccc; 
     }
 
     body.dark-mode .table-of-contents ul ul {
@@ -90,7 +90,7 @@
     }
 
     body.dark-mode .post-body h2 {
-        border-left-color: #87ceeb; /* Match the lighter blue */
+        border-left-color: #87ceeb; 
     }
 
     body.dark-mode #dark-mode-toggle {
@@ -100,17 +100,17 @@
 
     /* Dark Mode Toggle Icon Switch */
     .dark-mode-toggle .fa-moon {
-        display: block; /* Show moon by default (for light mode) */
+        display: block; 
     }
     .dark-mode-toggle .fa-sun {
-        display: none; /* Hide sun by default */
+        display: none; 
     }
     body.dark-mode .dark-mode-toggle .fa-moon {
-        display: none; /* Hide moon when in dark mode */
+        display: none; 
     }
     body.dark-mode .dark-mode-toggle .fa-sun {
-        display: block; /* Show sun when in dark mode */
-        color: #ffeb3b; /* Yellow for sun icon in dark mode */
+        display: block; 
+        color: #ffeb3b; 
     }
 
     body.dark-mode .menu-toggle {
@@ -171,7 +171,7 @@
 
     .main-nav ul li {
         margin-left: 25px;
-        position: relative; /* For dropdown positioning */
+        position: relative; 
     }
 
     .main-nav ul li a {
@@ -179,7 +179,7 @@
         color: #555;
         font-weight: 500;
         transition: color 0.3s ease;
-        display: flex; /* To align arrow */
+        display: flex; 
         align-items: center;
     }
 
@@ -196,7 +196,7 @@
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
         border-radius: 5px;
-        top: 100%; /* Position below the parent li */
+        top: 100%; 
         left: 0;
         padding: 10px 0;
     }
@@ -212,7 +212,7 @@
         text-decoration: none;
         display: block;
         text-align: left;
-        font-weight: normal; /* Override parent link font-weight */
+        font-weight: normal; 
     }
 
     body.dark-mode .dropdown-content a {
@@ -278,7 +278,7 @@
 
     /* Mobile Menu Toggle */
     .menu-toggle {
-        display: none; /* Hidden on desktop */
+        display: none; 
         background: none;
         border: none;
         font-size: 24px;
@@ -351,7 +351,7 @@
     /* Sidebars and Ads */
     .left-sidebar,
     .right-sidebar {
-        flex: 1; /* Equal space */
+        flex: 1; 
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -363,7 +363,7 @@
 
     /* Control ad visibility based on data attribute */
     .ads-container[data-ad-status="hidden"] {
-        display: none !important; /* Force hide if status is hidden */
+        display: none !important; 
     }
 
     /* TOC Styling */
@@ -587,15 +587,14 @@
             margin-bottom: 20px;
         }
 
-        /* Move right sidebar (TOC/Ads) above main content on smaller screens */
         .right-sidebar {
             order: -1;
         }
 
         /* Hide TOC for mobile view */
         .table-of-contents {
-            display: none; /* Hide TOC on screens 992px and narrower */
-            position: static; /* Remove sticky behavior */
+            display: none; 
+            position: static; 
             top: auto;
         }
 
@@ -610,12 +609,12 @@
 
         /* Mobile dropdown specific styles */
         .main-nav ul li.dropdown .dropdown-content {
-            position: static; /* Remove absolute positioning */
+            position: static;
             box-shadow: none;
             width: auto;
             padding: 0;
-            background-color: transparent; /* Transparent background */
-            border-top: 1px solid #eee; /* Separator for dropdown items */
+            background-color: transparent; 
+            border-top: 1px solid #eee; 
             margin-top: 5px;
         }
 
@@ -625,13 +624,13 @@
         }
 
         .main-nav ul li.dropdown .dropdown-content a {
-            padding: 10px 20px 10px 40px; /* Indent dropdown items */
+            padding: 10px 20px 10px 40px; 
             font-size: 14px;
             border-bottom: none;
         }
 
         .main-nav ul li.dropdown.active .dropdown-content {
-            display: block; /* Show dropdown when active on mobile */
+            display: block; 
         }
     }
 
@@ -642,7 +641,7 @@
             align-items: center;
         }
 
-        /* Date and time are now visible on mobile */
+        /* Date and time on mobile */
         #current-date-time {
             position: absolute;
             right: 0%;
@@ -747,7 +746,6 @@
             grid-template-columns: 1fr;
         }
 
-        /* Inside @media (max-width: 768px) */
         .logo-container {
             flex-basis: calc(100% - 100px);
         }
@@ -755,7 +753,6 @@
             flex-basis: auto;
         }
 
-        /* Inside @media (max-width: 480px) */
         .logo-container {
             flex-basis: calc(100% - 60px);
         }
@@ -771,15 +768,15 @@
             </div>
             <nav class="main-nav" id="main-nav">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="/bhaskarsah.com.np/">Home</a></li>
                     <li class="dropdown">
-                        <a href="/AI.html">Artificial Intelligence (AI) <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                        <a href="/IT.html">TI Related<i class="fas fa-chevron-down dropdown-arrow"></i></a>
                         <div class="dropdown-content">
-                            <a href="/AI.html#types">AI & Machine Learning</a>
-                            <a href="/AI.html#applications">Generative AI</a>
-                            <a href="/AI.html#benefits">AI Ethics</a>
-                            <a href="/AI.html#future">AI Applications</a>
-                            <a href="#">AI Development</a>
+                            <a href="#">IT Management</a>
+                            <a href="#">Cloud Computing</a>
+                            <a href="#">DevOps</a>
+                            <a href="#">Blockchain & Web3</a>
+                            <a href="#">Data Science</a>
                         </div>
                     </li>
                     <li><a href="/About Me.html">About Me</a></li>
@@ -812,202 +809,192 @@
         <main class="main-content">
             <article class="blog-post">
                 <header class="post-header">
-                    <h1>What is Artificial Intelligence (AI)? Types, Applications, Benefits & Future Described</h1>
+                    <h1>What is information technology? | Full Explanation with Points & Detailed Overview - CyberWise</h1>
                     <div class="post-meta">
                         <span>By Bhaskar Sah</span> |
-                        <span>january 03, 2025</span> |
-                        <span>Artificial Intelligence (AI)</span>
+                        <span>December 12, 2024</span> |
+                        <span>Information Technology (IT) </span>
                     </div>
                 </header>
 
                 <div class="post-body">
-                    <p>The scope of AI in everyday life is widening rapidly and is beyond our imagination. It is now the leading driver powering the digital revolution, and it is present in almost every new technology by the ocean in which most businesses and consumers are benefiting from it. Smartphones and smart homes have become the forefront of consumers’ daily lives. Today, AI has become readily available and affordable to everyone.</p>
+                    <p>The development of technology over the years has completely reshaped the activities in today's society. Industries and consumers alike are over reliant on the internet today and Information Technology is playing its part silently. Whether you are scrolling through your phone or a managing multi-national company, Information Technology plays a role in everything. In this post we aim to succinct explain Information Technology to cater for the needs of everyone: academics, working professionals or learning enthusiasts.</p>
 
-                    <h2>1. What is Artificial Intelligence (AI)?</h2>
-                    <p>Artificial Intelligence (AI) functions as the technology which enables machines to perform tasks that typically need  human intelligence. AI technology performs cognitive functions which include reasoning and problem-solving as well as learning from  experience while it executes tasks such as speech and image recognition and decision-making. The digital world today depends mainly  on AI which drives the operations of smart homes and smartphones together with business automation and scientific discovery.</p>
+                    <h2>1. What is Information Technology</h2>
+                    <p>Information Technology (IT) covers the use of computers, software, networks, and electronic devices to perform various operations such as creating, processing, storing, safeguarding, and transmitting of all types of electronic information. It includes all domains related to computing technology, and it extends across a number of business, educational, healthcare, government, and entertainment sectors.</p>
 
-                    <h3>1.1 Categories of Artificial Intelligence</h3>
-                    <p>The groupings of AI are determined by the capability and tasks the AI can perform. These groupings are a good way to tell how smart or human-like a specific AI system is:</p>
-                    
-                    <ul><strong><big><u>By the Ability:</u></big></strong></ul>
-                    <ul>
-                        <li>
-                           <strong> Narrow AI (Weak AI):-</strong> Concentrating on defined tasks (e.g., voice assistants, recommendation systems).
-                        </li>
+                    <p>IT is what makes a company economically viable, wherein we can certainly talk about, safety guaranteed data storage, worldwide communication, business process automation, and data-based business insight. It's not only hardware and software but also the methods, people, and environment that help computer systems to operate smoothly.</p>
 
-                        <li>
-                            <strong>General AI:-</strong> Hypothetical AI which could execute human-like intellectual activities.
-                        </li>
-
-                        <li>
-                           <strong> Superintelligent AI:-</strong> A futuristic idea of machines with intelligence superior to human.
-                        </li>
-                    </ul>
-
-                    <ul><strong><big><u>By the Functionality:</u></big></strong></ul>
+                    <h2>2. Key Components of Information Technology</h2>
 
                     <ul>
                         <li>
-                           <strong> Reactive Machines:-</strong> The systems that are able to give responses without any need for memory.
+                           <strong> Hardware:- </strong>Physical devices like computers, servers, routers and storage drives.These are the physical parts of an IT system that are used in the input, output, storage, and data processing of the system.
                         </li>
 
                         <li>
-                            <strong>Limited Memory AI:-</strong>The one that can learn from history and data to make better decisions.
+                            <strong>Software:-</strong> Those are the programs and applications to control hardware for the work of tasks.This comprises the operating systems (Windows, Linux), the office suite (MS Office), and home-grown software.
                         </li>
 
                         <li>
-                            <strong>Theory of Mind AI:-</strong> AI that relates to human emotions and beliefs and can be the future of potential AI.
+                            <strong>Networks:-</strong> The systems that are joining the devices to share resources and data.They connect and link the company and organization internally and externally through the network.They connect and link the company and organization together through the network inside and outside the company.Examples are LAN, WAN, the internet, and wireless technologies such as Wi-Fi and 5G.
                         </li>
 
                         <li>
-                            <strong>Self-aware AI:-</strong> Hypothetical machines that have consciousness and they are aware of their existence.
+                           <strong> Data:-</strong> It refers to the raw or structured facts that are sources of information to be processed and analyzed.The data is essentially the lifeblood of IT as it powers decisions, automation, and personalization.
+                        </li>
+
+                        <li>
+                            <strong>People:-</strong> IT professionals who are into software development, computer, storage, network performance, business operations, or customer support.They are responsible for the implementation, testing, and maintenance of IT infrastructure and services.
+                        </li>
+
+                        <li>
+                            <strong>Processes:-</strong> Methods and approaches that help to manage information technology in a business organization effectively.Along with that are methodologies like ITIL, Agile, DevOps, and cybersecurity protocols
                         </li>
                     </ul>
 
-                    <h2>2. How Does AI Work?</h2>
-                    <p>Artificial Intelligence processes data and algorithms to mimic human thought. It depends on a few key pieces of technology to operate:-</p>
 
-                    <ul>
-                        <li>
-                            <strong>Machine Learning (ML):-</strong> Is the magic in which machines learn from data without being told what to do.
-                        </li>
-
-                        <li>
-                            <strong>Deep Learning:-</strong> A subfield of ML in which neural networks are applied to large and complex types of data such as images and audio.
-                        </li>
-
-                        <li>
-                            <strong>Natural Language Processing (NLP):-</strong> The ability for machines to read, understand and interpret human language.
-                        </li>
-
-                        <li>
-                            <strong>Computer Vision:-</strong> Enables machines to interpret and understand visual inputs such as photos or videos.
-                        </li>
-                    </ul>
-
-                    <p><b>These technologies are frequently integrated together to develop intelligent applications that people and businesses use on a regular basis.</b></p>
-
-
-            <h2>3. Artificial Intelligence Applications in Real Life</h2>
-
-            <p>AI is causing a transformation of the industries in the direction of making them more efficient and intelligent.</p>
-
-            <p><b>Practical Examples of AI:</b></p>
+            <h2>3. What Technologies Do IT Use?</h2>
+            <p>
+                The Information Technology sector has several subfields which are specifically interesting to the tech community as each of them contributes to the whole digital ecosystem in a unique way:-
+            </p>
 
             <ul>
                 <li>
-                    <strong>Healthcare:-</strong> AI finds the disease, provides personalized care, and performs robotic surgery.
+                    <strong>Data and Computer Science: Software Development:-</strong> Making and writing applications, websites, and corporate systems.
                 </li>
 
                 <li>
-                   <strong> Finance:-</strong> It checks the credit score, discovers fraud, and develops trading algorithms.
+                    <strong>Networking and Infrastructure:-</strong> Setting up and managing the DM (Data Model) system.
                 </li>
 
                 <li>
-                    <strong>Education:-</strong> It does personalized learning and grading automation.
+                   <strong> Cybersecurity:- </strong>Guarding the privacy of networks and data from illegal access and sabotages.
                 </li>
 
                 <li>
-                    <strong>Transportation:-</strong> AI has the ability to drive itself, predict traffic, and save time in route optimization.
+                    <strong>Database Administration:-</strong> Being responsible for, retrieving, and processing structured data.
                 </li>
 
                 <li>
-                    <strong>Agriculture:-</strong>It is a system that uses AI in crop monitoring, weather forecast, and yield prediction.
+                    <strong>Cloud Computing:-</strong> Reaching out to the internet computing services (AWS, Azure).
                 </li>
 
                 <li>
-                    <strong>Retail:-</strong> Chatbots, inventory management, and customer behavior analysis.
+                   <strong> Artificial Intelligence:-</strong> The AI Project: R&D, and Research on machine learning, NLP (Natural Language Processing), Prof X,
                 </li>
 
                 <li>
-                    <strong>Entertainment:- </strong>Content recommendation, AI-generated music, and game bots.
+                    <strong>IT Assistance and Call Desk:- </strong>Resolving users' technical issues and keeping IT platforms in a good working order.
                 </li>
 
                 <li>
-                    <strong>Manufacturing:-</strong>Predictive maintenance, quality assurance, and automation.
+                    <strong>Statistics and Data Science:-</strong> The extraction of insights and trends from big data through analyses.
                 </li>
             </ul>
 
-                    <h2>4. Benefits of Artificial Intelligence</h2>
-                    <p>There are several benefits when it comes to AI that make it highly useful across industries.</p>
-                    <p><b>The most important advantages are:-</b></p>
-                    
+                    <h2>4. The Importance of Information Technology</h2>
+                    <p>Information Technology is one of the essential elements that drive the world in a certain direction. We have tried to set out some of the really crucial reasons below:-</p>
                     <ul>
                         <li>
-                            <strong>Enhanced Efficiency:-</strong> Boosts the speed of tasks and diminishes the workload of the employees.
+                            <strong>Helps in Communication:-</strong> The use of emails, instant messaging, video conferencing tools enables people to interconnect globally.
                         </li>
 
                         <li>
-                            <strong>Correctness:-</strong> Lowers the risks of making mistakes through automation.
+                           <strong> Leads to High Businefficiencyss Solution:-</strong> It avoids the need for manual tasks, improves the accuracy, and increases efficiency in the processes.
                         </li>
 
                         <li>
-                            <strong>24/7 Availablility:-</strong> AI tools can be utilized non-stop regardless of rest or drink.
+                           <strong> Enables Global Operations:-</strong> Digital platforms are utilized by companies to reach out to customers in all parts of the world.
                         </li>
 
                         <li>
-                            <strong>Information Processing:-</strong> Deals with large volumes of data very quickly.
+                            <strong>Supports Decision-Making:-</strong> Leaders are supported with vast data that is analyzed and processed by using business intelligence and analytics.
                         </li>
 
                         <li>
-                            <strong>Economical Data:-</strong> Provides cheaper sources of data by use of automation techniques.
+                            <strong>Advances Healthcare:-</strong> Some of the contributions from technology include Telemedicine, which has digital records of patient health and AI diagnostics that diagnose and treat patients.
                         </li>
 
-                        <li><strong>More Intelligent Decision Making:-</strong> Offers decisions and predictions derived from the information.</li>
+                        <li>
+                            <strong>Transforms Education:-</strong> There are now online learning platforms and virtual classrooms where the knowledge has become accessible across various locations.
+                        </li>
+
+                        <li>
+                            <strong>Leads to New Business Models:-</strong> The transactions of online banking, digital wallets, and blockchain have indeed introduced new dimensions to the financial industry.
+                        </li>
+
+                       <p><b> Paradoxically, IT is not only a support function but a strategic asset that can drive innovation, ensure competitiveness, and promote growth.</b></p>
                     </ul>
 
-                    <h2>5. Challenges of Artificial Intelligence</h2>
-                    <p>The advantages notwithstanding, AI comes with a gamut of obstacles that have to be resolved.</p>
-                    <p><b>Key Issues:</b></p>
-                  <ul>
-                    <li>
-                        <strong>Job Losses:-</strong> Automation has the potential to displace human workers in many sectors.
-                    </li>
 
-                    <li>
-                       <strong> Bias and Fairness:-</strong>AI may be a ground for the reflection and reinforcement of social biases existing in the data.
-                    </li>
+                    <h2>5. Challenges in the IT Industry</h2>
+                    <p>Even as it proves to be very efficient, the IT sector has to confront some tough issues:-</p>
 
-                    <li>
-                        <strong>Privacy Issues:-</strong> AI systems usually gather and process confidential personal information.
-                    </li>
-
-                    <li>
-                        <strong>Lack of Transparency:-</strong> Some AI models are designed in such a way that they are not understandable or explainable.
-                    </li>
-
-                    <li>
-                        <strong>Security Risks:-</strong> Misusing of AI may be a source of cyberattacks or fake content (e.g., deepfakes).
-                    </li>
-                  </ul>
-
-                    <h2>6. The Future of AI Technology </h2>
-                    <p>The future of Artificial Intelligence is certainly bright. Without a doubt, AI will continue to be a massive driving force for the technological revolution and will have a significant influence in almost all areas of our lives.</p>
-                    <p><b>Future AI Trends:</b></p>
                     <ul>
                         <li>
-                            <strong>Explainable AI:-</strong> AI systems that generate results openly and understandably.
+                           <strong> Cybersecurity Threats:</strong> Data breaches, ransomware, and phishing attacks are the main targets for cybercriminals all over the world.
                         </li>
 
                         <li>
-                            <strong>AI Ethics & Governance:-</strong> AI regulations that are conducted worldwide to ensure equity and safety.
+                             <strong>High Costs:</strong> The construction of secure, scalable IT infrastructure is neither easy nor inexpensive.
                         </li>
 
                         <li>
-                            <strong>Human-AI Collaboration:-</strong> Using AI as partners rather than as their replacements for human beings.
+                              <strong>Rapid Technological Change:</strong> IT professionals must learn new generations of skills and keep their systems current regularly.
                         </li>
 
                         <li>
-                            <strong>AI in Climate & Sustainability:-</strong> Cutting down waste, energy optimization, and resource management by technology innovations.
+                            <strong> Compliance and Regulations:</strong> Compliance is the foremost confirmation of the regulations such as GDPR and HIPAA even though it is difficult.
                         </li>
 
                         <li>
-                        <strong>Wider Accessibility:-</strong>Wider Accessibility: Enabling all size businesses and individuals with multiples access to AI tools.
+                            <strong>Talent Shortage:</strong> There is always not enough supply to meet the demand for skilled professionals of IT field.
                         </li>
+
+                        <p><b>Companies should be more agile and be able to manage risks and to plan and implement strategically to be in positions better than their competitors.</b></p>
+                        
+                    </ul>
+
+                    <h2>6. Future Trends in Information Technology </h2>
+                    <p>The field of IT has a bright future with extraordinary inventions that will change the way we live and work.</p>
+
+                    <ul>
+                        <li>
+                            <strong>Internet of Things (IoT):-</strong> The intelligence of interconnected smart devices extended to households, cities, and industries.
+                        </li>
+
+                        <li>
+                            <strong>Hybrid Cloud and Edge Computing:-</strong> Faster data processing and more flexibility achieved at the network edge.
+                        </li>
+
+                        <li>
+                            <strong>5G Networks:-</strong> A super-fast and stable internet capability for real-time apps and teleworking.
+                        </li>
+
+                        <li>
+                           <strong> AI and Machine Learning:-</strong> More advanced automation, personal services, and analytical work done intelligently.
+                        </li>
+
+                        <li>
+                           <strong> Blockchain Technology:-</strong> Systems of decentralized and secure data exchange.
+                        </li>
+
+                        <li>
+                            <strong>Quantum Computing:-</strong> Who can know or solve the problems that today's computers are unable to do?
+                        </li>
+
+                        <p>
+                            <b>
+                                As a matter of fact, these trends are not only futuristic but are also completely transforming sectors like finance, health, retail, and manufacturing.
+                            </b>
+                        </p>
                     </ul>
 
                     <h2>9. Conclusion</h2>
-                    <p>Artificial Intelligence is changing the face of the entire world. The capabilities of smart gadgets and modern healthcare systems depend largely on AI to cover the daily routine of people and the efficient operation of any business. While it brings a lot of good things, it also gives rise to the need to be aware of certain responsible development and ethical use. Gaining insights into AI - what AI is, how it performs, and where it is leading us - is thus vital for us in order to be prepared for the future.</p>
+                    <p>Information Technology no longer remains only a technical field, it is now a central factor in the human progress and digital transformation. Firstly, IT is the one keeping the world going, it is architected to be sustainable and competitive resources for innovative business(the word 'at that time') and also have to keep moving with the changes. It is worth noting that the last sentence is a little bit of a repetition of the first sentence so it might be better if it were to be replaced by the previous paragraph.</p>
+
+                    <p>To survive and prosper in the 21st century, people should be computer literate on top of the professionals who need that to organize their tasks.</p>
 
                 </div>
             </article>
@@ -1032,13 +1019,13 @@
                     </div>
                 </div>
             </section>
-        </main>        
+        </main>
 
         <aside class="right-sidebar">
             <div class="table-of-contents" id="toc-container">
                 <h3>Table of Contents</h3>
                 <ul id="toc-list">
-                </ul>
+                    </ul>
             </div>
             <div class="ads-container right-ads" data-ad-status="hidden">
                 <div class="ad-unit">
@@ -1149,26 +1136,26 @@
             const dropdowns = document.querySelectorAll('.dropdown');
 
             dropdowns.forEach(dropdown => {
-                const dropdownToggle = dropdown.querySelector('a'); // The main link for the dropdown
+                const dropdownToggle = dropdown.querySelector('a'); 
                 const dropdownContent = dropdown.querySelector('.dropdown-content');
 
                 // For desktop (hover)
                 dropdown.addEventListener('mouseenter', () => {
                     if (window.innerWidth > 992) { // Only on desktop
-                        dropdown.classList.add('active'); // Add active class to show arrow
+                        dropdown.classList.add('active'); 
                     }
                 });
 
                 dropdown.addEventListener('mouseleave', () => {
                     if (window.innerWidth > 992) { // Only on desktop
-                        dropdown.classList.remove('active'); // Remove active class
+                        dropdown.classList.remove('active'); 
                     }
                 });
 
                 // For mobile (click)
                 dropdownToggle.addEventListener('click', function(event) {
                     if (window.innerWidth <= 992) { // Only on mobile
-                        event.preventDefault(); // Prevent default link behavior
+                        event.preventDefault(); 
                         dropdown.classList.toggle('active');
                         dropdownContent.style.display = dropdown.classList.contains('active') ? 'block' : 'none';
                     }
@@ -1177,91 +1164,93 @@
 
 
             const tocList = document.getElementById('toc-list');
-            const mainContent = document.querySelector('.main-content'); // Changed from .post-body for broader heading selection
-            const headings = mainContent.querySelectorAll('h2, h3');
+    const postBody = document.querySelector('.post-body');
+    const headings = postBody.querySelectorAll('h2, h3'); 
 
-            if (tocList && headings.length > 0) {
-                headings.forEach((heading, index) => {
+    if (tocList && headings.length > 0) {
+        headings.forEach((heading, index) => {
+            
+            const id = heading.textContent.toLowerCase()
+                             .replace(/[^a-z0-9\s-]/g, '') 
+                             .trim() 
+                             .replace(/\s+/g, '-'); 
+            heading.id = id; 
 
-                    const id = heading.textContent.toLowerCase()
-                                .replace(/[^a-z0-9\s-]/g, '')
-                                .trim()
-                                .replace(/\s+/g, '-');
-                    heading.id = id;
+            const listItem = document.createElement('li');
+            const anchor = document.createElement('a');
+            anchor.href = `#${id}`;
+            anchor.textContent = heading.textContent;
+            anchor.classList.add(`toc-level-${heading.tagName.toLowerCase()}`); 
 
-                    const listItem = document.createElement('li');
-                    const anchor = document.createElement('a');
-                    anchor.href = `#${id}`;
-                    anchor.textContent = heading.textContent;
-                    anchor.classList.add(`toc-level-${heading.tagName.toLowerCase()}`);
+            
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById(id).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start' 
+                });
+               
+                document.querySelectorAll('#toc-list a').forEach(link => link.classList.remove('active'));
+                
+                this.classList.add('active');
+            });
 
-                    anchor.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        document.getElementById(id).scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-
-                        document.querySelectorAll('#toc-list a').forEach(link => link.classList.remove('active'));
-
-                        this.classList.add('active');
-                    });
-
-
-                    if (heading.tagName === 'H3') {
-                        let parentH2ListItem = listItem.previousElementSibling;
-
-                        while (parentH2ListItem && !parentH2ListItem.querySelector('.toc-level-h2')) {
-                            parentH2ListItem = parentH2ListItem.previousElementSibling;
-                        }
-                        if (parentH2ListItem) {
-                            let ul = parentH2ListItem.querySelector('ul');
-                            if (!ul) {
-                                ul = document.createElement('ul');
-                                parentH2ListItem.appendChild(ul);
-                            }
-                            ul.appendChild(listItem);
-                        } else {
-                            tocList.appendChild(listItem);
-                        }
-                    } else {
-                        tocList.appendChild(listItem);
+            
+            if (heading.tagName === 'H3') {
+                let parentH2ListItem = listItem.previousElementSibling;
+                
+                while (parentH2ListItem && !parentH2ListItem.querySelector('.toc-level-h2')) {
+                    parentH2ListItem = parentH2ListItem.previousElementSibling;
+                }
+                if (parentH2ListItem) {
+                    let ul = parentH2ListItem.querySelector('ul');
+                    if (!ul) { 
+                        ul = document.createElement('ul');
+                        parentH2ListItem.appendChild(ul);
                     }
-                    listItem.appendChild(anchor);
-                });
-
-
-                const observerOptions = {
-                    root: null,
-                    rootMargin: '0px 0px -50% 0px',
-                    threshold: 0
-                };
-
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        const id = entry.target.id;
-                        const tocLink = document.querySelector(`#toc-list a[href="#${id}"]`);
-
-                        if (tocLink) {
-                            if (entry.isIntersecting) {
-
-                                document.querySelectorAll('#toc-list a').forEach(link => link.classList.remove('active'));
-
-                                tocLink.classList.add('active');
-                            } else {
-
-                            }
-                        }
-                    });
-                }, observerOptions);
-
-                // Observe each heading
-                headings.forEach(heading => {
-                    observer.observe(heading);
-                });
+                    ul.appendChild(listItem);
+                } else {
+                    tocList.appendChild(listItem); 
+                }
+            } else { 
+                tocList.appendChild(listItem);
             }
+            listItem.appendChild(anchor);
         });
-    </script>
+
+       
+        const observerOptions = {
+            root: null, 
+            rootMargin: '0px 0px -50% 0px', 
+            threshold: 0 
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const id = entry.target.id;
+                const tocLink = document.querySelector(`#toc-list a[href="#${id}"]`);
+
+                if (tocLink) {
+                    if (entry.isIntersecting) {
+                        
+                        document.querySelectorAll('#toc-list a').forEach(link => link.classList.remove('active'));
+                        
+                        tocLink.classList.add('active');
+                    } else {
+                        
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe each heading
+        headings.forEach(heading => {
+            observer.observe(heading);
+        });
+    }
+});
+   
+   </script>
 
 </body>
 </html>
