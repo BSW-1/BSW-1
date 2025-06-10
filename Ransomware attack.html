@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3663278458751008"
+        crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Protect Your Data Online</title>
+    <link rel="icon" href="/Logo1 2.png" type="image/icon type">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<style>
+    /* General Body and Container */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f5f6; 
+        color: #333;
+        line-height: 1.6;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Dark Mode Styles */
+    body.dark-mode {
+        background-color: #1a1a2e;
+        color: #e0e0e0; 
+    }
+
+    body.dark-mode .main-header,
+    body.dark-mode .main-content,
+    body.dark-mode .table-of-contents,
+    body.dark-mode .ad-unit,
+    body.dark-mode .similar-posts,
+    body.dark-mode .post-card {
+        background-color: #2e3b55; 
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    body.dark-mode .main-header {
+        border-bottom-color: #444;
+    }
+
+    body.dark-mode .logo a,
+    body.dark-mode .main-nav ul li a,
+    body.dark-mode .blog-post h1,
+    body.dark-mode .post-body h2,
+    body.dark-mode .post-body h3,
+    body.dark-mode .table-of-contents h3,
+    body.dark-mode .similar-posts h2,
+    body.dark-mode .post-card h3 a {
+        color: #fff; 
+    }
+
+    body.dark-mode .main-nav ul li a:hover,
+    body.dark-mode .table-of-contents ul li a:hover,
+    body.dark-mode .table-of-contents ul li a.active,
+    body.dark-mode .post-card h3 a:hover,
+    body.dark-mode .footer-links li a:hover,
+    body.dark-mode .social-media a:hover {
+        color: #87ceeb; 
+    }
+
+    body.dark-mode .post-meta,
+    body.dark-mode .table-of-contents ul li a,
+    body.dark-mode .table-of-contents ul ul li a,
+    body.dark-mode .ad-unit p,
+    body.dark-mode .post-card p {
+        color: #ccc; 
+    }
+
+    body.dark-mode .table-of-contents ul ul {
+        border-left-color: #555;
+    }
+
+    body.dark-mode .ad-unit {
+        border-color: #555;
+    }
+
+    body.dark-mode .post-card {
+        border-color: #555;
+    }
+
+    body.dark-mode .post-meta,
+    body.dark-mode .similar-posts h2 {
+        border-bottom-color: #444;
+    }
+
+    body.dark-mode .post-body h2 {
+        border-left-color: #87ceeb; 
+    }
+
+    body.dark-mode #dark-mode-toggle {
+        background-color: #444;
+        color: #fff;
+    }
+
+    /* Dark Mode Toggle Icon Switch */
+    .dark-mode-toggle .fa-moon {
+        display: block; 
+    }
+    .dark-mode-toggle .fa-sun {
+        display: none; 
+    }
+    body.dark-mode .dark-mode-toggle .fa-moon {
+        display: none; 
+    }
+    body.dark-mode .dark-mode-toggle .fa-sun {
+        display: block; 
+        color: #ffeb3b; 
+    }
+
+    body.dark-mode .menu-toggle {
+        background-color: #444;
+        color: #fff;
+    }
+
+    /* Header Styling */
+    .main-header {
+        background-color: #fff;
+        border-bottom: 1px solid #eee;
+        padding: 15px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .header-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    .logo-container .logo-text {
+        font-size: 2em;
+        font-weight: bold;
+        color: #3498db;
+        transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    body.dark-mode .logo-container .logo-text {
+        color: #50fa7b;
+    }
+    .logo-container .logo-subtext {
+        font-size: 0.8em;
+        color: #777;
+        transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    body.dark-mode .logo-container .logo-subtext {
+        color: #aaa;
+    }
+
+    .logo-container img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 8px;
+        height: 35px;
+        width: 35px;
+    }
+
+
+    .main-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .main-nav ul li {
+        margin-left: 25px;
+        position: relative; 
+    }
+
+    .main-nav ul li a {
+        text-decoration: none;
+        color: #555;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        display: flex; 
+        align-items: center;
+    }
+
+    .main-nav ul li a:hover {
+        color: #007bff;
+    }
+
+    /* Dropdown specific styles */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 5px;
+        top: 100%; 
+        left: 0;
+        padding: 10px 0;
+    }
+
+    body.dark-mode .dropdown-content {
+        background-color: #3e4b65;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+    }
+
+    .dropdown-content a {
+        color: #333;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        font-weight: normal; 
+    }
+
+    body.dark-mode .dropdown-content a {
+        color: #e0e0e0;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+        color: #007bff;
+    }
+
+    body.dark-mode .dropdown-content a:hover {
+        background-color: #556677;
+        color: #87ceeb;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Dropdown arrow */
+    .dropdown-arrow {
+        margin-left: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .dropdown.active .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+
+
+    .header-meta {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #current-date-time {
+        font-size: 14px;
+        color: #777;
+    }
+
+    /* Dark Mode Toggle Button */
+    .dark-mode-toggle {
+        background-color: #f0f0f0;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 18px;
+        color: #555;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .dark-mode-toggle:hover {
+        background-color: #e0e0e0;
+    }
+
+
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none; 
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #555;
+    }
+
+    /* Main Content Area */
+    .container {
+        display: flex;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 20px auto;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .main-content {
+        flex: 3;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .blog-post h1 {
+        font-size: 36px;
+        color: #222;
+        margin-bottom: 10px;
+    }
+
+    .post-meta {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 25px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+    }
+
+    .post-body h2 {
+        font-size: 28px;
+        color: #222;
+        margin-top: 35px;
+        margin-bottom: 15px;
+        border-left: 5px solid #007bff;
+        padding-left: 10px;
+    }
+
+    .post-body h3 {
+        font-size: 22px;
+        color: #333;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    .post-body p {
+        margin-bottom: 15px;
+    }
+
+    .post-body ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+
+    .post-body ul li {
+        margin-bottom: 8px;
+    }
+
+    /* Sidebars and Ads */
+    .left-sidebar,
+    .right-sidebar {
+        flex: 1; 
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .left-sidebar {
+        display: none;
+    }
+
+    /* Control ad visibility based on data attribute */
+    .ads-container[data-ad-status="hidden"] {
+        display: none !important; 
+    }
+
+    /* TOC Styling */
+    .table-of-contents {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        position: sticky;
+        top: 20px;
+    }
+
+    .table-of-contents h3 {
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: #333;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+    }
+
+    .table-of-contents ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .table-of-contents ul li {
+        margin-bottom: 8px;
+    }
+
+    .table-of-contents ul li a {
+        text-decoration: none;
+        color: #555;
+        font-size: 15px;
+        display: block;
+        padding: 5px 0;
+        transition: color 0.2s ease, padding-left 0.2s ease;
+    }
+
+    .table-of-contents ul li a:hover,
+    .table-of-contents ul li a.active {
+        color: #007bff;
+        padding-left: 5px;
+    }
+
+    .table-of-contents ul ul {
+        margin-left: 15px;
+        border-left: 1px solid #eee;
+        padding-left: 10px;
+    }
+
+    .table-of-contents ul ul li a {
+        font-size: 14px;
+        color: #777;
+    }
+
+    /* Ad Unit Styling */
+    .ad-unit {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        text-align: center;
+        border: 1px dashed #ddd;
+    }
+
+    .ad-unit img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .ad-unit p {
+        font-size: 14px;
+        color: #777;
+    }
+
+
+    /* Similar Posts Section */
+    .similar-posts {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        margin-top: 30px;
+    }
+
+    .similar-posts h2 {
+        font-size: 26px;
+        color: #222;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+    }
+
+    .post-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .post-card {
+        background-color: #fff;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        transition: transform 0.2s ease;
+    }
+
+    .post-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .post-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .post-card h3 {
+        font-size: 18px;
+        padding: 15px;
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    .post-card h3 a {
+        text-decoration: none;
+        color: #007bff;
+        transition: color 0.2s ease;
+    }
+
+    .post-card h3 a:hover {
+        color: #0056b3;
+    }
+
+    .post-card p {
+        font-size: 14px;
+        color: #666;
+        padding: 0 15px 15px;
+        margin-top: 0;
+    }
+
+
+    /* Footer Styling */
+    .main-footer {
+        background-color: #333;
+        color: #fff;
+        padding: 25px 0;
+        margin-top: 40px;
+    }
+
+    body.dark-mode .main-footer {
+        background-color: #1a1a2e;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        flex-wrap: wrap;
+    }
+
+    .footer-content p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .footer-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .footer-links li {
+        margin-left: 20px;
+    }
+
+    .footer-links li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+        transition: color 0.3s ease;
+    }
+
+    .footer-links li a:hover {
+        color: #007bff;
+    }
+
+    .social-media {
+        display: flex;
+        gap: 15px;
+    }
+
+    .social-media a {
+        color: #fff;
+        font-size: 20px;
+        transition: color 0.3s ease;
+    }
+
+    .social-media a:hover {
+        color: #007bff;
+    }
+
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+        .container {
+            flex-direction: column;
+            padding: 0 10px;
+        }
+
+        .main-content,
+        .right-sidebar,
+        .similar-posts {
+            margin-bottom: 20px;
+        }
+
+        .right-sidebar {
+            order: -1;
+        }
+
+        /* Hide TOC for mobile view */
+        .table-of-contents {
+            display: none; 
+            position: static; 
+            top: auto;
+        }
+
+        .left-sidebar {
+            display: none;
+        }
+
+        /* Hide ads on screens 992px and narrower, regardless of data-ad-status */
+        .ads-container {
+            display: none;
+        }
+
+        /* Mobile dropdown specific styles */
+        .main-nav ul li.dropdown .dropdown-content {
+            position: static;
+            box-shadow: none;
+            width: auto;
+            padding: 0;
+            background-color: transparent; 
+            border-top: 1px solid #eee; 
+            margin-top: 5px;
+        }
+
+        body.dark-mode .main-nav ul li.dropdown .dropdown-content {
+            background-color: transparent;
+            border-top-color: #444;
+        }
+
+        .main-nav ul li.dropdown .dropdown-content a {
+            padding: 10px 20px 10px 40px; 
+            font-size: 14px;
+            border-bottom: none;
+        }
+
+        .main-nav ul li.dropdown.active .dropdown-content {
+            display: block; 
+        }
+    }
+
+    @media (max-width: 768px) {
+        .header-content {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Date and time on mobile */
+        #current-date-time {
+            position: absolute;
+            right: 0%;
+            width: 45%;
+        }
+
+        .logo {
+            flex-basis: 50%;
+        }
+
+        .header-meta {
+            flex-basis: 50%;
+            justify-content: flex-end;
+        }
+
+        .main-nav {
+            /* Mobile navigation menu */
+            display: none;
+            flex-direction: column;
+            width: 250px;
+            background-color: #fff;
+            position: absolute;
+            top: 70px;
+            right: 0;
+            z-index: 100;
+            box-shadow: -5px 0 10px rgba(0,0,0,0.1);
+            padding: 0;
+        }
+
+        body.dark-mode .main-nav {
+            background-color: #2e3b55;
+        }
+
+        .main-nav.active {
+            display: flex;
+        }
+
+        .main-nav ul {
+            flex-direction: column;
+            width: 100%;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        .main-nav ul li {
+            margin: 0;
+            width: 100%;
+        }
+
+        .main-nav ul li a {
+            padding: 12px 20px;
+            border-bottom: 1px solid #eee;
+            display: block;
+        }
+
+        body.dark-mode .main-nav ul li a {
+            border-bottom-color: #444;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        .blog-post h1 {
+            font-size: 28px;
+        }
+
+        .post-body h2 {
+            font-size: 24px;
+        }
+
+        .post-body h3 {
+            font-size: 20px;
+        }
+
+        .footer-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-top: 15px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-links li {
+            margin: 5px 0;
+        }
+
+        .social-media {
+            margin-top: 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .post-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .logo-container {
+            flex-basis: calc(100% - 100px);
+        }
+        .header-meta {
+            flex-basis: auto;
+        }
+
+        .logo-container {
+            flex-basis: calc(100% - 60px);
+        }
+    }
+</style>
+
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-container">
+                <a class="logo-text">CyberWise</a><img src="/Nepal flag.gif" width="30" height="13">
+                <div class="logo-subtext">Your Tech Insights</div>
+            </div>
+            <nav class="main-nav" id="main-nav">
+                <ul><li><a href="/index.html">Home Page</a></li></ul>
+            </nav>
+            <div class="header-meta">
+                <span id="current-date-time"></span>
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="left-sidebar">
+            <div class="ads-container left-ads" data-ad-status="hidden">
+                <div class="ad-unit">
+                    <img src="https://via.placeholder.com/300x600?text=Left+Ad+Space" alt="Advertisement">
+                    <p>Left Ad Area</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <article class="blog-post">
+                <header class="post-header">
+                    <h1>Ransomware attack- Complete guide</h1>
+                    <div class="post-meta">
+                        <span>By Bhaskar Sah</span> |
+                        <span>May 25, 2025</span> |
+                        <span>Incident Response</span>
+                    </div>
+                </header>
+
+                <div class="post-body">
+
+                    <h2>1. The Rise of Ransomware Attacks</h2>
+
+                    <p>Over the course of last several years, Ransomware infection has become one of the most widely reported cybersecurity issues for both businesses and individuals. This type of malware encrypts files or freezes computer systems and demands to be paid a ransom in order to give control back. Ransomware attacks are on the rise because digital technology, along with the Internet, has grown exponentially, which opens more entry points for the cybercriminal.</p>
+
+
+            <h2>2. What is Ransomware?</h2>
+
+            <p>Ransomware is a kind of malicious software that prevents access to a computer system or files unless a ransom has been paid. The attackers withhold the digital keys needed to unlock their prey’s data until the victims pay up. They refuse to save or help the victims if they refuse to pay. Ransomware can happen to anyone – from that guy who occasionally dabbling in an chatroom to a large corporations – and it can cause a major disturbance and, potentially, financial ruin. </p>
+
+            <p>Some of the notable facts concerning ransomware include:- </p>
+            <ul>
+                <li>
+                    It encrypts the files or locks the systems to prevent one from accessing files.
+                </li>
+
+                <li>
+                    The price asked is paid in cryptocurrency, including Bitcoin.
+                </li>
+
+                <li>
+                    Ransomware is spread through phishing emails, dubious links, and software gaps or faults.
+                </li>
+
+                <li>
+                    It attacks the user’s personal devices and enterprise networks.
+                </li>
+            </ul>
+
+                    <h2>3. Why Are Ransomware Attacks Increasing?</h2>
+                    <p>The expanding digital environment and more advanced cybercriminal strategies are the main causes of the increase in ransomware attacks. There are more chances for attacks when there are more devices online. Furthermore, ransomware-as-a-service platforms have made ransomware widely available by reducing the barrier to attack launch for criminals.</p>
+
+                    <ul>
+                       <li>
+                        Expansion of digital infrastructure leads to more attacks.
+                       </li>
+
+                       <li>
+                        Advanced attack methods (e.g., phishing, exploits).
+                       </li>
+
+                       <li>
+                        Ransomware-as-a service allowing for many more attackers.
+                       </li>
+
+                       <li>
+                        Cybercriminals are incentivised by high financial returns.
+                       </li>
+                    </ul>
+
+                    <h2>4. Common Attack Methods</h2>
+
+                    <p>Ransomware bad guys have also been known to rely on social engineering and technological vulnerabilities to spread their infections. Email phishing is a common technique that seeks to fool people into opening the malicious files or following the links. They are going to almost the same extent to find out and access their grounds of entry.</p>
+
+                    <ul>
+                       <li>
+                        Phishing emails that contain harmful links or attachments.
+                       </li>
+
+                       <li>
+                        Taking advantage of unpatched software flaws.
+                       </li>
+
+                       <li>
+                        Using social engineering to control users.
+                       </li>
+
+                       <li>
+                        Using ransomware kits to make deployment simple
+                       </li>
+                    </ul>
+
+                    <h2>5. Impact of Ransomware Attacks</h2>
+
+                    <p>One of the main effects of ransomware attacks can be compared with a disaster, as they render the data unusable, cause a business interruption, and require a huge budget to cover damages. Also such incidents might result in loss of reputation and/or court cases due to the disclosure of confidential information.</p>
+
+                    <p>The primary dangers of a ransomware attack:-</p>
+
+                    <ul>
+                        <li>
+                            Loss of data or encryption which results in inaccessibility
+                        </li>
+
+                        <li>
+                            Operational downtime that affects business continuity
+                        </li>
+
+                        <li>
+                            Financial losses from ransom payments and recovery
+                        </li>
+
+                        <li>
+                            Damage to reputation and potential legal penalties
+                        </li>
+                    </ul>
+
+                    <h2>6. Sectors Most Targeted</h2>
+
+                    <p>Some sectors are more prone to ransomware attacks than others because of the nature of their business and the kind of data they have. Unfortunately, these types of incidents are going to happen to medical institutions, financial institutions, educational establishments, and government services. Nevertheless, it doesn't mean that a secure organization cannot exist.</p>
+
+                    <p>Key Points:-</p>
+
+                    <ul>
+                        <li>
+                            Healthcare with patients' sensitive data
+                        </li>
+
+                        <li>
+                            Financial institutions dealing with monetary data of high value
+                        </li>
+
+                        <li>
+                            Educational institutions that do not have enough cybersecurity resources
+                        </li>
+
+                        <li>
+                            Government agencies that provide vital services
+                        </li>
+
+                        <li>
+                            Businesses of all sizes
+                        </li>
+                    </ul>
+
+                    <h2>7. How to Protect Against Ransomware</h2>
+                    <p>Stopping ransomware means fighting at many points with many weapons. Companies should not only keep software up-to-date but also educate employees, create several backups, and install security instruments. Besides, network segmentation and incident response planning also make an organization more resilient.</p>
+
+                    <p>Key Points:-</p>
+                    <ul>
+                        <li>
+                            Updating and patching software regularly    
+                        </li>
+
+                        <li>
+                            Running cybersecurity awareness sessions for employees
+                        </li>
+
+                        <li>
+                            Having safe offline backups
+                        </li>
+
+                        <li>
+                            Antivirus and endpoint protection usage
+                        </li>
+
+                        <li>
+                            Segmenting networks to restrict the spread of the attack
+                        </li>
+
+                        <li>
+                            Creating and practicing incident response plans
+                        </li>
+                    </ul>
+
+                    <h2>Conclusion</h2>
+                    <p>The number of ransomware attacks keeps going up as the hackers get more intelligent and the digital systems become more interconnected. Such attacks are high danger of a large scale to the individuals and organizations, they can lead to a huge financial loss, interruption of the operation, and data leakage. Though, organizations have the opportunity to significantly lower their risk by realizing the mechanism of a ransomware attack and implementing preventive security measures—e.g. doing regular software update, conducting employee training, and having trustworthy data backups. Being up to date with all the news and ready is the key to the continuous struggle of defending against ransomware threats and safeguarding the most valuable digital assets.</p>
+
+                </div>
+            </article>
+
+        </main>
+
+        <aside class="right-sidebar">
+            <div class="table-of-contents" id="toc-container">
+                <h3>Table of Contents</h3>
+                <ul id="toc-list">
+                    </ul>
+            </div>
+            <div class="ads-container right-ads" data-ad-status="hidden">
+                <div class="ad-unit">
+                    <img src="https://via.placeholder.com/300x250?text=Right+Ad+Space+1" alt="Advertisement">
+                    <p>Right Ad Area 1</p>
+                </div>
+                <div class="ad-unit">
+                    <img src="https://via.placeholder.com/300x600?text=Right+Ad+Space+2" alt="Advertisement">
+                    <p>Right Ad Area 2</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 CyberWise. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="/About Me.html">About Author</a></li>
+                <li><a href="/privacy policy.html">Privacy Policy</a></li>
+                <li><a href="/terms&condition.html">Terms and Condition</a></li>
+                <li><a href="/Disclaimer.html">Disclaimer</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="https://www.facebook.com/bhaskar.sah.5621" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/wasu462" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/bha__s__kar_/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Header Date and Time
+            const currentDateTimeElement = document.getElementById('current-date-time');
+            function updateDateTime() {
+                const now = new Date();
+                const options = {
+                    weekday: 'long', // e.g., 'Monday'
+                    year: 'numeric', // e.g., '2025'
+                    month: 'long',   // e.g., 'May'
+                    day: 'numeric',  // e.g., '25'
+                    hour: '2-digit', // e.g., '04'
+                    minute: '2-digit',// e.g., '55'
+                    second: '2-digit',// e.g., '41'
+                    hour12: true     // Use AM/PM
+                };
+
+                const formatter = new Intl.DateTimeFormat('en-US', options);
+                currentDateTimeElement.textContent = formatter.format(now);
+            }
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+
+
+            const darkModeToggle = document.getElementById('dark-mode-toggle');
+            const body = document.body;
+
+
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-mode');
+            }
+
+            darkModeToggle.addEventListener('click', function() {
+                body.classList.toggle('dark-mode');
+
+                if (body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+
+
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+
+            menuToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+
+                const icon = menuToggle.querySelector('i');
+                if (mainNav.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+
+            mainNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    // Only close main nav if it's a regular link, not a dropdown toggle
+                    if (mainNav.classList.contains('active') && !link.closest('.dropdown')) {
+                        mainNav.classList.remove('active');
+                        menuToggle.querySelector('i').classList.remove('fa-times');
+                        menuToggle.querySelector('i').classList.add('fa-bars');
+                    }
+                });
+            });
+
+            // Dropdown functionality
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            dropdowns.forEach(dropdown => {
+                const dropdownToggle = dropdown.querySelector('a'); 
+                const dropdownContent = dropdown.querySelector('.dropdown-content');
+
+                // For desktop (hover)
+                dropdown.addEventListener('mouseenter', () => {
+                    if (window.innerWidth > 992) { // Only on desktop
+                        dropdown.classList.add('active'); 
+                    }
+                });
+
+                dropdown.addEventListener('mouseleave', () => {
+                    if (window.innerWidth > 992) { // Only on desktop
+                        dropdown.classList.remove('active'); 
+                    }
+                });
+
+                // For mobile (click)
+                dropdownToggle.addEventListener('click', function(event) {
+                    if (window.innerWidth <= 992) { // Only on mobile
+                        event.preventDefault(); 
+                        dropdown.classList.toggle('active');
+                        dropdownContent.style.display = dropdown.classList.contains('active') ? 'block' : 'none';
+                    }
+                });
+            });
+
+
+            const tocList = document.getElementById('toc-list');
+    const postBody = document.querySelector('.post-body');
+    const headings = postBody.querySelectorAll('h2, h3'); 
+
+    if (tocList && headings.length > 0) {
+        headings.forEach((heading, index) => {
+            
+            const id = heading.textContent.toLowerCase()
+                             .replace(/[^a-z0-9\s-]/g, '') 
+                             .trim() 
+                             .replace(/\s+/g, '-'); 
+            heading.id = id; 
+
+            const listItem = document.createElement('li');
+            const anchor = document.createElement('a');
+            anchor.href = `#${id}`;
+            anchor.textContent = heading.textContent;
+            anchor.classList.add(`toc-level-${heading.tagName.toLowerCase()}`); 
+
+            
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById(id).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start' 
+                });
+               
+                document.querySelectorAll('#toc-list a').forEach(link => link.classList.remove('active'));
+                
+                this.classList.add('active');
+            });
+
+            
+            if (heading.tagName === 'H3') {
+                let parentH2ListItem = listItem.previousElementSibling;
+                
+                while (parentH2ListItem && !parentH2ListItem.querySelector('.toc-level-h2')) {
+                    parentH2ListItem = parentH2ListItem.previousElementSibling;
+                }
+                if (parentH2ListItem) {
+                    let ul = parentH2ListItem.querySelector('ul');
+                    if (!ul) { 
+                        ul = document.createElement('ul');
+                        parentH2ListItem.appendChild(ul);
+                    }
+                    ul.appendChild(listItem);
+                } else {
+                    tocList.appendChild(listItem); 
+                }
+            } else { 
+                tocList.appendChild(listItem);
+            }
+            listItem.appendChild(anchor);
+        });
+
+       
+        const observerOptions = {
+            root: null, 
+            rootMargin: '0px 0px -50% 0px', 
+            threshold: 0 
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const id = entry.target.id;
+                const tocLink = document.querySelector(`#toc-list a[href="#${id}"]`);
+
+                if (tocLink) {
+                    if (entry.isIntersecting) {
+                        
+                        document.querySelectorAll('#toc-list a').forEach(link => link.classList.remove('active'));
+                        
+                        tocLink.classList.add('active');
+                    } else {
+                        
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe each heading
+        headings.forEach(heading => {
+            observer.observe(heading);
+        });
+    }
+});
+   
+   </script>
+
+</body>
+</html>
