@@ -3,144 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Link Detector</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>CyberWise | Secure Link Detector</title>
+    <link rel="icon" href="/Logo1 2.png" type="image/icon type">
 
     <style>
-        * {
-            box-sizing: border-box;
+        :root {
+            /* --- Dark Mode (Default) --- */
+            --bg: #0d1117;
+            --card-bg: #161b22;
+            --input-bg: #0d1117;
+            --text: #c9d1d9;
+            --accent: #50fa7b; 
+            --glow: rgba(80, 250, 123, 0.2);
+            --danger: #f85149;
+            --secure: #50fa7b;
+            --warning: #d29922;
         }
-        
+
+        body.light-mode {
+            /* --- Light Mode --- */
+            --bg: #f6f8fa;
+            --card-bg: #ffffff;
+            --input-bg: #ffffff;
+            --text: #24292f;
+            --accent: #3498db; 
+            --glow: rgba(52, 152, 219, 0.15);
+        }
+
+        * { box-sizing: border-box; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #f0f4f8, #e1e8ed);
             margin: 0;
-            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            flex-direction: column;
+            align-items: center; /* Horizontally center main */
+            min-height: 100vh;
         }
-        
-        .container {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            width: 400px;
+
+        /* --- Updated Header: Left Corner Logo --- */
+        header {
+            width: 100%;
+            max-width: 1250px; 
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .logo-text {
+            font-size: 2em;
+            font-weight: 670;
+            color: var(--accent); 
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 11px;
+        }
+
+        .logo-text img {
+            height: 40px;
+            width: 35px;
+        }
+
+        .logo-subtext {
+            font-size: 0.75em;
+            color: #777;
+            margin-top: 2px;
+        }
+
+        #theme-toggle {
+            background: var(--card-bg);
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            width: 42px; height: 42px;
+            cursor: pointer;
+            color: var(--text);
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        /* --- Main UI --- */
+        main {
+            width: 100%;
+            max-width: 480px;
+            padding: 20px 20px;
             text-align: center;
         }
-        
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #333;
+
+        .label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+            color: var(--accent);
+            font-weight: bold;
+            opacity: 0.8;
         }
-        
+
+        .search-area { margin-bottom: 30px; }
+
         input {
             width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 6px;
+            background: var(--input-bg);
+            border: 2px solid var(--accent);
+            border-radius: 12px;
+            padding: 16px 20px;
+            color: var(--text);
             font-size: 16px;
-            transition: border-color 0.3s;
-        }
-        
-        input:focus {
-            border-color: #007bff;
             outline: none;
+            box-shadow: 0 0 15px var(--glow);
         }
-        
-        button {
-            width: 100%;
-            padding: 12px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
+
+        /* --- Result Card --- */
+        .result-panel {
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid rgba(128,128,128,0.1);
+            padding: 24px;
+            text-align: left;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            display: none;
         }
-        
-        button:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
+
+        .status-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
         }
-        
-        .result {
-            margin-top: 20px;
-            padding: 10px;
-            border-radius: 6px;
-            font-size: 16px;
-            transition: background-color 0.3s, color 0.3s;
+
+        .line {
+            height: 1px;
+            background: var(--text);
+            opacity: 0.1;
+            margin: 15px 0;
         }
-        
-        .secure {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
+
+        .url-text {
+            font-size: 11px;
+            opacity: 0.5;
+            word-break: break-all;
         }
-        
-        .insecure {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
+
+        @media (max-width: 480px) {
+            header { padding: 20px; }
+            .logo-text { font-size: 1.5em; }
         }
     </style>
-
 </head>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3663278458751008"
-crossorigin="anonymous"></script>
-<!-- ad -->
-<ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-3663278458751008"
-data-ad-slot="2324050708"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 <body>
-    <div class="container">
-        <h1>Secure Link Detector</h1>
-        <input type="text" id="urlInput" placeholder="Enter a URL (e.g., https://example.com)">
-        <button id="checkButton">Check Security</button>
-        <div id="result" class="result"></div>
-    </div>
-    <script src="script.js"></script>
+
+    <header>
+        <div class="logo-container">
+            <a href="https://bhaskarsah.com.np" class="logo-text">
+                CyberWise
+                <img src="/Nepal flag.gif" alt="Flag">
+            </a>
+            <div class="logo-subtext">Your Tech Insights</div>
+        </div>
+        <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </header>
+
+    <main>
+        <div class="label">Secure Link Detector</div>
+
+        <div class="search-area">
+            <input type="text" id="userInput" placeholder="Paste link and press Enter" onkeydown="handleAction(event)">
+        </div>
+
+        <div class="result-panel" id="resultCard">
+            <div class="status-header" id="statusHeader">
+                <span>STATUS: CHECKING</span>
+                <span id="statusIcon">⚡</span>
+            </div>
+            <div class="line"></div>
+            <div class="url-text" id="targetUrl">URL: -</div>
+        </div>
+    </main>
 
     <script>
-        document.getElementById('checkButton').addEventListener('click', function() {
-            const urlInput = document.getElementById('urlInput').value.trim();
-            const resultDiv = document.getElementById('result');
-        
-            // Clear previous result
-            resultDiv.innerHTML = '';
-            resultDiv.className = 'result';
-        
-            // Validate URL format
-            const urlPattern = /^(https?:\/\/)/;
-            if (!urlPattern.test(urlInput)) {
-                resultDiv.innerHTML = 'Please enter a valid URL starting with http:// or https://';
-                resultDiv.className += ' insecure';
+        function toggleTheme() {
+            const body = document.body;
+            const btn = document.getElementById('theme-toggle');
+            body.classList.toggle('light-mode');
+            btn.innerText = body.classList.contains('light-mode') ? '☀️' : '🌙';
+        }
+
+        function handleAction(e) {
+            if (e.key === 'Enter') {
+                validateLink();
+            }
+        }
+
+        function validateLink() {
+            const input = document.getElementById('userInput').value.trim();
+            const card = document.getElementById('resultCard');
+            const header = document.getElementById('statusHeader');
+            const icon = document.getElementById('statusIcon');
+            const urlDisplay = document.getElementById('targetUrl');
+
+            if (!input) return;
+
+            card.style.display = 'block';
+            urlDisplay.innerText = `Scanned: ${input}`;
+
+            const urlPattern = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+            const isValidUrl = urlPattern.test(input);
+
+            if (!isValidUrl) {
+                header.innerHTML = `<span style="color: var(--warning)">INVALID FORMAT</span>`;
+                icon.innerText = '❌';
                 return;
             }
-        
-            // Check if the URL is secure (HTTPS)
-            if (urlInput.startsWith('https://')) {
-                resultDiv.innerHTML = 'This link is secure!';
-                resultDiv.className += ' secure';
-            } else {
-                resultDiv.innerHTML = 'This link is not secure. Consider using HTTPS.';
-                resultDiv.className += ' insecure';
-            }
-        });
-    </script>
 
+            if (input.startsWith('https://')) {
+                header.innerHTML = `<span style="color: var(--secure)">STATUS: SECURE</span>`;
+                icon.innerText = '✔️';
+            } else {
+                header.innerHTML = `<span style="color: var(--danger)">STATUS: INSECURE (HTTP)</span>`;
+                icon.innerText = '⚠️';
+            }
+        }
+    </script>
 </body>
 </html>
