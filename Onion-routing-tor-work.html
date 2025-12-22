@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What is dark web? How to access it? Everything You Should Know About the Dark Web.</title>
+    <title>Onion Routing & Anonymity Networks A Deep Dive into Tor, I2P, and Online Privacy</title>
     <link rel="icon" href="/Logo1 2.png" type="image/icon type">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -35,9 +35,12 @@
     body.dark-mode .table-of-contents,
     body.dark-mode .ad-unit,
     body.dark-mode .similar-posts,
-    body.dark-mode .post-card {
+    body.dark-mode .post-card,
+    body.dark-mode .concept-box,
+    body.dark-mode .summary-box {
         background-color: #2e3b55; 
         box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        color: #e0e0e0;
     }
 
     body.dark-mode .main-header {
@@ -140,6 +143,7 @@
         font-weight: bold;
         color: #3498db;
         transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        text-decoration: none;
     }
     body.dark-mode .logo-container .logo-text {
         color: #50fa7b;
@@ -347,6 +351,133 @@
     .post-body ul li {
         margin-bottom: 8px;
     }
+
+    /* --- NEW STYLES FOR BOXES & TABLES --- */
+    
+    /* Concept Box (The "Core Goal" box) */
+    .concept-box {
+        text-align: center;
+        font-weight: bold;
+        background: #eef;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 20px 0;
+        border: 1px solid #dde;
+        color: #333;
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+    
+    body.dark-mode .concept-box {
+        background: #2e3b55;
+        color: #fff;
+        border-color: #444;
+    }
+
+    /* Summary Box */
+    .summary-box {
+        background-color: #fff8e1;
+        border-left: 5px solid #ffc107;
+        padding: 15px;
+        margin-bottom: 25px;
+        border-radius: 4px;
+        color: #444;
+    }
+    
+    body.dark-mode .summary-box {
+        background-color: #3a3a20; 
+        color: #ddd;
+        border-left-color: #ffd54f;
+    }
+
+    /* Comparison Table Styling */
+    .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 16px;
+        overflow-x: auto;
+        display: block; /* Ensures horizontal scroll on small mobile */
+    }
+    
+    /* Remove display:block for larger screens so it fills width properly */
+    @media (min-width: 600px) {
+        .comparison-table { display: table; }
+    }
+
+    .comparison-table th, .comparison-table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .comparison-table th {
+        background-color: #f2f2f2;
+        color: #333;
+        font-weight: bold;
+    }
+
+    /* Dark mode for table */
+    body.dark-mode .comparison-table th {
+        background-color: #444;
+        color: #fff;
+        border-color: #555;
+    }
+    body.dark-mode .comparison-table td {
+        border-color: #555;
+        color: #e0e0e0;
+    }
+    
+    /* Ethical Boxes */
+    .ethical-container {
+        display: flex; 
+        gap: 20px; 
+        flex-wrap: wrap;
+    }
+    
+    .ethical-box {
+        flex: 1; 
+        min-width: 250px; 
+        padding: 15px; 
+        border-radius: 5px;
+        border: 1px solid transparent;
+    }
+    
+    .ethical-good {
+        background: #e8f5e9;
+        color: #1b5e20;
+        border-color: #c8e6c9;
+    }
+    
+    .ethical-bad {
+        background: #ffebee;
+        color: #b71c1c;
+        border-color: #ffcdd2;
+    }
+    
+    body.dark-mode .ethical-good {
+        background: #1b3320; /* Dark green bg */
+        color: #a5d6a7;
+        border-color: #2e5e32;
+    }
+    
+    body.dark-mode .ethical-bad {
+        background: #3e2021; /* Dark red bg */
+        color: #ef9a9a;
+        border-color: #5e2e2e;
+    }
+
+    /* Blockquote */
+    blockquote {
+        border-left: 5px solid #007bff;
+        margin: 20px 0;
+        padding-left: 20px;
+        font-style: italic;
+        color: #555;
+    }
+    body.dark-mode blockquote {
+        color: #bbb;
+    }
+
 
     /* Sidebars and Ads */
     .left-sidebar,
@@ -757,6 +888,9 @@
             flex-basis: calc(100% - 60px);
         }
     }
+
+    
+
 </style>
 
 <body>
@@ -806,156 +940,271 @@
         <main class="main-content">
             <article class="blog-post">
                 <header class="post-header">
-                    <h1>What is dark web? How to access it? Everything You Should Know About the Dark Web.</h1>
+                   <h1>Onion Routing & Anonymity Networks A Deep Dive into Tor, I2P, and Online Privacy</h1>
+                        
                     <div class="post-meta">
                         <span>By Bhaskar Sah</span> |
-                        <span>November 01, 2024</span> |
+                        <span>December 21, 2025</span> |
                         <span>Dark Web</span>
                     </div>
                 </header>
 
                 <div class="post-body">
-                    <p>When people think of the term Dark Web, they often picture illegal dealings secret markets, or a haven for hackers. However, the Dark Web involves much more than shady activities. It serves as a complex system built to serve a variety of purposes. This article explores the meaning of the Dark Web how it is structured and operates, its ethical and legal limits, and other aspects of this hidden part of the internet.</p>
-
-                    <h2>1. What is the Dark Web?</h2>
-                    <p>The Dark Web is a part of the internet that common search engines like Google or Bing can't index. To access it, you need special software and settings, or specific permission. The Dark Web is part of the larger "deep web," which includes all parts of the internet that aren't indexed - such as private databases and password-protected sites. But there's more to the Dark Web than meets the eye. Its very nature is concealed, and people often access it through networks built for anonymity, like Tor (The Onion Router).</p>
-
-                    <h2>2. Understanding the Dark Web</h2>
-                    <h3>2.1 Structure of the Internet </h3>
-
-                    <p>To get your head around the dark web, you first have to understand how the internet is built:</p>
                     
+                    <div class="summary-box">
+                        <strong><i class="fas fa-info-circle"></i> Quick Summary:</strong> 
+                        Onion routing When you use onion routing, you bundle your data in layers of encryption and send it bouncing to random computers (relays) scattered around the globe. It’s a digital shell game that helps keep your identity and location hidden from snoopers.
+                    </div>
+
+                    <h2>1. What “onion routing” means</h2>
+                    <p>Onion routing is a networking technique designed to protect who you are and where you are connecting from.</p>
+                    
+                    <p><strong>The idea:</strong></p>
                     <ul>
-                        <li>
-                            <strong>Surface Web:</strong> This is the part of the internet that is available to the public and is indexed by search engines. Websites, the social media platform, blog, you name it.
-                        </li>
-
-                        <li>
-                            <strong>Deep Web:</strong>this part involves information that is not part of the search engines. Examples of these are non-public databases, medical information, tutorial assets, organizational intranets and more. The deep web, for the most part, is pretty innocent.
-                        </li>
-
-                        <li>
-                            <strong>The Dark Web:</strong> A small subset of the deep web needing specialized software and a lot of configuration to access. This is purposefully hidden and quite often, requires the necessities of utility of anonymization tools like Tor (The Onion Router).
+                        <li>Your message is wrapped in multiple layers of encryption (like layers of an onion).</li>
+                        <li>Each network relay removes only one layer.</li>
+                        <li>No single relay knows both:
+                            <ul>
+                                <dl style="background: #6e6812; color: rgb(247, 247, 247); font-weight: 700; padding: 20px; width: 350px; border-radius: 12px; border: 1px solid #eee;">
+                                    <li>Who you are, and</li>
+                                    <li>Where your data is ultimately going</li>
+                                </dl>
+                            </ul>
                         </li>
                     </ul>
 
-                    <h2>3. How to access the dark web</h2>
-
-                    <p>The dark web normally can be accessed through the use of Tor, which is a network that anonymizes internet traffic by routing your connection through a series of volunteer-operated servers obscuring your IP and location. It's that anonymity that draws users wanting to engage in activities that might be illegal or censored in their home countries.</p>
-
-                    <p>Moreover, dark web sites have special domains that end with .onion and can be opened only in the Tor browser. It helps to keep both users and hosts of such resources anonymous.</p>
+                    <p><strong>Core goal</strong></p>
+                    <p>Prevent any observer (ISPs, governments, websites, attackers) from easily linking:</p>
                     
-                    
-
-
-            <h2>4. Activities on the Dark Web</h2>
-
-            <p>The dark web has a wide range of practices, both ethical and unethical, therefore mentions the following basic categories:-</p>
-
-            <h3>4.1. Illegal Activities</h3>
-            <ul>
-                <li>
-                    <strong>Drug Trafficking:</strong> There are many drugs being sold on the dark web in the marketplace. Boarding favorite substances becomes easy as vendors employ rating mechanisms popularized by e-commerce shops.
-                </li>
-
-                <li>
-                    <strong>Weapons Sales:</strong> Similarly, the firearms and ammo can be laid hands upon the dark net. Such deals are often very low risk of interception by police hence the worry about gun running.
-                </li>
-
-                <li>
-                   <strong> Stolen Data and Hacking Services:</strong> The web sells hacked personal information like credit card, social securities, email address and so much more. Cybercrime services are also available on the dark web.
-                </li>
-
-                <li>
-                   <strong> Human Trafficking and Exploitation:</strong> Regrettably, the more despicable practices of human subjugation, child abuse as well as illegal pornography are on sale on the dark internet as well.
-                </li>
-            </ul>
-
-            <h3>4.2. Legal Uses</h3>
-
-            <p>The dark web is not entirely made up of illegal activities. On the other hand, this platform is preferred by some individuals for legitimate purposes such as:-</p>
-
-            <ul>
-                <li>
-                    <strong>Whistleblowing and Freedom of Speech:</strong> In oppressive regimes, journalists and activists who use dark web technology communication share their work and their pieces of information to the community without worrying about being prosecuted.
-                </li>
-
-                <li>
-                   <strong> Privacy Protection:</strong> In most cases, the people who care about the surveillance governments or companies issue may decide to turn to the dark web to achieve both the highest degree of privacy and the best security.
-                </li>
-
-                <li>
-                   <strong> Research Purposes:</strong> The dark web is a fertile ground for security professionals and academics to study, for example, criminal behaviors and thereby come up with countermeasures to cyber dangers.
-                </li>
-            </ul>
+                    <class="concept-box">
+                      <dl style="background: #136813; color: rgb(247, 247, 247); font-weight: 700; padding: 20px; width: 350px; border-radius: 12px; border: 1px solid #eee;">  User <i class="fas fa-arrow-right"></i> Activity <i class="fas fa-arrow-right"></i> Destination</dl>
                     
 
-                    <h2>5. Risks of the Dark Web</h2>
-                    <p>Engagement with the dark web comes with some major dangers, including:-</p>
+                    <h2>2. How Tor works (The Onion Router) ?</h2>
+                    <p>The best known onion routing network is Tor. It was actually created by the U.S. Naval Research Laboratory.</p>
 
-                    <h3>5.1. Legal Consequences</h3>
-                  <ul>
-                    <li>
-                        To use or to be part of any illegal activities on the dark web can cause one to be charged or convicted with a crime that is very serious. The police have arrested people involved with the dark web e-commerce businesses many times during the past years.
-                    </li>
-                  </ul>
-
-                  <h3>5.2. Cybersecurity Threats</h3>
-                  <ul>
-                    <li>
-                        The dark web is swarming with all kinds of malware including the phishing scams and whatnot, which have made users who try to plead victim among cyber attacks become one. Any person who downloads files or clicks on unreliable links might be unknowingly harmed by the device or might have their personal data compromised.
-                    </li>
-                  </ul>
-
-                  <h3>5.3. Scams and Fraud</h3>
-                  <ul>
-                    <li>
-                        There are many sellers on the dark web that are not trustworthy. Users may lose the money they paid to scams, where products or services were delivered late or never.
-                    </li>
-                  </ul>
+                    <h3>2.1 Tor’s relay system</h3>
+                    <p>When you’re on Tor, your traffic goes across at least three relays:</p>
                     
-
-                    <h2>6. The function of law enforcement</h2>
-
-                    <p>
-                        Law enforcement agencies worldwide have made the dark web a top concern. Are implementing strategies to combat criminal activities on this platform.
-                    </p>
-
                     <ul>
-                        <li>
-                            <strong>Undercover Operations:</strong> The agencies might penetrate the marketplaces of the dark web, which would enable them to collect evidence and then convict the criminals.
+                        <li><i class="fas fa-shield-alt" style="color:#2ecc71;"></i> <strong>Entry (Guard) Node</strong>
+                            <ul>
+                                <li>Knows who you are (your IP).</li>
+                                <li>Does not know what site you’re visiting.</li>
+                            </ul>
                         </li>
-
-                        <li>
-                            <strong>Seizing Domains and Assets:</strong> Some of the platforms like Silk Road and AlphaBay have been shut down through the legal process, and seizures have been made to grab assets linked to illegal operations.
+                        <li><i class="fas fa-random" style="color:#f1c40f;"></i> <strong>Middle Relay</strong>
+                            <ul>
+                                <li>Passes encrypted traffic along.</li>
+                                <li>Knows neither the sender nor the destination.</li>
+                            </ul>
                         </li>
-
-                        <li>
-                            <strong>International Cooperation:</strong> Considering that the dark web is a worldwide issue, law enforcement agency cooperation is of paramount importance in the fight against transnational cybercrime.
+                        <li><i class="fas fa-door-open" style="color:#e74c3c;"></i> <strong>Exit Node</strong>
+                            <ul>
+                                <li>Knows the destination (the website you want).</li>
+                                <li>Does not know who you are.</li>
+                            </ul>
                         </li>
                     </ul>
+                    <p>Each relay can only see its previous and next hop, never the full path.</p>
+
+                    <h3>2.2 Encryption layers (the “onion”)</h3>
+                    <p>Before your data leaves your device:</p>
+                    <ol>
+                        <li>It is encrypted three times.</li>
+                        <li>Each relay peels off one layer.</li>
+                        <li>Only the final destination sees the fully decrypted request.</li>
+                    </ol>
+                    <p>This prevents traffic correlation by a single observer.</p>
+
+                    <h3>2.3 Tor hidden services (.onion)</h3>
+                    <p>Some websites exist inside the Tor network and never touch the regular internet. These are often called <strong>Onion services</strong> or <strong>.onion sites</strong>.</p>
                     
+                    <p><strong>How they differ:</strong></p>
+                    <ul>
+                        <li>The user’s location is hidden.</li>
+                        <li>The server’s location is also hidden.</li>
+                        <li>Traffic never exits Tor.</li>
+                    </ul>
 
-                    <h2>7. The future of the dark web</h2>
-                   <p>As technology evolves, so does the Dark Web. Emerging trends include:-</p>
+                    <h3>How is this not a VPN??</h3>
+                    <p>Tor is often mistaken for VPNs. Here is the difference:</p>
+                    
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>VPN (Virtual Private Network) There as another reader suggested if you know who that was with Tor (The Onion Router).</th>
+                                <th>Trust You have to trust the VPN service not to log Your data.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Trust</strong></td>
+                                <td>You must trust the VPN provider not to log your data.</td>
+                                <td>Trust is distributed; no single node sees everything.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Speed</strong></td>
+                                <td>Fast (good for streaming).</td>
+                                <td>Slow (traffic bounces around the world).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Anonymity</strong></td>
+                                <td>ISP can't see activity, but VPN knows your identity</td>
+                                <td> Excellent anonymity, very hard to trace back to you!</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cost</strong></td>
+                                <td>Usually paid.</td>
+                                <td>Free and open source.</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                   <ul>
-                    <li>
-                       <strong> Improved anonymity tools:</strong> New technologies are constantly being developed to improve user anonymity and security on the dark web.
-                    </li>
+                    <h2>3. I2P (Invisible Internet Project)</h2>
+                    <p>You mentioned “12P” — this is likely I2P.</p>
 
-                    <li>
-                       <strong> Regulatory review:</strong> The government is exploring ways to regulate dark web activity. It balances the need for privacy and freedom with the risk of illegal content.
-                    </li>
+                    <h3>Key differences from Tor</h3>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Tor</th>
+                                <th>I2P</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Focus</td>
+                                <td>Anonymously accessing the web</td>
+                                <td>Anonymous internal services</td>
+                            </tr>
+                            <tr>
+                                <td>Traffic</td>
+                                <td>Mostly outbound</td>
+                                <td>Mostly peer-to-peer</td>
+                            </tr>
+                            <tr>
+                                <td>Routing</td>
+                                <td>Circuit-based</td>
+                                <td>Garlic routing</td>
+                            </tr>
+                            <tr>
+                                <td>Use case</td>
+                                <td>Browsing, anonymity</td>
+                                <td>Distributed apps, messaging</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                    <li>
-                        <strong>Landscape Change: </strong>In Response to Law Enforcement Actions Black web markets can develop A new platform has emerged to replace the one that was shut down...
-                    </li>
-                   </ul>
+                    <h3>Garlic routing (I2P)</h3>
+                    <p>Instead of one message = one onion:</p>
+                    <ul>
+                        <li>Multiple messages are bundled together ("cloves" in a garlic).</li>
+                        <li>This increases resistance to traffic analysis.</li>
+                        <li>Makes it harder to correlate timing patterns.</li>
+                    </ul>
 
-                    <h2>8. Conclusion</h2>
-                    <p>The Dark Web is a complex and diverse part of the internet. Although often associated with illegal activities But it also serves as a haven for privacy. freedom of speech and research as well To navigate the digital landscape responsibly It is critical to understand the structure, risks, and impacts as technology advances. The dynamics of the dark web are likely to change. This makes continued awareness and education important for users and policy makers.</p>
+                    <h2>4. How anonymity networks protect users (technically)</h2>
+                    <h3>4.1 Threats they defend against</h3>
+                    <ul>
+                        <li><strong>IP address tracking:</strong> Websites do not see your real IP.</li>
+                        <li><strong>ISP surveillance:</strong> Your Internet Provider can see that you are using Tor, but not what for.</li>
+                        <li><strong>Network-level censorship:</strong>  Getting around companies in constrained countries.</li>
+                    </ul>
 
+                    <h3>4.2 What they do not protect against</h3>
+                    <p>Anonymity networks cannot protect you if:</p>
+                    <ul>
+                        <li>You log into your accounts (like Facebook, Google).</li>
+                        <li>You download infected software or files.</li>
+                        <li>You reveal personal info voluntarily in chats.</li>
+                        <li>Your device itself is compromised with malware.</li>
+                    </ul>
+                    <dl style="background: #4b3e2a; color: white; width: 350px; padding: 5px; border-radius: 10px; border: 1px solid #f7f7f7;"><p><strong>Remember: Anonymity ≠ Invisibility</strong></p></dl>
+
+                    <h2>5. Common misconceptions</h2>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li> ☛ <strong>“Tor is only for criminals”</strong><br>
+                        False. Many legitimate uses exist: Journalists, Activists, Researchers, and people living under censorship.</li>
+                        <br>
+                        <li> ☛ <strong>“Tor makes you untraceable”</strong><br>
+                        False. It reduces risk significantly but is not a magic shield against dedicated nation-state attackers.</li>
+                        <br>
+                        <li> ☛ <strong>“The Dark Web is a different internet”</strong><br>
+                        Not really. It’s still the internet, just accessed through different routing protocols.</li>
+                    </ul>
+
+                    <h2>6. Safety considerations (important)</h2>
+                    <p>Since you asked about safety, here are conceptual rules, not instructions:</p>
+                    
+                    <h3>Technical safety</h3>
+                    <ul>
+                        <li>Anonymity depends on behavior, not just tools.</li>
+                        <li>Browser exploits (JavaScript) can bypass network protections.</li>
+                        <li>Metadata (timing, size, patterns) still matters.</li>
+                    </ul>
+
+                    <h3>Personal safety</h3>
+                    <ul>
+                        <li>Not all hidden services are trustworthy.</li>
+                        <li>Some content can be harmful or illegal.</li>
+                        <li>Curiosity without context can expose you to risks.</li>
+                    </ul>
+
+                    <h2>7. Ethical use of anonymity networks</h2>
+                    <p>Anonymity networks are dual-use technologies.</p>
+
+                    <div class="ethical-container">
+                        <div class="ethical-box ethical-good">
+                            <strong><i class="fas fa-check-circle"></i> Ethical uses include:</strong>
+                            <ul>
+                                <li>Protecting free speech</li>
+                                <li>Avoiding political persecution</li>
+                                <li>Researching sensitive topics</li>
+                                <li>Secure communication</li>
+                            </ul>
+                        </div>
+                        <div class="ethical-box ethical-bad">
+                            <strong><i class="fas fa-times-circle"></i> Unethical uses include:</strong>
+                            <ul>
+                                <li>Harassment</li>
+                                <li>Scams</li>
+                                <li>Exploitation</li>
+                                <li>Coordinating harm</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: 15px;"><strong>Ethical principle:</strong></p>
+                    <blockquote>Use anonymity to protect rights — not to remove responsibility.</blockquote>
+
+                    <h2>8. Why this matters today</h2>
+                    <p>Onion routing represents a bigger idea:</p>
+                    <ul>
+                        <li>Privacy as a technical property</li>
+                        <li>Power balance between users and observers</li>
+                        <li>Resistance to mass surveillance</li>
+                    </ul>
+                    
+                    <h2>Glossary of Terms</h2>
+                    <dl style="background: #4b3e2a; color: white; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
+                        <dt><strong>Node / Relay</strong></dt>
+                        <dd>A computer that participates in the Tor network by passing traffic along.</dd>
+                        <br>
+                        <dt><strong>Bridge</strong></dt>
+                        <dd>A secret node not publicly listed, for when some would-be Tor users have their network connections blocked in countries such as China or Iran.</dd>
+                        <br>
+                        <dt><strong>Fingerprinting</strong></dt>
+                        <dd>Tricks they use to track you include your browser settings, screen size and fonts – and even if your IP address is hidden.</dd>
+                    </dl>
+
+                    <p style="margin-top:20px">By learning how it works, you can critically evaluate privacy claims, identify trade-offs and make ethical decisions about technology.</p>
+
+                    <h2>Conclusion</h2>
+                    <p>Privacy-enhanced network architectures (such as onion routing and the various anonymity networks – Tor, I2P) offer evidence that privacy can be an intrinsic part of a network design. Not by decoupling identity from destination (as with Tor) or by trusting the system operator not to spy on every user, but rather by separating what any one observer can see. At the same time they are not magic shields: user behavior, device security and ethical decisions still count.Comprehending the operation - and consequently its limitations - of these particular technologies are among the most effective ways for users to understand how to handle them responsibly, the extent of their ability to protect user privacy, and their importance in the protection of the rights to free expression and access to information in an increasingly monitored online ecosystem.</p>
+  
                 </div>
             </article>
 
@@ -1007,14 +1256,14 @@
             function updateDateTime() {
                 const now = new Date();
                 const options = {
-                    weekday: 'long', // e.g., 'Monday'
-                    year: 'numeric', // e.g., '2025'
-                    month: 'long',   // e.g., 'May'
-                    day: 'numeric',  // e.g., '25'
-                    hour: '2-digit', // e.g., '04'
-                    minute: '2-digit',// e.g., '55'
-                    second: '2-digit',// e.g., '41'
-                    hour12: true     // Use AM/PM
+                    weekday: 'long', 
+                    year: 'numeric', 
+                    month: 'long',   
+                    day: 'numeric',  
+                    hour: '2-digit', 
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: true     
                 };
 
                 const formatter = new Intl.DateTimeFormat('en-US', options);
@@ -1193,4 +1442,4 @@
    </script>
 
 </body>
-</html>
+</html> 
