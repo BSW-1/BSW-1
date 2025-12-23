@@ -13,7 +13,6 @@
 </head>
 
 <style>
-    /* General Body and Container */
     body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -191,7 +190,7 @@
         color: #007bff;
     }
 
-    /* Dropdown specific styles */
+    /* Dropdown  */
     .dropdown-content {
         display: none;
         position: absolute;
@@ -352,9 +351,8 @@
         margin-bottom: 8px;
     }
 
-    /* --- NEW STYLES FOR BOXES & TABLES --- */
     
-    /* Concept Box (The "Core Goal" box) */
+    /* Concept Box */
     .concept-box {
         text-align: center;
         font-weight: bold;
@@ -373,7 +371,6 @@
         border-color: #444;
     }
 
-    /* Summary Box */
     .summary-box {
         background-color: #fff8e1;
         border-left: 5px solid #ffc107;
@@ -396,10 +393,9 @@
         margin: 20px 0;
         font-size: 16px;
         overflow-x: auto;
-        display: block; /* Ensures horizontal scroll on small mobile */
+        display: block; 
     }
     
-    /* Remove display:block for larger screens so it fills width properly */
     @media (min-width: 600px) {
         .comparison-table { display: table; }
     }
@@ -455,13 +451,13 @@
     }
     
     body.dark-mode .ethical-good {
-        background: #1b3320; /* Dark green bg */
+        background: #1b3320; 
         color: #a5d6a7;
         border-color: #2e5e32;
     }
     
     body.dark-mode .ethical-bad {
-        background: #3e2021; /* Dark red bg */
+        background: #3e2021; 
         color: #ef9a9a;
         border-color: #5e2e2e;
     }
@@ -492,7 +488,6 @@
         display: none;
     }
 
-    /* Control ad visibility based on data attribute */
     .ads-container[data-ad-status="hidden"] {
         display: none !important; 
     }
@@ -705,7 +700,6 @@
     }
 
 
-    /* Responsive Design */
     @media (max-width: 992px) {
         .container {
             flex-direction: column;
