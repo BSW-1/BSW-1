@@ -5,287 +5,277 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhaskar Sah - CyberWise Tech Insights</title>
     <link rel="icon" href="/Logo1 2.png" type="image/icon type">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
-        
+        /* --- Base Styles --- */
         html {
             scroll-behavior: smooth;
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            transition: background-color 0.6s ease-in-out; 
+            background-color: #eef2f6;
+            color: #333;
+            transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
             display: flex;
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center;
-            min-height: 100vh; 
+            flex-direction: column;
+            min-height: 100vh;
             margin: 0;
+            padding: 0; /* Removed padding to allow full-width footer */
+            overflow-x: hidden;
+        }
+
+        /* --- Main Content Wrapper --- */
+        .main-content {
+            flex: 1; /* Pushes footer to bottom */
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 20px;
-            box-sizing: border-box;
-            position: relative; 
-            overflow-x: hidden; 
-        }
-
-        
-        body {
-            background-color: #eef2f6; 
-            color: #333; 
-        }
-
-        .profile-wrapper {
-            position: relative; 
-            margin-bottom: 3rem; 
-            max-width: 500px; 
             width: 100%;
         }
 
+        .profile-wrapper {
+            position: relative;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        /* --- Profile Card --- */
         .profile-card {
-            background-color: #ffffff; 
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); 
+            background-color: #ffffff;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
             transition: background-color 0.6s ease-in-out, box-shadow 0.6s ease-in-out, transform 0.3s ease;
         }
 
-        .profile-card h1 {
-            color: #2c3e50; 
-        }
-        .profile-card p.description {
-            color: #5d6d7e; 
-        }
+        .profile-card h1 { color: #2c3e50; }
+        .profile-card p.description { color: #5d6d7e; }
 
         .author-avatar {
-            border-color: #8e44ad; 
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+            border-color: #8e44ad;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
+        .premium-heading { font-family: 'Playfair Display', serif; }
+
+        /* --- Social Links --- */
         .social-link {
             transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
         }
 
-        /* Dark Mode Styles */
-        body.dark-mode {
-            background-color: #2c3e50; 
-            color: #ecf0f1; 
-        }
-
-        .dark-mode .profile-card {
-            background-color: #34495e; 
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7); 
-        }
-
-        .dark-mode .profile-card h1 {
-            color: #e2e8f0; 
-        }
-        .dark-mode .profile-card p.description {
-            color: #bdc3c7; 
-        }
-
-        .dark-mode .author-avatar {
-            border-color: #9b59b6; 
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
-        }
-
-        /* Social link colors for dark mode to ensure visibility */
-        .dark-mode .social-link.twitter { background-color: #1DA1F2; }
-        .dark-mode .social-link.twitter:hover { background-color: #0c85d0; }
-        .dark-mode .social-link.facebook { background-color: #1877F2; }
-        .dark-mode .social-link.facebook:hover { background-color: #156ac2; }
-        .dark-mode .social-link.youtube { background-color: #FF0000; }
-        .dark-mode .social-link.youtube:hover { background-color: #cc0000; }
-        .dark-mode .social-link.github { background-color: #7f8c8d; }
-        .dark-mode .social-link.github:hover { background-color: #616e70; }
-
-        
-        .premium-heading {
-            font-family: 'Playfair Display', serif;
-        }
-
-        
+        /* --- Theme Toggle --- */
         #theme-toggle {
             position: absolute;
-            top: -20px; 
-            right: -20px; 
+            top: -20px;
+            right: -20px;
             z-index: 10;
-            background-color: #f0f2f5; 
-            color: #333; 
-            padding: 12px; 
-            border-radius: 50%; 
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+            background-color: #f0f2f5;
+            color: #333;
+            padding: 12px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             cursor: pointer;
-            outline: none; 
-            border: none; 
-            overflow: hidden; 
-            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.3s ease;
+            border: none;
+            width: 45px;
+            height: 45px;
+            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, transform 0.3s ease;
         }
 
-        .dark-mode #theme-toggle {
-            background-color: #34495e; 
-            color: #ecf0f1; 
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
-        }
+        #theme-toggle:hover { transform: scale(1.1); }
 
-        #theme-toggle:hover {
-            transform: scale(1.1); 
-        }
-
-        
         #theme-toggle i {
-            display: inline-block; 
-            transition: transform 0.3s ease, opacity 0.3s ease;
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%); 
+            transition: transform 0.5s ease, opacity 0.5s ease;
         }
 
-        
-        #theme-toggle i.fa-moon { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
-        #theme-toggle i.fa-sun { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
-
-        
-        body.dark-mode #theme-toggle i.fa-moon {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1);
-        }
-        body.dark-mode #theme-toggle i.fa-sun {
-            opacity: 0;
-            transform: translate(-50%, -50%) scale(0.5);
+        /* --- Footer Styles (Optimized) --- */
+        .site-footer {
+            background-color: #000000;
+            color: #ecf0f1;
+            padding: 30px 20px;
+            width: 100%;
+            margin-top: auto; /* Ensures footer sits at bottom */
+            transition: background-color 0.6s ease-in-out;
         }
 
-        
-        body.light-mode #theme-toggle i.fa-sun {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1);
-        }
-        body.light-mode #theme-toggle i.fa-moon {
-            opacity: 0;
-            transform: translate(-50%, -50%) scale(0.5);
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column; /* Mobile Default: Stacked */
+            align-items: center;
+            gap: 20px;
+            text-align: center;
         }
 
-       
-        .profile-card.animate-pop {
-            animation: popIn 0.3s ease-out;
+        .footer-copyright {
+            font-size: 0.9em;
+            color: #adb5bd;
+            margin: 0;
         }
+
+        .footer-legal-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.9em;
+        }
+
+        .footer-legal-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .footer-legal-links a:hover { color: #3498db; }
+
+
+        @media (min-width: 600px) {
+            .footer-legal-links a:not(:last-child)::after {
+                content: '|';
+                margin-left: 15px;
+                color: #4a5568;
+                pointer-events: none;
+            }
+        }
+
+        /* --- Dark Mode Overrides --- */
+        body.dark-mode {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        .dark-mode .profile-card {
+            background-color: #34495e;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+        }
+
+        .dark-mode .profile-card h1 { color: #e2e8f0; }
+        .dark-mode .profile-card p.description { color: #bdc3c7; }
+
+        .dark-mode .author-avatar {
+            border-color: #9b59b6;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .dark-mode #theme-toggle {
+            background-color: #34495e;
+            color: #ecf0f1;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .dark-mode .site-footer {
+            background-color: #111111;
+            border-top: 1px solid #2a2a2a;
+        }
+
+        .dark-mode .footer-legal-links a:hover { color: #50fa7b; }
+
+        /* --- Animations --- */
+        .profile-card.animate-pop { animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
 
         @keyframes popIn {
-            0% { transform: scale(0.98); opacity: 0.8; }
-            50% { transform: scale(1.01); opacity: 1; }
-            100% { transform: scale(1); }
+            0% { transform: scale(0.95); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
         }
 
-        
-        .content-section {
-            background-color: #ffffff;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            border-radius: 0.75rem; 
-            padding: 2rem; 
-            margin-top: 3rem; 
-            max-width: 500px;
-            width: 100%;
-            transition: background-color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+        /* --- Responsive Design (Laptop) --- */
+        @media (min-width: 768px) {
+            .footer-container {
+                flex-direction: row; 
+                justify-content: space-between;
+                text-align: left;
+            }
         }
 
-        .dark-mode .content-section {
-            background-color: #34495e;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
-        }
+        /* Theme Toggle Icon Logic */
+        .fa-moon { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+        .fa-sun { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
 
-        .content-section h2 {
-            color: #2c3e50;
-            transition: color 0.6s ease-in-out;
-        }
-
-        .dark-mode .content-section h2 {
-            color: #e2e8f0;
-        }
-
-        .content-section p {
-            color: #5d6d7e;
-            transition: color 0.6s ease-in-out;
-        }
-
-        .dark-mode .content-section p {
-            color: #bdc3c7;
-        }
+        body.dark-mode #theme-toggle .fa-moon { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+        body.light-mode #theme-toggle .fa-sun { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 
     </style>
 </head>
-<body class="antialiased">
+<body class="light-mode">
 
-    <div id="main-profile" class="profile-wrapper">
-        <button id="theme-toggle" class="relative">
-            <i class="fas fa-moon fa-lg"></i>
-            <i class="fas fa-sun fa-lg"></i>
-        </button>
+    <div class="main-content">
+        <div id="main-profile" class="profile-wrapper">
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon fa-lg"></i>
+                <i class="fas fa-sun fa-lg"></i>
+            </button>
 
-        <div class="profile-card rounded-xl p-8 max-w-md w-full mx-auto transform transition-all duration-300 hover:scale-105">
-            <div class="flex flex-col items-center text-center">
-                <img src="/bhaskar.webp" alt="Bhaskar Sah Profile Picture" class="author-avatar w-32 h-32 rounded-full object-cover border-4 shadow-md mb-6">
+            <div class="profile-card rounded-xl p-8 max-w-md w-full mx-auto">
+                <div class="flex flex-col items-center text-center">
+                    <img src="/bhaskar.webp" alt="Bhaskar Sah Profile Picture" class="author-avatar w-32 h-32 rounded-full object-cover border-4 shadow-md mb-6">
 
-                <h1 class="premium-heading text-3xl font-bold mb-2">Bhaskar Sah</h1>
-                      <a href="https://bhaskarsah.com.np" target="_blank"><h2>WebSite:- <u><b>CyberWise Tech Insight</b></u></h2></a>
-
-                      <br>
-
-                <p class="description text-lg leading-relaxed mb-6">
-                   "CyberWise - Your Tech Insights" focuses on making tricky subjects easy to understand. This platform covers <strong>Cybersecurity, Artificial Intelligence, Science & Technology,</strong> and the fascinating parts of the <strong>Dark Web</strong> and <strong>so on..</strong>
-                    <br><br>
-                    Articles aim to give readers a clear and practical understand of how to stay safe online and keep up with new developments. We do more than just look into the latest tech breakthroughs. We also strive to share insights that help build a digital community where everyone feels more secure and well-informed.
-                </p>
-
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="https://x.com/wasu462" target="_blank" class="social-link twitter bg-blue-500 text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-600 flex items-center space-x-2">
-                        <i class="fab fa-twitter w-5 h-5"></i>
-                        <span>Twitter</span>
-                    </a>
-                    <a href="https://www.facebook.com/bhaskar.sah.5621" target="_blank" class="social-link facebook bg-blue-700 text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-800 flex items-center space-x-2">
-                        <i class="fab fa-facebook-f w-5 h-5"></i>
-                        <span>Facebook</span>
+                    <h1 class="premium-heading text-3xl font-bold mb-2">Bhaskar Sah</h1>
+                    <a href="https://bhaskarsah.com.np" target="_blank" class="hover:text-blue-500 transition-colors">
+                        <h2 class="font-semibold">WebSite:- <u><b>CyberWise Tech Insight</b></u></h2>
                     </a>
 
-                    </a>
+                    <br>
+
+                    <p class="description text-lg leading-relaxed mb-6">
+                        "CyberWise - Your Tech Insights" focuses on making tricky subjects easy to understand. This platform covers <strong>Cybersecurity, Artificial Intelligence, Science & Technology,</strong> and the fascinating parts of the <strong>Dark Web</strong> and <strong>so on..</strong>
+                        <br><br>
+                        Articles aim to give readers a clear and practical understand of how to stay safe online and keep up with new developments. We do more than just look into the latest tech breakthroughs. We also strive to share insights that help build a digital community where everyone feels more secure and well-informed.
+                    </p>
+
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="https://x.com/wasu462" target="_blank" class="social-link twitter bg-blue-500 text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-600 flex items-center space-x-2" aria-label="Twitter">
+                            <i class="fab fa-twitter w-5 h-5"></i>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="https://www.facebook.com/bhaskar.sah.5621" target="_blank" class="social-link facebook bg-blue-700 text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-800 flex items-center space-x-2" aria-label="Facebook">
+                            <i class="fab fa-facebook-f w-5 h-5"></i>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-copyright">
+                <p>&copy; 2024 CyberWise. All Rights Reserved.</p>
+            </div>
+            <nav class="footer-legal-links">
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/Disclaimer.html">Disclaimer</a>
+                <a href="/terms&condition.html">Terms and Condition</a>
+                <a href="/contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </footer>
 
     <script>
         const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
         const profileCard = document.querySelector('.profile-card');
 
-        // Function to set the theme and trigger animations
+        // Function to set the theme
         function setTheme(theme) {
-            
             body.classList.remove('dark-mode', 'light-mode');
             profileCard.classList.remove('animate-pop');
 
-        
             body.classList.add(theme);
             localStorage.setItem('theme', theme);
-
             
-            setTimeout(() => {
-                profileCard.classList.add('animate-pop');
-            }, 50); 
-
-            
-            const moonIcon = themeToggle.querySelector('.fa-moon');
-            const sunIcon = themeToggle.querySelector('.fa-sun');
-
-            if (theme === 'dark-mode') {
-                moonIcon.style.opacity = '1';
-                moonIcon.style.transform = 'translate(-50%, -50%) scale(1)';
-                sunIcon.style.opacity = '0';
-                sunIcon.style.transform = 'translate(-50%, -50%) scale(0.5)';
-            } else { // light-mode
-                sunIcon.style.opacity = '1';
-                sunIcon.style.transform = 'translate(-50%, -50%) scale(1)';
-                moonIcon.style.opacity = '0';
-                moonIcon.style.transform = 'translate(-50%, -50%) scale(0.5)';
-            }
+            // Re-trigger animation
+            void profileCard.offsetWidth; 
+            profileCard.classList.add('animate-pop');
         }
 
         // Initial setup on load
@@ -294,15 +284,13 @@
             if (currentTheme) {
                 setTheme(currentTheme);
             } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                // Check OS preference if no theme saved
                 setTheme('dark-mode');
             } else {
-                // Default to light mode
                 setTheme('light-mode');
             }
         });
 
-
+        // Toggle Event
         themeToggle.addEventListener('click', () => {
             if (body.classList.contains('dark-mode')) {
                 setTheme('light-mode');
@@ -310,7 +298,6 @@
                 setTheme('dark-mode');
             }
         });
-
     </script>
 
 </body>

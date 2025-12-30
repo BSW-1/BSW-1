@@ -5,429 +5,263 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - CyberWise</title>
     <link rel="icon" href="/Logo1 2.png" type="image/icon type">
-    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
 
-<style>
-    html {
-  scroll-behavior: smooth;
-}
+    <style>
+        /* --- General & Scroll Behavior --- */
+        html {
+            scroll-behavior: smooth;
+            /* CRITICAL FIX: prevents the sticky header from covering 
+               form fields when the browser scrolls to show an error */
+            scroll-padding-top: 100px; 
+        }
 
-    /* General Styles */
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-}
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
+        a { text-decoration: none; transition: color 0.3s ease; }
+        img { max-width: 100%; height: auto; }
 
-a {
-    text-decoration: none;
-    color: #007bff; 
-    transition: color 0.3s ease;
-}
+        /* --- Header --- */
+        .site-header {
+            background-color: #ffffff;
+            padding: 15px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-a:hover {
-    color: #0056b3; 
-}
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-h1, h2, h3 {
-    margin-top: 0;
-    font-weight: 600;
-}
-
-
-.site-header {
-    background-color: #ffffff;
-    padding: 15px 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
- .logo-container .logo-text {
-            font-size: 2em;
+        .logo-text {
+            font-size: 1.8em;
             font-weight: bold;
             color: #3498db;
-            transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            display: flex;
+            align-items: center;
         }
-        body.dark-mode .logo-container .logo-text {
-            color: #50fa7b;
-        }
-        .logo-container .logo-subtext {
-            font-size: 0.8em;
+
+        .logo-subtext {
+            font-size: 0.75em;
             color: #777;
-            transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-        body.dark-mode .logo-container .logo-subtext {
-            color: #aaa;
+            margin-top: -5px;
         }
 
-.logo-container img {
-            display: inline-block; 
-            vertical-align: middle; 
-            margin-left: 8px;           
-            height: 35px;           
-            width: 35px;            
+        .main-nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
         }
 
-.main-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-}
+        .main-nav li { margin-left: 25px; }
 
-.main-nav li {
-    margin-left: 25px;
-}
+        .main-nav a {
+            color: #555;
+            font-weight: 400;
+            position: relative;
+        }
 
-.main-nav a {
-    color: #555;
-    font-weight: 400;
-    font-size: 1em;
-    padding: 5px 0;
-    position: relative;
-}
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #007bff;
+            transition: width 0.3s ease;
+        }
 
-.main-nav a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #007bff;
-    transition: width 0.3s ease;
-}
+        .main-nav a:hover::after,
+        .main-nav a.active::after { width: 100%; }
+        .main-nav a.active { color: #007bff; font-weight: 600; }
 
-.main-nav a:hover::after,
-.main-nav a.active::after {
-    width: 100%;
-}
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            color: #333;
+            cursor: pointer;
+        }
 
-.main-nav a.active {
-    color: #007bff;
-    font-weight: 600;
-}
+        /* --- Hero Section --- */
+        .contact-hero {
+            background: black;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
 
-.mobile-nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    color: #333;
-    cursor: pointer;
-}
+        .contact-hero h1 { font-size: 3em; margin-bottom: 0.5em; font-weight: 700; }
+        .contact-hero .subtitle { font-size: 1.1em; max-width: 700px; margin: 0 auto; font-weight: 300; opacity: 0.9; }
 
-/* Contact Hero Section */
-.contact-hero {
-    background: black; 
-    color: white;
-    padding: 80px 0;
-    text-align: center;
-}
+        /* --- Main Content Layout --- */
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 60px 15px;
+            justify-content: center;
+        }
 
-.contact-hero h1 {
-    font-size: 3em;
-    margin-bottom: 0.5em;
-    font-weight: 700;
-}
+        /* --- Form Container --- */
+        .contact-form-container {
+            flex: 1 1 500px;
+            max-width: 600px;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
 
-.contact-hero .subtitle {
-    font-size: 1.2em;
-    max-width: 700px;
-    margin: 0 auto 20px;
-    font-weight: 300;
-}
+        .contact-form-container h1 { font-size: 1.8em; text-align: center; margin-bottom: 10px; color: #2c3e50; }
+        .contact-form-container p { text-align: center; margin-bottom: 30px; color: #666; }
 
-/* Main Content Layout */
-.contact-content {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 30px;
-    padding: 60px 0;
-    background-color: #f9f9f9;
-    justify-content: center; 
-}
+        /* --- Cards Grid --- */
+        .contact-details-section {
+            flex: 1 1 350px;
+            max-width: 450px;
+        }
 
-.contact-form-container {
-    flex: 1 1 500px; 
-    max-width: 600px; 
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
+        .contact-info-grid {
+            display: grid;
+            gap: 20px;
+        }
 
-.contact-form-container h1 {
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 15px;
-    color: #2c3e50;
-}
+        .contact-card {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.contact-form-container p {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #555;
-}
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+        }
 
-/* Form Styles */
-.contact-form-container form div {
-    margin-bottom: 1rem;
-}
+        .contact-icon { font-size: 2em; color: #007bff; margin-bottom: 15px; }
+        .contact-card h3 { margin: 10px 0; color: #2c3e50; }
+        .contact-card p { font-size: 0.9em; color: #666; margin-bottom: 10px; }
+        
+        .contact-link { color: #007bff; font-weight: 600; }
+        .contact-link:hover { text-decoration: underline; }
 
-.contact-form-container label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 0.9em;
-    color: #666;
-}
+        .social-links a {
+            font-size: 1.2em;
+            color: #555;
+            margin: 0 8px;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover { color: #007bff; }
 
-.contact-form-container input[type="text"],
-.contact-form-container input[type="email"],
-.contact-form-container textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9em;
-    box-sizing: border-box; 
-}
+        /* --- Footer (Responsive & Clean) --- */
+        .site-footer-bottom {
+            background-color: #000;
+            color: #ecf0f1;
+            padding: 30px 0;
+            margin-top: auto; /* Pushes footer to bottom */
+        }
 
-.contact-form-container input[type="text"]:focus,
-.contact-form-container input[type="email"]:focus,
-.contact-form-container textarea:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
-}
+        .footer-container {
+            display: flex;
+            flex-direction: column; /* Mobile first: stacked */
+            align-items: center;
+            gap: 15px;
+            text-align: center;
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
 
-.contact-form-container textarea {
-    resize: vertical;
-    min-height: 120px;
-}
+        .footer-copyright { font-size: 0.9em; color: #adb5bd; margin: 0; }
 
-.contact-form-container button {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    font-weight: 600;
-    width: 100%;
-    transition: background-color 0.3s ease;
-}
+        .footer-legal-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
 
-.contact-form-container button:hover {
-    background-color: #0056b3;
-}
+        .footer-legal-links a {
+            font-size: 0.9em;
+            color: #adb5bd;
+            position: relative;
+        }
 
-.contact-form-container #result {
-    margin-top: 15px;
-    text-align: center;
-    font-size: 0.9em;
-}
+        .footer-legal-links a:hover { color: #3498db; }
 
-/* Contact Details Section */
-.contact-details-section {
-    flex: 1 1 400px; 
-    max-width: 500px; 
-    padding: 0; 
-    background-color: transparent; 
-}
+        /* Desktop Footer Tweaks */
+        @media (min-width: 768px) {
+            .footer-container {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+            /* Add separator '|' only on desktop */
+            .footer-legal-links a:not(:last-child)::after {
+                content: '|';
+                margin-left: 15px;
+                color: #444;
+                pointer-events: none;
+            }
+        }
 
-.contact-info-grid {
-    display: grid;
-    grid-template-columns: 1fr; 
-    gap: 30px;
-}
-
-.contact-card {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-}
-
-.contact-icon {
-    font-size: 2.5em;
-    color: #007bff;
-    margin-bottom: 20px;
-}
-
-.contact-card h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #2c3e50;
-}
-
-.contact-card p {
-    font-size: 0.95em;
-    color: #555;
-    margin-bottom: 15px;
-    min-height: 40px; 
-}
-
-.contact-link {
-    font-weight: 600;
-    display: inline-block;
-    color: #007bff;
-}
-
-.contact-link:hover {
-    text-decoration: underline;
-}
-
-.social-links {
-    margin-top: 15px;
-}
-
-.social-links a {
-    font-size: 1.5em;
-    color: #555;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #007bff;
-}
-
-/* Map Section */
-.map-section {
-    padding: 60px 0;
-    background-color: #f0f4f8;
-}
-
-.map-section h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 30px;
-    color: #2c3e50;
-}
-
-.map-embed {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* Footer */
-.site-footer-bottom {
-    background-color: black; 
-    color: #ecf0f1;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
-}
-
-.site-footer-bottom p {
-    margin: 0;
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-    .contact-content {
-        flex-direction: column; 
-        align-items: center; 
-    }
-
-    .contact-form-container,
-    .contact-details-section {
-        flex: 1 1 100%; 
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .main-nav {
-        width: 100%;
-        display: none; 
-        margin-top: 15px;
-    }
-
-    .main-nav.active {
-        display: block; 
-    }
-
-    .main-nav ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .main-nav li {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .main-nav a::after {
-        display: none; /* Mobile nav usually doesn't have underlines */
-    }
-
-    .mobile-nav-toggle {
-        display: block;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-    }
-
-    .contact-hero h1 {
-        font-size: 2.2em;
-    }
-    .contact-hero .subtitle {
-        font-size: 1em;
-    }
-
-    .contact-info-grid {
-        grid-template-columns: 1fr; /* Stack cards on smaller screens */
-    }
-}
-</style>
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 768px) {
+            .header-container { flex-direction: column; align-items: flex-start; }
+            
+            .main-nav {
+                display: none;
+                width: 100%;
+                margin-top: 15px;
+            }
+            .main-nav.active { display: block; }
+            .main-nav ul { flex-direction: column; text-align: center; }
+            .main-nav li { margin: 10px 0; }
+            .mobile-nav-toggle { display: block; position: absolute; top: 20px; right: 20px; }
+            
+            .contact-hero h1 { font-size: 2.2em; }
+            .contact-content { padding: 40px 15px; gap: 30px; }
+        }
+    </style>
+</head>
 <body>
 
     <header class="site-header">
         <div class="container header-container">
-           <div class="logo-container">
-                <a href="https://bhaskarsah.com.np" class="logo-text">CyberWise<img src="/Nepal flag.gif" width="30" height="13"></a>
+            <div class="logo-container">
+                <a href="https://bhaskarsah.com.np" class="logo-text">
+                    CyberWise
+                    <img src="/Nepal flag.gif" alt="Nepal Flag" style="margin-left: 8px; height: 20px; width: auto;">
+                </a>
                 <div class="logo-subtext">Your Tech Insights</div>
             </div>
             <nav class="main-nav">
@@ -446,76 +280,74 @@ h1, h2, h3 {
         <section class="contact-hero">
             <div class="container">
                 <h1>Contact Us</h1>
-                <p class="subtitle">We appreciate your feedback! Please get in touch with us if you have any recommendations or questions regarding any topic. You may ask by sending me email.</p>
+                <p class="subtitle">We appreciate your feedback! Please get in touch with us if you have any recommendations or questions regarding any topic.</p>
             </div>
         </section>
 
         <section class="contact-content container">
             <div class="contact-form-container">
-                <h1>Contact Us</h1>
-                <p>Fill up the form below to send us a message.</p>
+                <h1>Send a Message</h1>
+                <p>Fill up the form below and we will get back to you.</p>
+                
                 <form action="https://api.web3forms.com/submit" method="POST" id="form">
                     <input type="hidden" name="access_key" value="a6bfc3b8-001c-4b78-b737-c5c26f97a7ec" />
-                    <input type="hidden" name="subject" value="New Submission from Web3Forms" />
-                    <input type="checkbox" name="botcheck" id="" style="display: none;" />
+                    <input type="hidden" name="subject" value="New Submission from CyberWise" />
+                    <input type="checkbox" name="botcheck" style="display: none;" />
 
-                    <div class="flex mb-6 space-x-4">
+                    <div class="flex flex-col md:flex-row mb-6 space-y-4 md:space-y-0 md:space-x-4">
                         <div class="w-full md:w-1/2">
-                            <label for="fname" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">First Name</label>
-                            <input type="text" name="name" id="first_name" placeholder="First" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                            <label for="first_name" class="block mb-2 text-sm text-gray-600">First Name</label>
+                            <input type="text" name="name" id="first_name" placeholder="First Name" required 
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" />
                         </div>
                         <div class="w-full md:w-1/2">
-                            <label for="lname" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Last Name</label>
-                            <input type="text" name="last_name" id="lname" placeholder="Last" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                            <label for="lname" class="block mb-2 text-sm text-gray-600">Last Name</label>
+                            <input type="text" name="last_name" id="lname" placeholder="Last Name" required 
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" />
                         </div>
                     </div>
 
-                    <div class="flex mb-6 space-x-4">
-                        <div class="w-full md:w-1/2">
-                            <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
-                            <input type="email" name="email" id="email" placeholder="you@company.com" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
-                        </div>
-                    </div>
                     <div class="mb-6">
-                        <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Your Message</label>
-
-                        <textarea rows="5" name="message" id="message" placeholder="Your Message" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required></textarea>
+                        <label for="email" class="block mb-2 text-sm text-gray-600">Email Address</label>
+                        <input type="email" name="email" id="email" placeholder="you@example.com" required 
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" />
                     </div>
+
                     <div class="mb-6">
-                        <button type="submit" class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">
+                        <label for="message" class="block mb-2 text-sm text-gray-600">Your Message</label>
+                        <textarea rows="5" name="message" id="message" placeholder="Type your message here..." required 
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"></textarea>
+                    </div>
+
+                    <div class="mb-6">
+                        <button type="submit" class="w-full px-3 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-md shadow-md transition-colors duration-300 font-semibold">
                             Send Message
                         </button>
                     </div>
-                    <p class="text-base text-center text-gray-400" id="result"></p>
+                    <p class="text-base text-center" id="result"></p>
                 </form>
             </div>
 
             <section class="contact-details-section">
                 <div class="contact-info-grid">
                     <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <h3>Email Us</h3>
-                        <p>Reach out directly via email for any inquiries or support.</p>
+                        <p>Reach out directly via email for any inquiries.</p>
                         <a href="mailto:bsw554@gmail.com" class="contact-link">bsw554@gmail.com</a>
                     </div>
 
                     <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <h3>Address</h3>
                         <p>Mirchaiya, Siraha<br>Nepal</p>
-                        <a href="https://www.google.com/maps/search/?" target="_blank" class="contact-link">Get Directions</a>
+                        <a href="https://maps.google.com" target="_blank" class="contact-link">Get Directions</a>
                     </div>
 
                     <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-share-alt"></i>
-                        </div>
+                        <div class="contact-icon"><i class="fas fa-share-alt"></i></div>
                         <h3>Connect with Us</h3>
-                        <p>Follow us on social media for updates and news.</p>
+                        <p>Follow us on social media.</p>
                         <div class="social-links">
                             <a href="https://www.facebook.com/bhaskar.sah.5621" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://x.com/wasu462" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -528,82 +360,86 @@ h1, h2, h3 {
     </main>
 
     <footer class="site-footer-bottom">
-        <div class="container">
-            <p>© 2024 CyberWise. All Rights Reserved.</p>
-            </div>
+        <div class="footer-container">
+            <p class="footer-copyright">&copy; 2024 CyberWise. All Rights Reserved.</p>
+            <nav class="footer-legal-links">
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/Disclaimer.html">Disclaimer</a>
+                <a href="/terms&condition.html">Terms and Condition</a>
+                <a href="/About Me.html">About Us</a>
+            </nav>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
-
     <script>
-   document.addEventListener('DOMContentLoaded', function() {
-    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-    const mainNav = document.querySelector('.main-nav');
+        // Mobile Navigation Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+            const mainNav = document.querySelector('.main-nav');
 
-    if (mobileNavToggle && mainNav) {
-        mobileNavToggle.addEventListener('click', function() {
-            mainNav.classList.toggle('active');
-            // Optional: Change icon on toggle
-            const icon = mobileNavToggle.querySelector('i');
-            if (mainNav.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+            if (mobileNavToggle && mainNav) {
+                mobileNavToggle.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    const icon = mobileNavToggle.querySelector('i');
+                    if (mainNav.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
             }
         });
-    }
-});
-    </script>
 
-    <script>
+        // Form Submission Logic
         const form = document.getElementById("form");
-const result = document.getElementById("result");
+        const result = document.getElementById("result");
 
-form.addEventListener("submit", function (e) {
-  const formData = new FormData(form);
-  e.preventDefault();
-  var object = {};
-  formData.forEach((value, key) => {
-    object[key] = value;
-  });
-  var json = JSON.stringify(object);
-  result.innerHTML = "Please wait...";
-
-  fetch("https://api.web3forms.com/submit", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json"
-    },
-    body: json
-  })
-    .then(async (response) => {
-      let json = await response.json();
-      if (response.status == 200) {
-        result.innerHTML = json.message;
-        result.classList.remove("text-gray-500");
-        result.classList.add("text-green-500");
-      } else {
-        console.log(response);
-        result.innerHTML = json.message;
-        result.classList.remove("text-gray-500");
-        result.classList.add("text-red-500");
-      }
-    })
-    .catch((error) => {
-      console.log(error);
-      result.innerHTML = "Something went wrong!";
-    })
-    .then(function () {
-      form.reset();
-      setTimeout(() => {
-        result.style.display = "none";
-      }, 5000);
-    });
-});
-
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const object = {};
+            formData.forEach((value, key) => {
+                object[key] = value;
+            });
+            const json = JSON.stringify(object);
+            result.innerHTML = "Sending...";
+            
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = json.message;
+                    result.classList.remove("text-red-500");
+                    result.classList.add("text-green-500");
+                    form.reset();
+                } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                    result.classList.remove("text-green-500");
+                    result.classList.add("text-red-500");
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+                result.classList.add("text-red-500");
+            })
+            .then(function () {
+                setTimeout(() => {
+                    result.innerHTML = ""; // Clear message after 5 seconds
+                    result.classList.remove("text-green-500", "text-red-500");
+                }, 5000);
+            });
+        });
     </script>
 </body>
 </html>
