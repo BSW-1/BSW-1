@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhaskar Sah - CyberWise Tech Insights</title>
     <link rel="icon" href="/Logo1 2.png" type="image/icon type">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <meta property="og:site_name" content="CyberWise Tech" />
+    <meta property="og:url" content="https://www.bhaskarsah.com.np" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CyberWise Tech" />
+    <meta property="og:description"
+        content="This platform covers Cybersecurity, Artificial Intelligence, Science & Technology, and the fascinating parts of the Dark Web and so on.." />
+    <meta property="og:image" content="https://www.bhaskarsah.com.np/Logo1 2.png" />
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "CyberWise Tech",
+  "alternateName": "CyberWise",
+  "url": "https://www.bhaskarsah.com.np"
+}
+</script>
+
 
     <style>
         /* --- Base Styles --- */
@@ -25,13 +47,15 @@
             flex-direction: column;
             min-height: 100vh;
             margin: 0;
-            padding: 0; /* Removed padding to allow full-width footer */
+            padding: 0;
+            /* Removed padding to allow full-width footer */
             overflow-x: hidden;
         }
 
         /* --- Main Content Wrapper --- */
         .main-content {
-            flex: 1; /* Pushes footer to bottom */
+            flex: 1;
+            /* Pushes footer to bottom */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -52,15 +76,22 @@
             transition: background-color 0.6s ease-in-out, box-shadow 0.6s ease-in-out, transform 0.3s ease;
         }
 
-        .profile-card h1 { color: #2c3e50; }
-        .profile-card p.description { color: #5d6d7e; }
+        .profile-card h1 {
+            color: #2c3e50;
+        }
+
+        .profile-card p.description {
+            color: #5d6d7e;
+        }
 
         .author-avatar {
             border-color: #8e44ad;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
-        .premium-heading { font-family: 'Playfair Display', serif; }
+        .premium-heading {
+            font-family: 'Playfair Display', serif;
+        }
 
         /* --- Social Links --- */
         .social-link {
@@ -85,7 +116,9 @@
             transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, transform 0.3s ease;
         }
 
-        #theme-toggle:hover { transform: scale(1.1); }
+        #theme-toggle:hover {
+            transform: scale(1.1);
+        }
 
         #theme-toggle i {
             position: absolute;
@@ -100,7 +133,8 @@
             color: #ecf0f1;
             padding: 30px 20px;
             width: 100%;
-            margin-top: auto; /* Ensures footer sits at bottom */
+            margin-top: auto;
+            /* Ensures footer sits at bottom */
             transition: background-color 0.6s ease-in-out;
         }
 
@@ -108,7 +142,8 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-direction: column; /* Mobile Default: Stacked */
+            flex-direction: column;
+            /* Mobile Default: Stacked */
             align-items: center;
             gap: 20px;
             text-align: center;
@@ -135,7 +170,9 @@
             position: relative;
         }
 
-        .footer-legal-links a:hover { color: #3498db; }
+        .footer-legal-links a:hover {
+            color: #3498db;
+        }
 
 
         @media (min-width: 600px) {
@@ -158,8 +195,13 @@
             box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
         }
 
-        .dark-mode .profile-card h1 { color: #e2e8f0; }
-        .dark-mode .profile-card p.description { color: #bdc3c7; }
+        .dark-mode .profile-card h1 {
+            color: #e2e8f0;
+        }
+
+        .dark-mode .profile-card p.description {
+            color: #bdc3c7;
+        }
 
         .dark-mode .author-avatar {
             border-color: #9b59b6;
@@ -177,34 +219,59 @@
             border-top: 1px solid #2a2a2a;
         }
 
-        .dark-mode .footer-legal-links a:hover { color: #50fa7b; }
+        .dark-mode .footer-legal-links a:hover {
+            color: #50fa7b;
+        }
 
         /* --- Animations --- */
-        .profile-card.animate-pop { animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .profile-card.animate-pop {
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
 
         @keyframes popIn {
-            0% { transform: scale(0.95); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
+            0% {
+                transform: scale(0.95);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         /* --- Responsive Design (Laptop) --- */
         @media (min-width: 768px) {
             .footer-container {
-                flex-direction: row; 
+                flex-direction: row;
                 justify-content: space-between;
                 text-align: left;
             }
         }
 
         /* Theme Toggle Icon Logic */
-        .fa-moon { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
-        .fa-sun { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+        .fa-moon {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.5);
+        }
 
-        body.dark-mode #theme-toggle .fa-moon { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-        body.light-mode #theme-toggle .fa-sun { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+        .fa-sun {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.5);
+        }
 
+        body.dark-mode #theme-toggle .fa-moon {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        body.light-mode #theme-toggle .fa-sun {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
     </style>
 </head>
+
 <body class="light-mode">
 
     <div class="main-content">
@@ -216,7 +283,8 @@
 
             <div class="profile-card rounded-xl p-8 max-w-md w-full mx-auto">
                 <div class="flex flex-col items-center text-center">
-                    <img src="/bhaskar.webp" alt="Bhaskar Sah Profile Picture" class="author-avatar w-32 h-32 rounded-full object-cover border-4 shadow-md mb-6">
+                    <img src="/bhaskar.webp" alt="Bhaskar Sah Profile Picture"
+                        class="author-avatar w-32 h-32 rounded-full object-cover border-4 shadow-md mb-6">
 
                     <h1 class="premium-heading text-3xl font-bold mb-2">Bhaskar Sah</h1>
                     <a href="https://bhaskarsah.com.np" target="_blank" class="hover:text-blue-500 transition-colors">
@@ -226,17 +294,26 @@
                     <br>
 
                     <p class="description text-lg leading-relaxed mb-6">
-                        "CyberWise - Your Tech Insights" focuses on making tricky subjects easy to understand. This platform covers <strong>Cybersecurity, Artificial Intelligence, Science & Technology,</strong> and the fascinating parts of the <strong>Dark Web</strong> and <strong>so on..</strong>
+                        "CyberWise - Your Tech Insights" focuses on making tricky subjects easy to understand. This
+                        platform covers <strong>Cybersecurity, Artificial Intelligence, Science & Technology,</strong>
+                        and the fascinating parts of the <strong>Dark Web</strong> and <strong>so on..</strong>
                         <br><br>
-                        Articles aim to give readers a clear and practical understand of how to stay safe online and keep up with new developments. We do more than just look into the latest tech breakthroughs. We also strive to share insights that help build a digital community where everyone feels more secure and well-informed.
+                        Articles aim to give readers a clear and practical understand of how to stay safe online and
+                        keep up with new developments. We do more than just look into the latest tech breakthroughs. We
+                        also strive to share insights that help build a digital community where everyone feels more
+                        secure and well-informed.
                     </p>
 
                     <div class="flex flex-wrap justify-center gap-4">
-                        <a href="https://x.com/wasu462" target="_blank" class="social-link twitter bg-blue-500 text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-600 flex items-center space-x-2" aria-label="Twitter">
+                        <a href="https://x.com/wasu462" target="_blank"
+                            class="social-link twitter bg-blue-500 text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-600 flex items-center space-x-2"
+                            aria-label="Twitter">
                             <i class="fab fa-twitter w-5 h-5"></i>
                             <span>Twitter</span>
                         </a>
-                        <a href="https://www.facebook.com/bhaskar.sah.5621" target="_blank" class="social-link facebook bg-blue-700 text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-800 flex items-center space-x-2" aria-label="Facebook">
+                        <a href="https://www.facebook.com/bhaskar.sah.5621" target="_blank"
+                            class="social-link facebook bg-blue-700 text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-800 flex items-center space-x-2"
+                            aria-label="Facebook">
                             <i class="fab fa-facebook-f w-5 h-5"></i>
                             <span>Facebook</span>
                         </a>
@@ -272,9 +349,9 @@
 
             body.classList.add(theme);
             localStorage.setItem('theme', theme);
-            
+
             // Re-trigger animation
-            void profileCard.offsetWidth; 
+            void profileCard.offsetWidth;
             profileCard.classList.add('animate-pop');
         }
 
@@ -301,4 +378,5 @@
     </script>
 
 </body>
+
 </html>
