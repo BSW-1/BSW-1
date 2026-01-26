@@ -9,7 +9,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onion Routing & Anonymity Networks A Deep Dive into Tor, I2P, and Online Privacy</title>
+    <title>Personal Data Theft: How It Happens, Why It’s Dangerous, and How to Stay Safe</title>
     <link rel="icon" href="/Logo1 2.png" type="image/icon type">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -35,6 +35,7 @@
 </head>
 
 <style>
+    /* General Body and Container */
     body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -56,12 +57,9 @@
     body.dark-mode .table-of-contents,
     body.dark-mode .ad-unit,
     body.dark-mode .similar-posts,
-    body.dark-mode .post-card,
-    body.dark-mode .concept-box,
-    body.dark-mode .summary-box {
+    body.dark-mode .post-card {
         background-color: #2e3b55;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        color: #e0e0e0;
     }
 
     body.dark-mode .main-header {
@@ -167,7 +165,6 @@
         font-weight: bold;
         color: #3498db;
         transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-        text-decoration: none;
     }
 
     body.dark-mode .logo-container .logo-text {
@@ -218,7 +215,7 @@
         color: #007bff;
     }
 
-    /* Dropdown  */
+    /* Dropdown specific styles */
     .dropdown-content {
         display: none;
         position: absolute;
@@ -379,135 +376,6 @@
         margin-bottom: 8px;
     }
 
-
-    /* Concept Box */
-    .concept-box {
-        text-align: center;
-        font-weight: bold;
-        background: #eef;
-        padding: 15px;
-        border-radius: 8px;
-        margin: 20px 0;
-        border: 1px solid #dde;
-        color: #333;
-        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-    }
-
-    body.dark-mode .concept-box {
-        background: #2e3b55;
-        color: #fff;
-        border-color: #444;
-    }
-
-    .summary-box {
-        background-color: #fff8e1;
-        border-left: 5px solid #ffc107;
-        padding: 15px;
-        margin-bottom: 25px;
-        border-radius: 4px;
-        color: #444;
-    }
-
-    body.dark-mode .summary-box {
-        background-color: #3a3a20;
-        color: #ddd;
-        border-left-color: #ffd54f;
-    }
-
-    /* Comparison Table Styling */
-    .comparison-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
-        font-size: 16px;
-        overflow-x: auto;
-        display: block;
-    }
-
-    @media (min-width: 600px) {
-        .comparison-table {
-            display: table;
-        }
-    }
-
-    .comparison-table th,
-    .comparison-table td {
-        border: 1px solid #ddd;
-        padding: 12px;
-        text-align: left;
-    }
-
-    .comparison-table th {
-        background-color: #f2f2f2;
-        color: #333;
-        font-weight: bold;
-    }
-
-    /* Dark mode for table */
-    body.dark-mode .comparison-table th {
-        background-color: #444;
-        color: #fff;
-        border-color: #555;
-    }
-
-    body.dark-mode .comparison-table td {
-        border-color: #555;
-        color: #e0e0e0;
-    }
-
-    /* Ethical Boxes */
-    .ethical-container {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-
-    .ethical-box {
-        flex: 1;
-        min-width: 250px;
-        padding: 15px;
-        border-radius: 5px;
-        border: 1px solid transparent;
-    }
-
-    .ethical-good {
-        background: #e8f5e9;
-        color: #1b5e20;
-        border-color: #c8e6c9;
-    }
-
-    .ethical-bad {
-        background: #ffebee;
-        color: #b71c1c;
-        border-color: #ffcdd2;
-    }
-
-    body.dark-mode .ethical-good {
-        background: #1b3320;
-        color: #a5d6a7;
-        border-color: #2e5e32;
-    }
-
-    body.dark-mode .ethical-bad {
-        background: #3e2021;
-        color: #ef9a9a;
-        border-color: #5e2e2e;
-    }
-
-    /* Blockquote */
-    blockquote {
-        border-left: 5px solid #007bff;
-        margin: 20px 0;
-        padding-left: 20px;
-        font-style: italic;
-        color: #555;
-    }
-
-    body.dark-mode blockquote {
-        color: #bbb;
-    }
-
-
     /* Sidebars and Ads */
     .left-sidebar,
     .right-sidebar {
@@ -521,6 +389,7 @@
         display: none;
     }
 
+    /* Control ad visibility based on data attribute */
     .ads-container[data-ad-status="hidden"] {
         display: none !important;
     }
@@ -733,6 +602,7 @@
     }
 
 
+    /* Responsive Design */
     @media (max-width: 992px) {
         .container {
             flex-direction: column;
@@ -967,302 +837,252 @@
         <main class="main-content">
             <article class="blog-post">
                 <header class="post-header">
-                    <h1>Onion Routing & Anonymity Networks A Deep Dive into Tor, I2P, and Online Privacy</h1>
-
+                    <h1> Personal Data Theft: How It Happens, Why It’s Dangerous, and How to Stay Safe
+                    </h1>
                     <div class="post-meta">
                         <span>By Bhaskar Sah</span> |
-                        <span>December 21, 2025</span> |
+                        <span>January 25, 2026</span> |
                         <span>Dark Web</span>
                     </div>
                 </header>
 
                 <div class="post-body">
 
-                    <div class="summary-box">
-                        <strong><i class="fas fa-info-circle"></i> Quick Summary:</strong>
-                        Onion routing When you use onion routing, you bundle your data in layers of encryption and send
-                        it bouncing to random computers (relays) scattered around the globe. It’s a digital shell game
-                        that helps keep your identity and location hidden from snoopers.
-                    </div>
+                    <p>
+                        The Internet has become an amazing part of our lives today. From shopping online and social
+                        networking to banking and work, we have a lot of personal data on the Web. Free Internet live
+                        radio Advertisement However, though this high digitised life is convenient, it puts one’s
+                        <strong>personal data at a risk</strong> of Identity theft.
+                    </p>
 
-                    <h2>1. What “onion routing” means</h2>
-                    <p>Onion routing is a networking technique designed to protect who you are and where you are
-                        connecting from.</p>
+                    <p>
+                        Millions of people have their <strong>personal data</strong> leaked every day, often without
+                        their knowing. In some cases, this data finds its way onto the <strong>dark web</strong>, the
+                        unlisted part of the internet where cybercriminals purchase and trade personal information to
+                        abuse. In this guide we will explain how <strong>personal data leaks occur</strong>, what
+                        happens when stolen information lands on the dark web and what measures you can take to
+                        <strong>defend yourself.</strong>
+                    </p>
 
-                    <p><strong>The idea:</strong></p>
+
+                    <h2>1. What Is Personal Data?</h2>
+
+                    <p>
+                        Personal data means information that can identify you or be associated with you. Examples
+                        include:
+                    </p>
+
                     <ul>
-                        <li>Your message is wrapped in multiple layers of encryption (like layers of an onion).</li>
-                        <li>Each network relay removes only one layer.</li>
-                        <li>No single relay knows both:
-                            <ul>
-                                <dl
-                                    style="background: #6e6812; color: rgb(247, 247, 247); font-weight: 700; padding: 20px; width: 150px; border-radius: 12px; border: 1px solid #eee;">
-                                    <li>Who you are, and</li>
-                                    <li>Where your data is ultimately going</li>
-                                </dl>
-                            </ul>
-                        </li>
+                        <li>Full name</li>
+                        <li>Email address</li>
+                        <li>Phone number</li>
+                        <li>Passwords</li>
+                        <li>Bank account and credit card details</li>
+                        <li>Address</li>
+                        <li>ID numbers like (passport, citizenship, driver's license)</li>
+                        <li>Location information</li>
+                        <li>Social media accounts</li>
                     </ul>
 
-                    <p><strong>Core goal</strong></p>
-                    <p>Prevent any observer (ISPs, governments, websites, attackers) from easily linking:</p>
+                    <p>
+                        This feeds fraudsters for identity theft, bank scams, account hacking, spam and even blackmail.
+                        The more personal data you put on the internet, the more likely it is for that data to get
+                        stolen.
+                    </p>
 
-                    <class="concept-box">
-                        <dl
-                            style="background: #136813; color: rgb(247, 247, 247); font-weight: 700; padding: 20px; width: 250px; border-radius: 12px; border: 1px solid #eee;">
-                            User <i class="fas fa-arrow-right"></i> Activity <i class="fas fa-arrow-right"></i>
-                            Destination</dl>
+                    <hr>
+
+                    <h2>2. How Personal Data Leaks Happen</h2>
+
+                    <h3>2.1. Data Breaches</h3>
+                    <p>
+                        <strong>Data breaches</strong> happen when hackers infiltrate a website or company’s system and
+                        take users’ data. These are one of the big reasons your personal data winds up on the dark web.
+                    </p>
+
+                    <p><strong>Causes of data breaches:</strong></p>
+                    <ul>
+                        <li>Weak website or server security</li>
+                        <li>Outdated software</li>
+                        <li>Poorly configured cloud storage</li>
+                        <li>Employees accidentally exposing sensitive data</li>
+                    </ul>
+
+                    <p><strong>Example:</strong> In 2019 a well-known social media platform experienced a breach
+                        exposing more than 500 million user records (phone numbers and email addresses), that
+                        subsequently appeared for sale on the dark web.</p>
+
+                    <h3>2.2. Phishing Scams</h3>
+                    <p>
+                        Phishing occurs when attackers deceive individuals into divulging personal information. They do
+                        so with emails, messages or fake websites that are convincing. Users unwittingly give up some
+                        type of sensitive information, which the hackers collect and later sell.
+                    </p>
+
+                    <p><strong>Example:</strong> A user gets an email that purports to be from his bank, with a warning
+                        about “suspicious login.” The email takes the user to a fraudulent login page. When the user
+                        types in their username and password, they get what they need to access the account.</p>
+
+                    <h3>2.3. Weak or Reused Passwords</h3>
+                    <p>
+                        Many people re-use the same password across multiple accounts. If one is breached, then a hacker
+                        potentially has access to the victim’s email account as well. The technique is known as
+                        <strong>credential stuffing.</strong>
+                    </p>
+
+                    <p><strong>Tip:</strong> Create strong, unique passwords and think about a password manager to keep
+                        them safe.</p>
+
+                    <h3>2.4. Unsafe Apps and Downloads</h3>
+                    <p>
+                        A few apps and pieces of software actively harvest your personal data without your knowledge.
+                        This is often the case when users download apps from shady places, use pirated software, or give
+                        too many permissions to applications. Hackers are then able to obtain usernames, passwords and
+                        even location data, or personal files.
+                    </p>
+
+                    <h3>2.5. Public Wi-Fi Networks</h3>
+                    <p>
+                        Public Wi-Fi networks are convenient, but they’re not secure. Hackers are able to access data
+                        that is sent across these networks, such as passwords, emails or banking details.
+                    </p>
+
+                    <p><strong>Tip:</strong> Don’t log on to sensitive accounts using public Wi-Fi. Have a trusted
+                        VPN for secure connections.</p>
+
+                    <h3>2.6. Insider Threats</h3>
+                    <p>
+                        Some data leaks are the result of employees or insiders who work at a company. Large-scale leaks
+                        can be the result of accidental sharing, flimsy access controls or intentional theft.
+                    </p>
+
+                    <hr>
+
+                    <h2>3. How Data of Stolen Credit Cards Gets to the Dark Web</h2>
+
+                    <p>
+                        The <strong>dark web</strong> is the part of the internet, which is not searchable by
+                        normal search engines. Criminals use it to sell pilfered personal data anonymously.
+                    </p>
+
+                    <h3>Step 1: Data Collection</h3>
+                    <p>
+                        Hackers do this through data they collect from breaches, phishing scams, malware and fake apps.
+                        Even minimal data, such an email-password pair, can be of use.
+                    </p>
+
+                    <h3>Step 2: Data Organization</h3>
+                    <p>
+                        Once pilfered, the data is compiled into lists or databases. These can be email-password
+                        combinations, credit card numbers or personal identification information.
+                    </p>
+
+                    <h3>Step 3: Selling on the Dark Web</h3>
+                    <p>
+                        Robbed information is then offered on dark web markets in exchange for
+                        cryptocurrency,complicating the payment trail. Buyers are commonly hackers, scammers or identity
+                        thieves.
+                    </p>
+
+                    <h3>Step 4: Exploitation</h3>
+                    <p>
+                        After being bought and sold, stolen data is often exploited for fraud, identity theft,
+                        account takeovers, phishing scams or blackmail. Small leaks can even have long lasting affects.
+                    </p>
+
+                    <hr>
+
+                    <h2>4. Types of Personal data that is commonly stolen</h2>
+                    <ul>
+                        <li><strong>Login details:</strong> Emails, user names and passwords</li>
+                        <li><strong>Financial data:</strong> Credit card and bank account numbers, transaction histories
+                        </li>
+                        <li><strong>Information about identity:</strong> It has included names, addresses, ID numbers
+                            and even passports</li>
+                        <li><strong>Medical records:</strong> Health info and insurance statements</li>
+                        <li><strong>Social network information:</strong> messages, posts and photos.</li>
+                    </ul>
+
+                    <p>All of these forms of data can be used for online scams, stolen identity or sold en masse to
+                        other criminals on the dark web.</p>
+
+                    <hr>
+
+                    <h2>5. What Makes Information from the Dark Web So Harmful</h2>
+                    <p>If your data is on the dark web, you may face:</p>
+
+                    <ul>
+                        <li>Financial loss</li>
+                        <li>Hacked social media or email accounts</li>
+                        <li>Identity theft</li>
+                        <li>Fake accounts that were opened in your name</li>
+                        <li>Long-term privacy and security risks</li>
+                    </ul>
+
+                    <p>Just one leak can break you wide open across multiple accounts and leave you exposed to scams and
+                        phishing attempts for many years.</p>
+
+                    <hr>
+
+                    <h2>6. How to Keep Your Personal Information Safe Online</h2>
+
+                    <ul>
+
+                        <li><strong>Don’t Reuse Passwords Across Accounts:</strong> Make your passwords strong and
+                            unique.
+                        </li>
+
+                        <li><strong>Turn on Two-Factor Authentication (2FA):</strong> An additional layer of security
+                            that protects your account even if your password is compromised.</li>
+
+                        <li><strong>Be wary of phishing:</strong> Do not click any link nor open attachments contained
+                            in suspicious messages.</li>
+
+                        <li><strong>Only download apps from official stores:</strong> Stay away from pirated or cracked
+                            software.
+                        </li>
+
+                        <li><strong>Do not use public Wi-Fi for sensitive transactions:</strong> Consider a VPN.</li>
+
+                        <li><strong>Stay Up to Date:</strong> Updating addresses security holes hackers use to get in.
+                        </li>
+
+                        <li><strong>Limit how much personal information you share online:</strong> Don’t share too
+                            much on social media or on sites you don’t trust.</li>
+
+                        <li><strong>Keep an eye on your accounts:</strong> Monitor your bank statements and emails for
+                            any suspicious activity. </li>
+
+                    </ul>
 
 
-                        <h2>2. How Tor works (The Onion Router) ?</h2>
-                        <p>The best known onion routing network is Tor. It was actually created by the U.S. Naval
-                            Research Laboratory.</p>
+                    <hr>
 
-                        <h3>2.1 Tor’s relay system</h3>
-                        <p>When you’re on Tor, your traffic goes across at least three relays:</p>
+                    <h2>7. If Your Data Is Leaked, What Should You Do?</h2>
+                    <ul>
+                        <li>Change all passwords immediately.</li>
+                        <li>Turn on two-factor authentication for essential accounts.</li>
+                        <li>Check bank and online accounts for suspicious activity.</li>
+                        <li>Stay aware of phishing emails or scam communications.</li>
+                        <li>You might want to use online services to see if your email or passwords were included in
+                            known breaches.</li>
+                    </ul>
 
-                        <ul>
-                            <li><i class="fas fa-shield-alt" style="color:#2ecc71;"></i> <strong>Entry (Guard)
-                                    Node</strong>
-                                <ul>
-                                    <li>Knows who you are (your IP).</li>
-                                    <li>Does not know what site you’re visiting.</li>
-                                </ul>
-                            </li>
-                            <li><i class="fas fa-random" style="color:#f1c40f;"></i> <strong>Middle Relay</strong>
-                                <ul>
-                                    <li>Passes encrypted traffic along.</li>
-                                    <li>Knows neither the sender nor the destination.</li>
-                                </ul>
-                            </li>
-                            <li><i class="fas fa-door-open" style="color:#e74c3c;"></i> <strong>Exit Node</strong>
-                                <ul>
-                                    <li>Knows the destination (the website you want).</li>
-                                    <li>Does not know who you are.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <p>Each relay can only see its previous and next hop, never the full path.</p>
+                    <hr>
 
-                        <h3>2.2 Encryption layers (the “onion”)</h3>
-                        <p>Before your data leaves your device:</p>
-                        <ol>
-                            <li>It is encrypted three times.</li>
-                            <li>Each relay peels off one layer.</li>
-                            <li>Only the final destination sees the fully decrypted request.</li>
-                        </ol>
-                        <p>This prevents traffic correlation by a single observer.</p>
+                    <h2>8. Conclusion</h2>
+                    <p>
+                        With the growing threat of cybercrime, personal data leaks have become more common. Breach,
+                        phishing, weak password, malware and unsafe app hackers use all of them to steal your data.
+                        After it has been stolen, this data frequently ends up on the dark web, from which it can be
+                        exploited.
+                    </p>
 
-                        <h3>2.3 Tor hidden services (.onion)</h3>
-                        <p>Some websites exist inside the Tor network and never touch the regular internet. These are
-                            often called <strong>Onion services</strong> or <strong>.onion sites</strong>.</p>
-
-                        <p><strong>How they differ:</strong></p>
-                        <ul>
-                            <li>The user’s location is hidden.</li>
-                            <li>The server’s location is also hidden.</li>
-                            <li>Traffic never exits Tor.</li>
-                        </ul>
-
-                        <h3>How is this not a VPN??</h3>
-                        <p>Tor is often mistaken for VPNs. Here is the difference:</p>
-
-                        <table class="comparison-table">
-                            <thead>
-                                <tr>
-                                    <th>Feature</th>
-                                    <th>VPN (Virtual Private Network) There as another reader suggested if you know who
-                                        that was with Tor (The Onion Router).</th>
-                                    <th>Trust You have to trust the VPN service not to log Your data.</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Trust</strong></td>
-                                    <td>You must trust the VPN provider not to log your data.</td>
-                                    <td>Trust is distributed; no single node sees everything.</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Speed</strong></td>
-                                    <td>Fast (good for streaming).</td>
-                                    <td>Slow (traffic bounces around the world).</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Anonymity</strong></td>
-                                    <td>ISP can't see activity, but VPN knows your identity</td>
-                                    <td> Excellent anonymity, very hard to trace back to you!</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Cost</strong></td>
-                                    <td>Usually paid.</td>
-                                    <td>Free and open source.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <h2>3. I2P (Invisible Internet Project)</h2>
-                        <p>You mentioned “12P” — this is likely I2P.</p>
-
-                        <h3>Key differences from Tor</h3>
-                        <table class="comparison-table">
-                            <thead>
-                                <tr>
-                                    <th>Feature</th>
-                                    <th>Tor</th>
-                                    <th>I2P</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Focus</td>
-                                    <td>Anonymously accessing the web</td>
-                                    <td>Anonymous internal services</td>
-                                </tr>
-                                <tr>
-                                    <td>Traffic</td>
-                                    <td>Mostly outbound</td>
-                                    <td>Mostly peer-to-peer</td>
-                                </tr>
-                                <tr>
-                                    <td>Routing</td>
-                                    <td>Circuit-based</td>
-                                    <td>Garlic routing</td>
-                                </tr>
-                                <tr>
-                                    <td>Use case</td>
-                                    <td>Browsing, anonymity</td>
-                                    <td>Distributed apps, messaging</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <h3>Garlic routing (I2P)</h3>
-                        <p>Instead of one message = one onion:</p>
-                        <ul>
-                            <li>Multiple messages are bundled together ("cloves" in a garlic).</li>
-                            <li>This increases resistance to traffic analysis.</li>
-                            <li>Makes it harder to correlate timing patterns.</li>
-                        </ul>
-
-                        <h2>4. How anonymity networks protect users (technically)</h2>
-                        <h3>4.1 Threats they defend against</h3>
-                        <ul>
-                            <li><strong>IP address tracking:</strong> Websites do not see your real IP.</li>
-                            <li><strong>ISP surveillance:</strong> Your Internet Provider can see that you are using
-                                Tor, but not what for.</li>
-                            <li><strong>Network-level censorship:</strong> Getting around companies in constrained
-                                countries.</li>
-                        </ul>
-
-                        <h3>4.2 What they do not protect against</h3>
-                        <p>Anonymity networks cannot protect you if:</p>
-                        <ul>
-                            <li>You log into your accounts (like Facebook, Google).</li>
-                            <li>You download infected software or files.</li>
-                            <li>You reveal personal info voluntarily in chats.</li>
-                            <li>Your device itself is compromised with malware.</li>
-                        </ul>
-                        <dl
-                            style="background: #4b3e2a; color: white; width: 300px; padding: 5px; border-radius: 10px; border: 1px solid #f7f7f7;">
-                            <p><strong>Remember: Anonymity ≠ Invisibility</strong></p>
-                        </dl>
-
-                        <h2>5. Common misconceptions</h2>
-                        <ul style="list-style: none; padding-left: 0;">
-                            <li> ☛ <strong>“Tor is only for criminals”</strong><br>
-                                False. Many legitimate uses exist: Journalists, Activists, Researchers, and people
-                                living under censorship.</li>
-                            <br>
-                            <li> ☛ <strong>“Tor makes you untraceable”</strong><br>
-                                False. It reduces risk significantly but is not a magic shield against dedicated
-                                nation-state attackers.</li>
-                            <br>
-                            <li> ☛ <strong>“The Dark Web is a different internet”</strong><br>
-                                Not really. It’s still the internet, just accessed through different routing protocols.
-                            </li>
-                        </ul>
-
-                        <h2>6. Safety considerations (important)</h2>
-                        <p>Since you asked about safety, here are conceptual rules, not instructions:</p>
-
-                        <h3>Technical safety</h3>
-                        <ul>
-                            <li>Anonymity depends on behavior, not just tools.</li>
-                            <li>Browser exploits (JavaScript) can bypass network protections.</li>
-                            <li>Metadata (timing, size, patterns) still matters.</li>
-                        </ul>
-
-                        <h3>Personal safety</h3>
-                        <ul>
-                            <li>Not all hidden services are trustworthy.</li>
-                            <li>Some content can be harmful or illegal.</li>
-                            <li>Curiosity without context can expose you to risks.</li>
-                        </ul>
-
-                        <h2>7. Ethical use of anonymity networks</h2>
-                        <p>Anonymity networks are dual-use technologies.</p>
-
-                        <div class="ethical-container">
-                            <div class="ethical-box ethical-good">
-                                <strong><i class="fas fa-check-circle"></i> Ethical uses include:</strong>
-                                <ul>
-                                    <li>Protecting free speech</li>
-                                    <li>Avoiding political persecution</li>
-                                    <li>Researching sensitive topics</li>
-                                    <li>Secure communication</li>
-                                </ul>
-                            </div>
-                            <div class="ethical-box ethical-bad">
-                                <strong><i class="fas fa-times-circle"></i> Unethical uses include:</strong>
-                                <ul>
-                                    <li>Harassment</li>
-                                    <li>Scams</li>
-                                    <li>Exploitation</li>
-                                    <li>Coordinating harm</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <p style="margin-top: 15px;"><strong>Ethical principle:</strong></p>
-                        <blockquote>Use anonymity to protect rights — not to remove responsibility.</blockquote>
-
-                        <h2>8. Why this matters today</h2>
-                        <p>Onion routing represents a bigger idea:</p>
-                        <ul>
-                            <li>Privacy as a technical property</li>
-                            <li>Power balance between users and observers</li>
-                            <li>Resistance to mass surveillance</li>
-                        </ul>
-
-                        <h2>Glossary of Terms</h2>
-                        <dl
-                            style="background: #4b3e2a; color: white; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
-                            <dt><strong>Node / Relay</strong></dt>
-                            <dd>A computer that participates in the Tor network by passing traffic along.</dd>
-                            <br>
-                            <dt><strong>Bridge</strong></dt>
-                            <dd>A secret node not publicly listed, for when some would-be Tor users have their network
-                                connections blocked in countries such as China or Iran.</dd>
-                            <br>
-                            <dt><strong>Fingerprinting</strong></dt>
-                            <dd>Tricks they use to track you include your browser settings, screen size and fonts – and
-                                even if your IP address is hidden.</dd>
-                        </dl>
-
-                        <p style="margin-top:20px">By learning how it works, you can critically evaluate privacy claims,
-                            identify trade-offs and make ethical decisions about technology.</p>
-
-                        <h2>Conclusion</h2>
-                        <p>Privacy-enhanced network architectures (such as onion routing and the various anonymity
-                            networks – Tor, I2P) offer evidence that privacy can be an intrinsic part of a network
-                            design. Not by decoupling identity from destination (as with Tor) or by trusting the system
-                            operator not to spy on every user, but rather by separating what any one observer can see.
-                            At the same time they are not magic shields: user behavior, device security and ethical
-                            decisions still count.Comprehending the operation - and consequently its limitations - of
-                            these particular technologies are among the most effective ways for users to understand how
-                            to handle them responsibly, the extent of their ability to protect user privacy, and their
-                            importance in the protection of the rights to free expression and access to information in
-                            an increasingly monitored online ecosystem.</p>
+                    <p>
+                        Knowing how leaks occur and taking simple precautions can dramatically lower your risk. The best
+                        defense against things like that is to be cautious and informed, as well as proactive. Be safe
+                        and take care of your digital life.
+                    </p>
 
                 </div>
             </article>
@@ -1317,14 +1137,14 @@
             function updateDateTime() {
                 const now = new Date();
                 const options = {
-                    weekday: 'long',
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                    hour: '2-digit',
-                    minute: '2-digit',
-                    second: '2-digit',
-                    hour12: true
+                    weekday: 'long', // e.g., 'Monday'
+                    year: 'numeric', // e.g., '2025'
+                    month: 'long',   // e.g., 'May'
+                    day: 'numeric',  // e.g., '25'
+                    hour: '2-digit', // e.g., '04'
+                    minute: '2-digit',// e.g., '55'
+                    second: '2-digit',// e.g., '41'
+                    hour12: true     // Use AM/PM
                 };
 
                 const formatter = new Intl.DateTimeFormat('en-US', options);
